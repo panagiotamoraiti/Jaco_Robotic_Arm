@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: $(dirname)/../../kinova-ros/kinova_description/urdf/j2n6s200_standalone.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/j2n6s200.srdf
+  CONFIG:
+    author_name: Panagiota Moraiti
+    author_email: moraiti.giota2001@gmail.com
+    generated_timestamp: 1690492917

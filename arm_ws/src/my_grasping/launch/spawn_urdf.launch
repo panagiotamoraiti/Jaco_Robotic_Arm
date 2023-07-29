@@ -1,0 +1,7 @@
+<launch>
+  <arg name="urdf_file" default="$(find my_grasping)/urdf/box.urdf"/>
+  <arg name="model_name" default="my_box"/>
+
+  <node name="spawn_box" pkg="gazebo_ros" type="spawn_model" args="-urdf -file $(arg urdf_file) -model $(arg model_name)"/>
+</launch>
+

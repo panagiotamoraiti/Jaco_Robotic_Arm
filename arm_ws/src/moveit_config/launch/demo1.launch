@@ -1,0 +1,42 @@
+<launch>
+
+  <rosparam command="load" file="$(find moveit_config)/config/joint_names.yaml"/>
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find moveit_config)/launch/planning_context.launch" >
+    <arg name="load_robot_description" value="true" />
+  </include>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[/j2n6s200/joint_states]</rosparam>
+  </node> 
+  
+    <!-- Given the published joint states, publish tf for the robot links -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
+  <include file="$(find moveit_config)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+  </include>
+  
+    <!-- ros-control Controller parameters-->  
+  <rosparam file="$(find moveit_config)/config/ros_controllers.yaml"/>
+  
+  <include file="$(find kinova_gazebo)/launch/robot_launch.launch">
+  </include>
+  
+  <!-- Disable Moveit! controller timeout -->
+    <param name="move_group/trajectory_execution/execution_duration_monitoring" value="false" />
+
+    <!-- Change start tolerance from 0.01 to 0.0 to avoid this error : "Invalid Trajectory: start point deviates from current robot state more than"-->
+    <!-- more info http://moveit.ros.org/moveit!/ros/2017/01/03/firstIndigoRelease.html -->
+    <param name="/move_group/trajectory_execution/allowed_start_tolerance" value="0.0" />
+
+    <!-- Change from 0.1 to 0.3 rad -->
+    <!-- Allows joints to be outside of min and max values when starting -->
+    <param name="/move_group/start_state_max_bounds_error" value="0.3" />
+
+</launch>
