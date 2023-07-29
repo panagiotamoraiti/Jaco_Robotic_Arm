@@ -1,4 +1,4 @@
-# Jaco_Robotic_Arm
+# Jaco Robotic Arm
 Jaco Kinova arm is a 6DOF robot arm that can perform a wide range of tasks. In this project we use the model j2n6s200 Jaco arm.
 We implemented this project during our internship at Athena RC.
 ## Gazebo Simulator
