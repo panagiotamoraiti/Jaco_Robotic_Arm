@@ -1,0 +1,6 @@
+/arm_ws/build
+/arm_ws/.catkin_workspace
+/arm_ws/devel
+/object_detection/Garbage\ Detection/
+/object_detection/Grape\ Leaves\ disease\ detection/
+/object_detection/scripts/labelmap.pbtxt

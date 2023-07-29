@@ -1,0 +1,8 @@
+numpy
+pandas
+tensorflow
+Pillow
+matplotlib
+opencv-python
+object_detection
+pyqt
