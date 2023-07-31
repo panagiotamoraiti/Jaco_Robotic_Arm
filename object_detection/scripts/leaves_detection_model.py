@@ -50,7 +50,7 @@ while(True):
             img = cv2.imread(image_path)
             h, w = img.shape[:2]
 
-            flag = False
+            txt_list = []
             for i in range(len(prediction[0])):
                  #print(prediction[0][i])
                 (sy, sx, ey, ex, conf) = prediction[0][i]
@@ -71,16 +71,12 @@ while(True):
 
                 
                 with open(output_file_path, 'a+') as output_file:
-                    check = (center_x, center_y)
-                    for line in output_file:
-                        if line.strip() == check.strip():
-                            flag = True
-                    if flag == False:
+                    if (center_x, center_y) not in txt_list:
                         output_file.write(f"({center_x}, {center_y})\n")
+                        txt_list.append((center_x, center_y))
 
                 cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
 
             cv2.imshow("image", img)
             cv2.waitKey(0)
 
-            cv2.destroyAllWindows()

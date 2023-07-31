@@ -55,8 +55,6 @@ def detect(detection_graph, test_image_path, img):
           image = Image.open(test_image_path)
         else:
           image = test_image_path
-          
-        flag = False
 
         (boxes, scores, classes, num) = sess.run(
             [detection_boxes, detection_scores, detection_classes, num_detections],
@@ -96,12 +94,7 @@ def detect(detection_graph, test_image_path, img):
         circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
         
         with open(output_file_path, 'a+') as output_file:
-                check = (center_x, center_y)
-                for line in output_file:
-                    if line.strip() == check.strip():
-                        flag = True
-                if flag == False:
-                    output_file.write(f"({center_x}, {center_y})\n")
+        	output_file.write(f"({center_x}, {center_y})\n")
         
         cv2.imshow("image", npim)
         cv2.waitKey(0)
@@ -167,6 +160,8 @@ while(True):
             cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
 
             detect(detection_graph, directory_Path + '/' + filename + '_resized.jpg', False)
+            
+            os.remove(directory_Path + '/' + filename + '_resized.jpg')
 
        
 
