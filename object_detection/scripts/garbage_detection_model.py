@@ -55,13 +55,30 @@ def detect(detection_graph, test_image_path, img):
           image = Image.open(test_image_path)
         else:
           image = test_image_path
+          
+        flag = False
 
         (boxes, scores, classes, num) = sess.run(
             [detection_boxes, detection_scores, detection_classes, num_detections],
             feed_dict={image_tensor: image2tensor(image)}
         )
 
+        w, h = image.size
+ 
+        first_box_coordinates = boxes[0][0]
+        y_min, x_min, y_max, x_max = first_box_coordinates
+ 
+        x_min = int(x_min * w)
+        y_min = int(y_min * h)
+        x_max = int(x_max * w)
+        y_max = int(y_max * h)
+ 
+        # Calculate the center coordinates
+        center_y = (y_min + y_max) // 2
+        center_x = (x_min + x_max) // 2        
+        
         npim = image2np(image)
+        
         vis_util.visualize_boxes_and_labels_on_image_array(
             npim,
             np.squeeze(boxes),
@@ -71,12 +88,23 @@ def detect(detection_graph, test_image_path, img):
             use_normalized_coordinates=True,
             line_thickness=5,
             min_score_thresh=.3)
-        #plt.figure(figsize=(12, 8))
-        #plt.imshow(npim)
-        #plt.show()
+            
+        # Draw a circle at the center of the bounding box
+        center = (center_x * width, center_y * height)
+        circle_color = (255, 0, 0)  
+        circle_radius = 3 
+        circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
+        
+        with open(output_file_path, 'a+') as output_file:
+                check = (center_x, center_y)
+                for line in output_file:
+                    if line.strip() == check.strip():
+                        flag = True
+                if flag == False:
+                    output_file.write(f"({center_x}, {center_y})\n")
         
         cv2.imshow("image", npim)
-        cv2.waitKey(2000)
+        cv2.waitKey(0)
         
         cv2.destroyAllWindows()
 
@@ -113,19 +141,32 @@ category_index = label_map_util.create_category_index(categories)
 
 detection_graph = reconstruct("./../Garbage Detection/ssd_mobilenet_v2_taco_2018_03_29.pb")
 
-directory_Path = './../Garbage Detection/images/batch_1'
-for filename in os.listdir(directory_Path):
-    # Check if the file has an image extension
-    if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):
-        # Get the full path of the image file
-        image_path = os.path.join(directory_Path, filename)
+#directory_Path = './../Garbage Detection/images/batch_1'
+# For real-time detection using snapshots taken from the robot camera in Unity
+directory_Path = './../../Jaco_arm/Screenshots'
 
-        image = cv2.imread(image_path)
-        height, width, _ = image.shape
-        resized_image = cv2.resize(image, (height//8, width//8))
-        height, width, _ = resized_image.shape
-        cv2.imwrite('./../Garbage Detection/images/output_image.jpg', resized_image)
+while(True):
+    for filename in os.listdir(directory_Path):
+        # Check if the file has an image extension
+        if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):
+            # Destroy previously created text files
+            filename_no_ext, _ = os.path.splitext(filename)
+            output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
+            
+            if (os.path.isfile(output_file_path)):
+                os.remove(output_file_path)
+                
+            # Get the full path of the image file
+            image_path = os.path.join(directory_Path, filename)
 
-        detect(detection_graph, './../Garbage Detection/images/output_image.jpg', False)
+            image = cv2.imread(image_path)
+            height, width, _ = image.shape
+            resized_image = cv2.resize(image, (height//4, width//4))
+            height, width, _ = resized_image.shape
+            #cv2.imwrite('./../Garbage Detection/images/output_image.jpg', resized_image)
+            cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
 
+            detect(detection_graph, directory_Path + '/' + filename + '_resized.jpg', False)
+
+       
 
