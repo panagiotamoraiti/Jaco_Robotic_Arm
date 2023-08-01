@@ -14,7 +14,7 @@ public class camera : MonoBehaviour
     public string savePath = "Screenshots/";
     public string fileNamePrefix = "screenshot";
  
-    private float timer = 30f; // Time between captures
+    private float timer = 2f; // Time between captures
     private float currentTime = 0f;
  
     private void Update()
@@ -59,4 +59,3 @@ public class camera : MonoBehaviour
         }
     }
 }
- 

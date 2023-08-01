@@ -29,25 +29,10 @@ public class TrajectoryPlanner : MonoBehaviour
     GameObject m_TargetPlacement;
     public GameObject TargetPlacement { get => m_TargetPlacement; set => m_TargetPlacement = value; }
 
-    // Assures that the gripper is always positioned above the m_Target cube before grasping.
-    //readonly Quaternion m_PickOrientation = Quaternion.Euler(90, 90, 0);
-    //readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
-    //readonly Quaternion m_PickOrientation = new Quaternion(0.197f, -0.067f, 0.977f, 0.041f);
-    
-    // readonly Quaternion m_PickOrientation = Quaternion.Euler(90, 90, 0);
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
-    // Quaternion or = new Quaternion(-0.72423f, 0.13094f, 0.60637f, -0.30111f);
-    // Quaternion or = new Quaternion(0.07173144817352295f, -0.027387527748942376f, 0.996719479560852f, -0.025599028915166856f); // functional
     Quaternion or = new Quaternion(-0.003451f, 0.006689f, 0.989699f, -0.142966f);
     // Vector3 pos = new Vector3(0.10684f, 0.22462f, 0.8162f);
-
-// UnityEditor.TransformWorldPlacementJSON:{"position":{"x":0.36590585112571719,"y":0.09689018875360489,"z":-0.15794116258621217},"rotation":{"x":-0.0034519752953201534,"y":0.006689317524433136,"z":0.989699125289917,"w":-0.14296650886535645},"scale":{"x":1.0,"y":1.0,"z":1.0}}  // pick orientation
-
-// UnityEditor.TransformWorldPlacementJSON:{"position":{"x":0.18070322275161744,"y":0.12306038290262222,"z":-0.36768752336502077},"rotation":{"x":0.19721326231956483,"y":-0.0665614977478981,"z":0.9772276878356934,"w":0.04126504436135292},"scale":{"x":1.0,"y":1.0,"z":1.0}}  // place orientation
-
-    //Quaternion or = new Quaternion(-0.0039f, 0.0066f, 0.9896f, -0.1434f);  // working in panagota's pc
-    //Vector3 pos = new Vector3(0.43f, 0.1f, -0.05299999f);
 
     Vector3 pos; 
     Vector3 box_pos;
@@ -167,6 +152,7 @@ public class TrajectoryPlanner : MonoBehaviour
             position = (m_TargetPlacement.transform.localPosition + m_PickPoseOffset).To<FLU>(),
 	    orientation = m_PickOrientation.To<FLU>()
         };
+
 
         m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
     }
