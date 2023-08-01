@@ -34,7 +34,8 @@ public class DetectAndGrab : MonoBehaviour
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
     Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
-    Vector3 pos = new Vector3(-0.047462593764066699f, 0.3511176109313965f, -0.47372329235076907f);
+    // Vector3 pos = new Vector3(-0.047462593764066699f, 0.3511176109313965f, -0.47372329235076907f);
+    Vector3 pos = new Vector3(0f, 0.45f, -0.5f);
     
     //UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-0.047462593764066699,"y":0.3511176109313965,"z":-0.47372329235076907},"rotation":{"x":0.6935244202613831,"y":-0.02997758984565735,"z":0.716662585735321,"w":-0.06723421812057495},"scale":{"x":1.0,"y":1.0,"z":1.0}}
     

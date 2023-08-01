@@ -6,6 +6,8 @@ using RosMessageTypes.NiryoMoveit;
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using UnityEngine;
+using System.Collections.Generic;
+using System.IO;
 
 public class CameraDetection : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class CameraDetection : MonoBehaviour
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
     const float k_PoseAssignmentWait = 1.5f;
+    const float k_PoseAssignmentWaitnew = 25f;
 
     // Variables required for ROS communication
     [SerializeField]
@@ -33,6 +36,14 @@ public class CameraDetection : MonoBehaviour
     readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
     Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
     Vector3 pos = new Vector3(-0.047462593764066699f, 0.3511176109313965f, -0.47372329235076907f);
+    
+    // for camera
+    public Camera targetCamera;
+    public string savePath = "Screenshots/";
+    public string fileNamePrefix = "screenshot";
+ 
+    private float timer = 2f; // Time between captures
+    private float currentTime = 0f;
 
     /*Vector3 pos; 
     Vector3 box_pos;
@@ -79,6 +90,37 @@ public class CameraDetection : MonoBehaviour
         m_RightGripper = m_j2n6s200.transform.Find(rightGripper).GetComponent<ArticulationBody>();
         m_LeftGripper = m_j2n6s200.transform.Find(leftGripper).GetComponent<ArticulationBody>();
     }
+    
+    private void CaptureScreen()
+        {
+	    // Create the screenshot file path
+	    // string filePath = savePath + fileNamePrefix + "_" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png";
+	    string filePath = savePath + fileNamePrefix + ".png";
+     
+	    // Capture the screenshot from the target camera
+	    if (targetCamera != null)
+	    {
+	        RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24);
+	        targetCamera.targetTexture = rt;
+	        Texture2D screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+	        targetCamera.Render();
+	        RenderTexture.active = rt;
+	        screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+	        targetCamera.targetTexture = null;
+	        RenderTexture.active = null;
+	        Destroy(rt);
+     
+	        // Convert the Texture2D to bytes and save the image
+	        byte[] bytes = screenshot.EncodeToPNG();
+	        System.IO.File.WriteAllBytes(filePath, bytes);
+     
+	        Debug.Log("Screenshot saved to: " + filePath);
+	    }
+	    else
+	    {
+	        Debug.LogError("Target camera is not assigned!");
+	    }
+        }
 
     /// <summary>
     ///     Close the gripper
@@ -187,7 +229,7 @@ public class CameraDetection : MonoBehaviour
         {
             // For every trajectory plan returned
             //for (var poseIndex = 0; poseIndex < response.trajectories.Length; poseIndex++)
-            for (var poseIndex = 0; poseIndex < 1; poseIndex++)
+            for (var poseIndex = 0; poseIndex < 2; poseIndex++)
             {
                 // For every robot pose in trajectory plan
                 foreach (var t in response.trajectories[poseIndex].joint_trajectory.points)
@@ -206,6 +248,13 @@ public class CameraDetection : MonoBehaviour
                     // Wait for robot to achieve pose for all joint assignments
                     yield return new WaitForSeconds(k_JointAssignmentWait);
                 }
+                
+                if (poseIndex == (int)Poses.PreGrasp)
+                {
+                    CaptureScreen();
+                    yield return new WaitForSeconds(k_PoseAssignmentWaitnew);
+                }
+                
 
                 // Close the gripper if completed executing the trajectory for the Grasp pose
                 if (poseIndex == (int)Poses.Grasp)

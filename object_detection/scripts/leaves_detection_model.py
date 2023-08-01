@@ -23,6 +23,10 @@ new_model = tf.keras.models.load_model(model_path)
 # For real-time detection using snapshots taken from the robot camera in Unity
 directory_Path = './../../Jaco_arm/Screenshots'
 
+end_effector_x = 532
+end_effector_y = 348
+transform_ratio = 0.15/100
+
 while(True):
     for filename in os.listdir(directory_Path):
         # Check if the file has an image extension
@@ -31,8 +35,11 @@ while(True):
             filename_no_ext, _ = os.path.splitext(filename)
             output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
             
-            if (os.path.isfile(output_file_path)):
+            '''if (os.path.isfile(output_file_path)):
                 os.remove(output_file_path)
+                
+            with open(output_file_path, 'w'):
+                pass'''
             
             # Get the full path of the image file
             image_path = os.path.join(directory_Path, filename)
@@ -52,6 +59,10 @@ while(True):
 
             txt_list = []
             for i in range(len(prediction[0])):
+                if i == 0:
+                    if (os.path.isfile(output_file_path)):
+                        os.remove(output_file_path)
+                    
                  #print(prediction[0][i])
                 (sy, sx, ey, ex, conf) = prediction[0][i]
                 #print(sx, sy, ex, ey, conf)
@@ -63,6 +74,13 @@ while(True):
 
                 center_x = (sx + ex) // 2
                 center_y = (sy + ey) // 2
+                
+                # Y axis in Opencv is -Z axis in Unity 
+                move_x = (end_effector_x - center_x) * transform_ratio
+                move_z = -(end_effector_y - center_y) * transform_ratio
+                
+                move_x = round(move_x, 3)
+                move_z = round(move_z, 3)
 
                 # Draw a small circle at the center of the rectangle
                 circle_radius = 3
@@ -72,11 +90,12 @@ while(True):
                 
                 with open(output_file_path, 'a+') as output_file:
                     if (center_x, center_y) not in txt_list:
-                        output_file.write(f"({center_x}, {center_y})\n")
+                        # output_file.write(f"({center_x}, {center_y})\n")
+                        output_file.write(f"{move_x}\n{move_z}\n")
                         txt_list.append((center_x, center_y))
 
                 cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
 
             cv2.imshow("image", img)
-            cv2.waitKey(0)
+            cv2.waitKey(100)
 
