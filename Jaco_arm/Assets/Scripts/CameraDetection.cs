@@ -15,7 +15,7 @@ public class CameraDetection : MonoBehaviour
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
     const float k_PoseAssignmentWait = 1.5f;
-    const float k_PoseAssignmentWaitnew = 25f;
+    const float k_PoseAssignmentWaitnew = 1.5f;
 
     // Variables required for ROS communication
     [SerializeField]
@@ -26,14 +26,13 @@ public class CameraDetection : MonoBehaviour
     GameObject m_j2n6s200;
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
     [SerializeField]
-    GameObject m_Target;
-    public GameObject Target { get => m_Target; set => m_Target = value; }
-    [SerializeField]
     GameObject m_TargetPlacement;
     public GameObject TargetPlacement { get => m_TargetPlacement; set => m_TargetPlacement = value; }
 
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
+    
+    // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
     Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
     Vector3 pos = new Vector3(-0.047462593764066699f, 0.3511176109313965f, -0.47372329235076907f);
     
@@ -41,21 +40,9 @@ public class CameraDetection : MonoBehaviour
     public Camera targetCamera;
     public string savePath = "Screenshots/";
     public string fileNamePrefix = "screenshot";
- 
-    private float timer = 2f; // Time between captures
-    private float currentTime = 0f;
+    
+    public int stage;
 
-    /*Vector3 pos; 
-    Vector3 box_pos;
-    void Awake()
-    {
-        // Initialize pos using m_Target's local position
-        box_pos = m_Target.transform.localPosition; 
-        pos.x = box_pos.x;
-        pos.y = box_pos.y + 0.06f; 
-        pos.z = box_pos.z;          
-    } */
- 
     // Articulation Bodies
     ArticulationBody[] m_JointArticulationBodies;
     ArticulationBody m_LeftGripper;
@@ -64,11 +51,8 @@ public class CameraDetection : MonoBehaviour
     // ROS Connector
     ROSConnection m_Ros;
 
-    /// <summary>
-    ///     Find all robot joints in Awake() and add them to the jointArticulationBodies array.
-    ///     Find left and right finger joints and assign them to their respective articulation body objects.
-    /// </summary>
-    void Start()
+
+    IEnumerator Start()
     {
         // Get ROS connection static instance
         m_Ros = ROSConnection.GetOrCreateInstance();
@@ -89,42 +73,60 @@ public class CameraDetection : MonoBehaviour
 
         m_RightGripper = m_j2n6s200.transform.Find(rightGripper).GetComponent<ArticulationBody>();
         m_LeftGripper = m_j2n6s200.transform.Find(leftGripper).GetComponent<ArticulationBody>();
+        
+        // Introduce a delay before calling PublishJoints()
+        yield return new WaitForSeconds(5.0f);
+        stage = (int)Poses.Start;
+        PublishJoints();
+        Debug.Log("Starting Coroutine ScreenshotPosition..");      
+        yield return new WaitForSeconds(12.0f);
+        
+        stage = (int)Poses.PreGrasp;
+        PublishJoints();
+        Debug.Log("Starting Coroutine Pregrasp..");
+        yield return new WaitForSeconds(5.0f);
+        
+        stage = (int)Poses.GoDown;
+        PublishJoints();
+        Debug.Log("Starting Coroutine GoDown..");
     }
+    
+    void Update()
+    {
+
+    }
+    
     
     private void CaptureScreen()
         {
-	    // Create the screenshot file path
-	    // string filePath = savePath + fileNamePrefix + "_" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png";
-	    string filePath = savePath + fileNamePrefix + ".png";
+        // Create the screenshot file path
+        string filePath = savePath + fileNamePrefix + ".png";
      
-	    // Capture the screenshot from the target camera
-	    if (targetCamera != null)
-	    {
-	        RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24);
-	        targetCamera.targetTexture = rt;
-	        Texture2D screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-	        targetCamera.Render();
-	        RenderTexture.active = rt;
-	        screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-	        targetCamera.targetTexture = null;
-	        RenderTexture.active = null;
-	        Destroy(rt);
+        // Capture the screenshot from the target camera
+        if (targetCamera != null)
+        {
+            RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24);
+            targetCamera.targetTexture = rt;
+            Texture2D screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+            targetCamera.Render();
+            RenderTexture.active = rt;
+            screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            targetCamera.targetTexture = null;
+            RenderTexture.active = null;
+            Destroy(rt);
      
-	        // Convert the Texture2D to bytes and save the image
-	        byte[] bytes = screenshot.EncodeToPNG();
-	        System.IO.File.WriteAllBytes(filePath, bytes);
+            // Convert the Texture2D to bytes and save the image
+            byte[] bytes = screenshot.EncodeToPNG();
+            System.IO.File.WriteAllBytes(filePath, bytes);
      
-	        Debug.Log("Screenshot saved to: " + filePath);
-	    }
-	    else
-	    {
-	        Debug.LogError("Target camera is not assigned!");
-	    }
+            Debug.Log("Screenshot saved to: " + filePath);
+        }
+        else
+        {
+            Debug.LogError("Target camera is not assigned!");
+        }
         }
 
-    /// <summary>
-    ///     Close the gripper
-    /// </summary>
     void CloseGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -137,9 +139,6 @@ public class CameraDetection : MonoBehaviour
         m_RightGripper.xDrive = rightDrive;
     }
 
-    /// <summary>
-    ///     Open the gripper
-    /// </summary>
     void OpenGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -179,12 +178,10 @@ public class CameraDetection : MonoBehaviour
         var request = new MoverServiceRequest();
         request.joints_input = CurrentJointConfig();
 
-        //Pick Pose
+        // Pick Pose
         request.pick_pose = new PoseMsg
         {
-           //position = (m_Target.transform.localPosition + m_PickPoseOffset).To<FLU>(),
            position = pos.To<FLU>(),
-           // The hardcoded x/z angles assure that the gripper is always positioned above the target cube before grasping.
            orientation = or.To<FLU>()
         };
 
@@ -192,7 +189,7 @@ public class CameraDetection : MonoBehaviour
         request.place_pose = new PoseMsg
         {
             position = (m_TargetPlacement.transform.localPosition + m_PickPoseOffset).To<FLU>(),
-	    orientation = m_PickOrientation.To<FLU>()
+            orientation = m_PickOrientation.To<FLU>()
         };
 
 
@@ -224,13 +221,22 @@ public class CameraDetection : MonoBehaviour
     /// <param name="response"> MoverServiceResponse received from niryo_moveit mover service running in ROS</param>
     /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
-    {
+    {        
         if (response.trajectories != null)
-        {
+        {          
+                    
             // For every trajectory plan returned
-            //for (var poseIndex = 0; poseIndex < response.trajectories.Length; poseIndex++)
-            for (var poseIndex = 0; poseIndex < 2; poseIndex++)
+            for (var poseIndex = stage; poseIndex < stage+1; poseIndex++)
             {
+                
+                // Close the gripper if completed executing the trajectory for the Grasp pose
+                if (poseIndex == (int)Poses.GraspAndPlace)
+                {
+                    yield return new WaitForSeconds(k_PoseAssignmentWait);
+                    CloseGripper();
+                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
+                }
+                
                 // For every robot pose in trajectory plan
                 foreach (var t in response.trajectories[poseIndex].joint_trajectory.points)
                 {
@@ -249,19 +255,10 @@ public class CameraDetection : MonoBehaviour
                     yield return new WaitForSeconds(k_JointAssignmentWait);
                 }
                 
-                if (poseIndex == (int)Poses.PreGrasp)
+                if (poseIndex == (int)Poses.Start)
                 {
                     CaptureScreen();
                     yield return new WaitForSeconds(k_PoseAssignmentWaitnew);
-                }
-                
-
-                // Close the gripper if completed executing the trajectory for the Grasp pose
-                if (poseIndex == (int)Poses.Grasp)
-                {
-                    yield return new WaitForSeconds(k_PoseAssignmentWait);
-                    CloseGripper();
-                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment
@@ -275,9 +272,9 @@ public class CameraDetection : MonoBehaviour
 
     enum Poses
     {
+        Start,
         PreGrasp,
-        Grasp,
-        PickUp,
-        Place
+        GoDown,
+        GraspAndPlace
     }
 }
