@@ -23,9 +23,8 @@ new_model = tf.keras.models.load_model(model_path)
 # For real-time detection using snapshots taken from the robot camera in Unity
 directory_Path = './../../Jaco_arm/Screenshots'
 
-end_effector_x = 532
-end_effector_y = 348
-transform_ratio = 0.15/100
+end_effector_x = 317
+end_effector_y = 354
 
 while(True):
     for filename in os.listdir(directory_Path):
@@ -50,12 +49,30 @@ while(True):
             image = load_img(image_path, target_size=(height, width))
             image = img_to_array(image)/255.0
             image = np.expand_dims(image, axis=0)
+            
+            
 
+            # Back to detecting
             prediction = new_model.predict(image)
             #print(prediction)
 
             img = cv2.imread(image_path)
             h, w = img.shape[:2]
+            
+            # Detect markers
+            dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
+            parameters = cv2.aruco.DetectorParameters()
+            detector = cv2.aruco.ArucoDetector(dictionary, parameters)
+            markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(img)
+            cv2.aruco.drawDetectedMarkers(img, markerCorners, markerIds)
+            # print(markerCorners)
+            
+            for corners in markerCorners:
+                # Compute the Euclidean distance between corners to find width and height
+                marker_width = abs(corners[0][0][0] - corners[0][1][0])
+                marker_height = abs(corners[0][0][1] - corners[0][3][1])
+            
+            transform_ratio = 0.1/marker_width
 
             txt_list = []
             for i in range(len(prediction[0])):
@@ -95,7 +112,9 @@ while(True):
                         txt_list.append((center_x, center_y))
 
                 cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
-
+                
+            
+                
             cv2.imshow("image", img)
             cv2.waitKey(100)
 

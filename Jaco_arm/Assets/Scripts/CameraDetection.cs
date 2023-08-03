@@ -34,7 +34,9 @@ public class CameraDetection : MonoBehaviour
     
     // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
     Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
-    Vector3 pos = new Vector3(-0.047462593764066699f, 0.3511176109313965f, -0.47372329235076907f);
+    //readonly Quaternion or = new Quaternion.Euler(0,90,0);
+    //Debug.Log(or.ToString());
+    Vector3 pos = new Vector3(0f, 0.4f, -0.5f);
     
     // for camera
     public Camera targetCamera;
@@ -105,12 +107,14 @@ public class CameraDetection : MonoBehaviour
         // Capture the screenshot from the target camera
         if (targetCamera != null)
         {
-            RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24);
+            int width = 600;
+            int height = 600;
+            RenderTexture rt = new RenderTexture(width, height, 24);
             targetCamera.targetTexture = rt;
-            Texture2D screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+            Texture2D screenshot = new Texture2D(width, height, TextureFormat.RGB24, false);
             targetCamera.Render();
             RenderTexture.active = rt;
-            screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0);
             targetCamera.targetTexture = null;
             RenderTexture.active = null;
             Destroy(rt);
