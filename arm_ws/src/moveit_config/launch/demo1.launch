@@ -26,6 +26,7 @@
   <rosparam file="$(find moveit_config)/config/ros_controllers.yaml"/>
   
   <include file="$(find kinova_gazebo)/launch/robot_launch.launch">
+    <arg name="gui" value="false" />
   </include>
   
   <!-- Disable Moveit! controller timeout -->

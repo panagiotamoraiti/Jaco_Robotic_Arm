@@ -80,17 +80,23 @@ public class CameraDetection : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         stage = (int)Poses.Start;
         PublishJoints();
-        Debug.Log("Starting Coroutine ScreenshotPosition..");      
+        Debug.Log("Starting Coroutine ScreenshotPosition.");      
         yield return new WaitForSeconds(12.0f);
         
         stage = (int)Poses.PreGrasp;
         PublishJoints();
-        Debug.Log("Starting Coroutine Pregrasp..");
+        Debug.Log("Starting Coroutine Pregrasp.");
         yield return new WaitForSeconds(5.0f);
         
         stage = (int)Poses.GoDown;
         PublishJoints();
-        Debug.Log("Starting Coroutine GoDown..");
+        Debug.Log("Starting Coroutine GoDown.");
+        yield return new WaitForSeconds(8.0f);
+        
+        stage = (int)Poses.GraspAndPlace;
+        PublishJoints();
+        Debug.Log("Starting Coroutine GraspAndPlace.");
+        yield return new WaitForSeconds(5.0f);
     }
     
     void Update()
@@ -138,6 +144,9 @@ public class CameraDetection : MonoBehaviour
 
         leftDrive.target = 60f;
         rightDrive.target = 60f;
+        
+        leftDrive.stiffness = 4000;
+        rightDrive.stiffness = 4000;
 
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
@@ -148,8 +157,8 @@ public class CameraDetection : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = -60f;
-        rightDrive.target = -60f;
+        leftDrive.target = -56f;
+        rightDrive.target = -56f;
 
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
@@ -238,7 +247,7 @@ public class CameraDetection : MonoBehaviour
                 {
                     yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
-                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
+                    yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
                 
                 // For every robot pose in trajectory plan

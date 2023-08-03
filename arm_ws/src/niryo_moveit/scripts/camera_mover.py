@@ -120,7 +120,7 @@ def plan_pick_and_place(req):
 
     # Go Down - lower gripper so it can grab the object
     #pick_pose = copy.deepcopy(req.pick_pose)
-    pick_pose.position.z -= 0.45
+    pick_pose.position.z -= 0.47
     go_down_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
     
     if not go_down_pose.joint_trajectory.points:
