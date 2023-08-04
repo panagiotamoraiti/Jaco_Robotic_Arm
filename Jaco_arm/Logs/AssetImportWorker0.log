@@ -337,3 +337,804 @@ System memory in use after: 69,6 MB.
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2206.
 Total: 2,624091 ms (FindLiveObjects: 0,189475 ms CreateObjectMapping: 0,055684 ms MarkObjects: 2,216496 ms  DeleteObjects: 0,161172 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1260,410311 seconds.
+  path: Assets/Materials/New Physic Material.physicMaterial
+  artifactKey: Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/New Physic Material.physicMaterial using Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9bb0031777fe935347995e213bc6f03') in 0,012294 seconds
+  Import took 0,015372 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002581 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,848 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2209.
+Total: 3,756044 ms (FindLiveObjects: 0,308528 ms CreateObjectMapping: 0,078226 ms MarkObjects: 3,042276 ms  DeleteObjects: 0,323487 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2212.
+Total: 3,762837 ms (FindLiveObjects: 0,463780 ms CreateObjectMapping: 0,063139 ms MarkObjects: 3,087149 ms  DeleteObjects: 0,147076 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002950 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,064 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2215.
+Total: 4,001204 ms (FindLiveObjects: 0,237816 ms CreateObjectMapping: 0,042650 ms MarkObjects: 3,547723 ms  DeleteObjects: 0,171672 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 284,895110 seconds.
+  path: Assets/Scenes/DetectionScene.unity
+  artifactKey: Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DetectionScene.unity using Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbc1b5603226bdae1397a4036ce46a6') in 0,017167 seconds
+  Import took 0,021423 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,003035 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,064 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2218.
+Total: 2,482646 ms (FindLiveObjects: 0,152657 ms CreateObjectMapping: 0,032611 ms MarkObjects: 2,074150 ms  DeleteObjects: 0,222688 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,001829 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,115 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2221.
+Total: 3,956791 ms (FindLiveObjects: 0,284694 ms CreateObjectMapping: 0,035046 ms MarkObjects: 3,436335 ms  DeleteObjects: 0,199635 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,003091 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,041 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2224.
+Total: 4,681029 ms (FindLiveObjects: 0,244328 ms CreateObjectMapping: 0,042630 ms MarkObjects: 4,211658 ms  DeleteObjects: 0,181240 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 149,287206 seconds.
+  path: Assets/Materials/New Physic Material.physicMaterial
+  artifactKey: Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/New Physic Material.physicMaterial using Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf9accfa6313d976308b09df40f3221') in 0,011320 seconds
+  Import took 0,014703 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002643 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,998 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2227.
+Total: 6,753596 ms (FindLiveObjects: 0,224030 ms CreateObjectMapping: 0,041328 ms MarkObjects: 6,231837 ms  DeleteObjects: 0,255158 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 198,774450 seconds.
+  path: Assets/Resources/ROSConnectionPrefab.prefab
+  artifactKey: Guid(ff910f64d068a6a9cba3997205f0ff07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ROSConnectionPrefab.prefab using Guid(ff910f64d068a6a9cba3997205f0ff07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f1fa52e5e80c604126339589985e451') in 0,032179 seconds
+  Import took 0,035693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8,264664 seconds.
+  path: Assets/Prefabs/14025_Soda_Can_diff.jpg
+  artifactKey: Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/14025_Soda_Can_diff.jpg using Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d389a72029ff00f141723d541d9dbf6') in 0,041147 seconds
+  Import took 0,044500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000125 seconds.
+  path: Assets/Prefabs/14025_Soda_Can_v3_l3.obj
+  artifactKey: Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.obj using Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867c2accaa248b0344fed5d95879385e') in 0,114028 seconds
+  Import took 0,117405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000117 seconds.
+  path: Assets/Prefabs/14025_Soda_Can_diff.jpg
+  artifactKey: Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/14025_Soda_Can_diff.jpg using Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d389a72029ff00f141723d541d9dbf6') in 0,004788 seconds
+  Import took 0,007721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9,976416 seconds.
+  path: Assets/Prefabs/14025_Soda_Can_v3_l3.mtl
+  artifactKey: Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.mtl using Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb56f1288fed89a6701cbf6b1317360') in 0,001128 seconds
+  Import took 0,004486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,005706 seconds.
+  path: Assets/Prefabs/14025_Soda_Can_v3_l3.mtl
+  artifactKey: Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.mtl using Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb56f1288fed89a6701cbf6b1317360') in 0,001029 seconds
+  Import took 0,004866 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002985 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,989 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1,18 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,4 MB.
+System memory in use after: 71,4 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 4,446349 ms (FindLiveObjects: 0,270407 ms CreateObjectMapping: 0,070002 ms MarkObjects: 3,836875 ms  DeleteObjects: 0,268023 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002779 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,020 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,4 MB.
+System memory in use after: 71,4 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2277.
+Total: 4,345920 ms (FindLiveObjects: 0,452368 ms CreateObjectMapping: 0,047990 ms MarkObjects: 3,704047 ms  DeleteObjects: 0,140603 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0,002812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,111 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,5 MB.
+System memory in use after: 71,4 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2280.
+Total: 6,317588 ms (FindLiveObjects: 0,353653 ms CreateObjectMapping: 0,145403 ms MarkObjects: 5,623386 ms  DeleteObjects: 0,193513 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 724,140519 seconds.
+  path: Assets/Prefabs/pick_and_place
+  artifactKey: Guid(d425a0575438413a49ffd846e6695b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/pick_and_place using Guid(d425a0575438413a49ffd846e6695b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde22bd7b3c1800954d6734900963b73') in 0,004154 seconds
+  Import took 0,007485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20,088358 seconds.
+  path: Assets/Prefabs/Garbage
+  artifactKey: Guid(2356b72575f294bcbbe4e7de699c342b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage using Guid(2356b72575f294bcbbe4e7de699c342b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abca5c882296d063d8a1c36d0950ce3') in 0,000964 seconds
+  Import took 0,004454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5,882864 seconds.
+  path: Assets/Prefabs/Garbage/14025_Soda_Can_v3_l3.obj
+  artifactKey: Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/14025_Soda_Can_v3_l3.obj using Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '905519e97550b1c10f907d8d8e391d0e') in 0,096886 seconds
+  Import took 0,100377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4,777659 seconds.
+  path: Assets/Prefabs/Garbage/1441.jpg
+  artifactKey: Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/1441.jpg using Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51129527da30ff05866aea7a663c76ad') in 0,011012 seconds
+  Import took 0,014716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,005140 seconds.
+  path: Assets/Prefabs/Garbage/1441.jpg
+  artifactKey: Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/1441.jpg using Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51129527da30ff05866aea7a663c76ad') in 0,002864 seconds
+  Import took 0,005321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5,421024 seconds.
+  path: Assets/Prefabs/Garbage/rattan difuse.jpg
+  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16943075a28313bfa486f596e3a2c5ee') in 0,001021 seconds
+  Import took 0,004281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000561 seconds.
+  path: Assets/Prefabs/Garbage/rattan difuse.jpg
+  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16943075a28313bfa486f596e3a2c5ee') in 0,000885 seconds
+  Import took 0,003313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 222,458724 seconds.
+  path: Assets/Prefabs/Garbage/ff.max
+  artifactKey: Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/ff.max using Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53ac88302d349b00ace66feb7dd8593') in 0,000991 seconds
+  Import took 0,004299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000645 seconds.
+  path: Assets/Prefabs/Garbage/ff.max
+  artifactKey: Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/ff.max using Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53ac88302d349b00ace66feb7dd8593') in 0,000889 seconds
+  Import took 0,002980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 649,215794 seconds.
+  path: Assets/Prefabs/Garbage/rattan difuse.jpg
+  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f731cde560538485400d0280da6316') in 0,004936 seconds
+  Import took 0,008234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000170 seconds.
+  path: Assets/Prefabs/Garbage/rattan_-basket.jpg
+  artifactKey: Guid(bf6cd6c8022923e8cb0af30983bf6daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan_-basket.jpg using Guid(bf6cd6c8022923e8cb0af30983bf6daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f2f039e4bf3cbaf0cd7a6d0617fb0d') in 0,002941 seconds
+  Import took 0,004601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000156 seconds.
+  path: Assets/Prefabs/Garbage/rattan difuse.jpg
+  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f731cde560538485400d0280da6316') in 0,003497 seconds
+  Import took 0,005838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000147 seconds.
+  path: Assets/Prefabs/Garbage/rattan opacity.jpg
+  artifactKey: Guid(efe23f3ee486f19faa0621d89028396f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/rattan opacity.jpg using Guid(efe23f3ee486f19faa0621d89028396f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5832b4eb010353bec9733aebcf9050c8') in 0,002865 seconds
+  Import took 0,004643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13,599187 seconds.
+  path: Assets/Prefabs/Garbage/Soda Can
+  artifactKey: Guid(79d7af9a187d43084b03d890ad1caa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/Soda Can using Guid(79d7af9a187d43084b03d890ad1caa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8254b1917f1ac77c6ecf635a12da04e5') in 0,038680 seconds
+  Import took 0,042744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11,737524 seconds.
+  path: Assets/Prefabs/Garbage/Basket
+  artifactKey: Guid(44a4da761d51758d9a0d6d5e12569bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/Basket using Guid(44a4da761d51758d9a0d6d5e12569bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6316b92238c634c5a5a7bc1357152ed3') in 0,038455 seconds
+  Import took 0,042906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11,650151 seconds.
+  path: Assets/Prefabs/Garbage/Basket/Rattan_Basket_mesh.max
+  artifactKey: Guid(a6527cf48f83f31fb98e3998fbb1eeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/Basket/Rattan_Basket_mesh.max using Guid(a6527cf48f83f31fb98e3998fbb1eeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc623ce6c33f14ceca365cc319d2662d') in 0,038770 seconds
+  Import took 0,043036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 587,879465 seconds.
+  path: Assets/Prefabs/Garbage/box
+  artifactKey: Guid(48bbfbc1ddc20f34086695f61aed4c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box using Guid(48bbfbc1ddc20f34086695f61aed4c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fcd84e4350e61ab0ee82bb84f02c38a') in 0,038241 seconds
+  Import took 0,042053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000206 seconds.
+  path: Assets/Prefabs/Garbage/box/Render_1.jpg
+  artifactKey: Guid(6abb789c4806619d791d3e6f6441fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Render_1.jpg using Guid(6abb789c4806619d791d3e6f6441fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f530175a19fa426ae1cd529ccaa0daf6') in 0,018898 seconds
+  Import took 0,022858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1,707097 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures
+  artifactKey: Guid(255d1657a39891f17aa8897f67ddc0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures using Guid(255d1657a39891f17aa8897f67ddc0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa29ccb4fa79602211c9377f03f72c59') in 0,000747 seconds
+  Import took 0,004589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,050214 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Base_Color.png
+  artifactKey: Guid(0a25cb574755f36a6ac33c59544ac4df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Base_Color.png using Guid(0a25cb574755f36a6ac33c59544ac4df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057f1347a4bae8f665d7e7f60ac0b479') in 0,006753 seconds
+  Import took 0,009818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000246 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Normal.png
+  artifactKey: Guid(689d9c998b03e1e0885a21ce48ec7aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Normal.png using Guid(689d9c998b03e1e0885a21ce48ec7aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c8500723ee3b6755c8fd55214ba7f4a') in 0,003243 seconds
+  Import took 0,004709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000227 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Normal_OpenGL.png
+  artifactKey: Guid(f1d357829535117d696925ea6feb04f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Normal_OpenGL.png using Guid(f1d357829535117d696925ea6feb04f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd23cff4fea07365617b7312848989c6e') in 0,005773 seconds
+  Import took 0,008702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000404 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Metallic.png
+  artifactKey: Guid(511ba6eddb255dd39823e731ed020a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Metallic.png using Guid(511ba6eddb255dd39823e731ed020a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02250bbd956a63e6b8dc9e9fec654bc') in 0,006116 seconds
+  Import took 0,008696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000234 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Height.png
+  artifactKey: Guid(e10c2fa61ccaa363ca2829ab77774622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Height.png using Guid(e10c2fa61ccaa363ca2829ab77774622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3f8a03dabe99110591517957a1f9a0') in 0,022628 seconds
+  Import took 0,025428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000317 seconds.
+  path: Assets/Prefabs/Garbage/box/Textures/default_Roughness.png
+  artifactKey: Guid(4cbec5eedc6ea83bc8630598e1e9d83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/Textures/default_Roughness.png using Guid(4cbec5eedc6ea83bc8630598e1e9d83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d84e53889c5ead3e8d70df1831fa76b') in 0,006005 seconds
+  Import took 0,008872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4,241265 seconds.
+  path: Assets/Prefabs/Garbage/box/3D models
+  artifactKey: Guid(6aa264187986213439969d7efd29ea1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/3D models using Guid(6aa264187986213439969d7efd29ea1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8876e577ce60e142fa58ec51ae69ef') in 0,038319 seconds
+  Import took 0,042698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000256 seconds.
+  path: Assets/Prefabs/Garbage/box/3D models/Box.fbx
+  artifactKey: Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/3D models/Box.fbx using Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e0eed697585a2f3db4241d3d4a8a052') in 0,268485 seconds
+  Import took 0,271378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000163 seconds.
+  path: Assets/Prefabs/Garbage/box/3D models/Box.3ds
+  artifactKey: Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/3D models/Box.3ds using Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eaaec3ef21d9938fc546346449aa313') in 0,045103 seconds
+  Import took 0,047130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000127 seconds.
+  path: Assets/Prefabs/Garbage/box/3D models/Box.obj
+  artifactKey: Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/3D models/Box.obj using Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '378943b534f389365385da461e45f40d') in 0,012133 seconds
+  Import took 0,014235 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,004386 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,700 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2288.
+Total: 3,274852 ms (FindLiveObjects: 0,263514 ms CreateObjectMapping: 0,102713 ms MarkObjects: 2,790654 ms  DeleteObjects: 0,116669 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001591 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,667 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2291.
+Total: 3,079025 ms (FindLiveObjects: 0,266159 ms CreateObjectMapping: 0,095649 ms MarkObjects: 2,596540 ms  DeleteObjects: 0,119204 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001749 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,714 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2294.
+Total: 3,339403 ms (FindLiveObjects: 0,208872 ms CreateObjectMapping: 0,063489 ms MarkObjects: 2,929524 ms  DeleteObjects: 0,136336 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001795 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2297.
+Total: 5,325367 ms (FindLiveObjects: 0,395161 ms CreateObjectMapping: 0,075131 ms MarkObjects: 4,538902 ms  DeleteObjects: 0,314840 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001650 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2300.
+Total: 2,815801 ms (FindLiveObjects: 0,222637 ms CreateObjectMapping: 0,058760 ms MarkObjects: 2,427062 ms  DeleteObjects: 0,106490 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002454 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,824 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2303.
+Total: 4,285246 ms (FindLiveObjects: 0,289222 ms CreateObjectMapping: 0,095209 ms MarkObjects: 3,697945 ms  DeleteObjects: 0,201688 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,003274 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,153 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2306.
+Total: 4,363894 ms (FindLiveObjects: 0,401644 ms CreateObjectMapping: 0,091321 ms MarkObjects: 3,724245 ms  DeleteObjects: 0,145794 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001693 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,058 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2309.
+Total: 3,927456 ms (FindLiveObjects: 0,244378 ms CreateObjectMapping: 0,043952 ms MarkObjects: 3,441695 ms  DeleteObjects: 0,195998 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,003026 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,943 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2312.
+Total: 3,734463 ms (FindLiveObjects: 0,234519 ms CreateObjectMapping: 0,047549 ms MarkObjects: 3,205141 ms  DeleteObjects: 0,246382 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002795 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,025 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2315.
+Total: 4,855135 ms (FindLiveObjects: 0,709280 ms CreateObjectMapping: 0,083467 ms MarkObjects: 3,755914 ms  DeleteObjects: 0,303990 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1882,049017 seconds.
+  path: Assets/Prefabs/Garbage/box/3D models/Box.stl
+  artifactKey: Guid(343b57cd15bcbdec1887e1cdd48e918b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/box/3D models/Box.stl using Guid(343b57cd15bcbdec1887e1cdd48e918b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd44cfb99018f47d875864b97436cb5') in 0,018419 seconds
+  Import took 0,023350 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001660 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,677 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2318.
+Total: 4,723348 ms (FindLiveObjects: 0,294593 ms CreateObjectMapping: 0,071514 ms MarkObjects: 4,173306 ms  DeleteObjects: 0,182813 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001547 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,627 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2321.
+Total: 3,500184 ms (FindLiveObjects: 0,259938 ms CreateObjectMapping: 0,106770 ms MarkObjects: 3,015656 ms  DeleteObjects: 0,116338 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

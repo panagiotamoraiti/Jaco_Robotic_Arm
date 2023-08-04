@@ -30,7 +30,8 @@ public class CameraDetection : MonoBehaviour
     public GameObject TargetPlacement { get => m_TargetPlacement; set => m_TargetPlacement = value; }
 
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
-    readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
+    // readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
+    Vector3 box_place = new Vector3(0.315f, 0.4f, 0.121f);
     
     // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
     Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
@@ -157,8 +158,8 @@ public class CameraDetection : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = -56f;
-        rightDrive.target = -56f;
+        leftDrive.target = -60f;
+        rightDrive.target = -60f;
 
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
@@ -201,7 +202,8 @@ public class CameraDetection : MonoBehaviour
         // Place Pose
         request.place_pose = new PoseMsg
         {
-            position = (m_TargetPlacement.transform.localPosition + m_PickPoseOffset).To<FLU>(),
+            // position = (m_TargetPlacement.transform.localPosition + m_PickPoseOffset).To<FLU>(),
+            position = box_place.To<FLU>(),
             orientation = m_PickOrientation.To<FLU>()
         };
 
