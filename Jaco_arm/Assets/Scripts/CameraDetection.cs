@@ -25,10 +25,6 @@ public class CameraDetection : MonoBehaviour
     [SerializeField]
     GameObject m_j2n6s200;
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
-    [SerializeField]
-    GameObject m_TargetPlacement;
-    public GameObject TargetPlacement { get => m_TargetPlacement; set => m_TargetPlacement = value; }
-
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     // readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
     Vector3 box_place = new Vector3(0.315f, 0.4f, 0.121f);
@@ -202,7 +198,6 @@ public class CameraDetection : MonoBehaviour
         // Place Pose
         request.place_pose = new PoseMsg
         {
-            // position = (m_TargetPlacement.transform.localPosition + m_PickPoseOffset).To<FLU>(),
             position = box_place.To<FLU>(),
             orientation = m_PickOrientation.To<FLU>()
         };

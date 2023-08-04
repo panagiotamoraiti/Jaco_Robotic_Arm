@@ -51,7 +51,6 @@ while(True):
             image = np.expand_dims(image, axis=0)
             
             
-
             # Back to detecting
             prediction = new_model.predict(image)
             #print(prediction)
@@ -74,47 +73,55 @@ while(True):
             
             transform_ratio = 0.1/marker_width
 
-            txt_list = []
-            for i in range(len(prediction[0])):
-                if i == 0:
-                    if (os.path.isfile(output_file_path)):
-                        os.remove(output_file_path)
+            if len(prediction[0]) > 0:
+                txt_list = []
+                for i in range(len(prediction[0])):
+                    if i == 0:
+                        if (os.path.isfile(output_file_path)):
+                            os.remove(output_file_path)
+                        
+                     #print(prediction[0][i])
+                    (sy, sx, ey, ex, conf) = prediction[0][i]
+                    #print(sx, sy, ex, ey, conf)
+
+                    sx = int(sx * w)
+                    sy = int(sy * h)
+                    ex = int(ex * w)
+                    ey = int(ey * h)
+
+                    center_x = (sx + ex) // 2
+                    center_y = (sy + ey) // 2
                     
-                 #print(prediction[0][i])
-                (sy, sx, ey, ex, conf) = prediction[0][i]
-                #print(sx, sy, ex, ey, conf)
+                    # Y axis in Opencv is -Z axis in Unity 
+                    move_x = (end_effector_x - center_x) * transform_ratio
+                    move_z = -(end_effector_y - center_y) * transform_ratio
+                    
+                    move_x = round(move_x, 3)
+                    move_z = round(move_z, 3)
 
-                sx = int(sx * w)
-                sy = int(sy * h)
-                ex = int(ex * w)
-                ey = int(ey * h)
+                    # Draw a small circle at the center of the rectangle
+                    circle_radius = 3
+                    circle_color = (255, 0, 0)  
+                    cv2.circle(img, (center_x, center_y), circle_radius, circle_color, -1)
 
-                center_x = (sx + ex) // 2
-                center_y = (sy + ey) // 2
-                
-                # Y axis in Opencv is -Z axis in Unity 
-                move_x = (end_effector_x - center_x) * transform_ratio
-                move_z = -(end_effector_y - center_y) * transform_ratio
-                
-                move_x = round(move_x, 3)
-                move_z = round(move_z, 3)
+                    
+                    with open(output_file_path, 'a+') as output_file:
+                        if (center_x, center_y) not in txt_list:
+                            output_file.write(f"{move_x}\n{move_z}\n")
+                            txt_list.append((center_x, center_y))
 
-                # Draw a small circle at the center of the rectangle
-                circle_radius = 3
-                circle_color = (255, 0, 0)  
-                cv2.circle(img, (center_x, center_y), circle_radius, circle_color, -1)
-
+                    cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
+            else:
+                if (os.path.isfile(output_file_path)):
+                    os.remove(output_file_path)
                 
                 with open(output_file_path, 'a+') as output_file:
-                    if (center_x, center_y) not in txt_list:
-                        # output_file.write(f"({center_x}, {center_y})\n")
-                        output_file.write(f"{move_x}\n{move_z}\n")
-                        txt_list.append((center_x, center_y))
-
-                cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
-                
+                    output_file.write(f"0\n0\n")
+                  
+            cv2.imwrite('./../output_image.jpg', img)
+            # Remove image
+            os.remove(image_path)
             
-                
-            cv2.imshow("image", img)
-            cv2.waitKey(100)
+            #cv2.imshow("image", img)
+            #cv2.waitKey(1)
 

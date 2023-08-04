@@ -8,6 +8,7 @@ import sys
 import copy
 import math
 import moveit_commander
+import os
 
 import moveit_msgs.msg
 from moveit_msgs.msg import Constraints, JointConstraint, PositionConstraint, OrientationConstraint, BoundingVolume
@@ -61,11 +62,12 @@ def read_values():
     with open(file_path, 'r') as file:
         line_1 = file.readline().strip()
         line_2 = file.readline().strip()
+        
         if line_1 == "":
             line_1 = 0
         if line_2 == "":
             line_2 = 0
-        
+                  
     return float(line_1), float(line_2)
 
 """

@@ -16,6 +16,9 @@ from object_detection.utils import visualization_utils as vis_util
 from object_detection.utils import dataset_util, label_map_util
 from object_detection.protos import string_int_label_map_pb2
 
+end_effector_x = 317
+end_effector_y = 354
+
 # reconstruct frozen graph
 def reconstruct(pb_path):
     if not os.path.isfile(pb_path):
@@ -62,44 +65,63 @@ def detect(detection_graph, test_image_path, img):
         )
 
         w, h = image.size
- 
-        first_box_coordinates = boxes[0][0]
-        y_min, x_min, y_max, x_max = first_box_coordinates
- 
-        x_min = int(x_min * w)
-        y_min = int(y_min * h)
-        x_max = int(x_max * w)
-        y_max = int(y_max * h)
- 
-        # Calculate the center coordinates
-        center_y = (y_min + y_max) // 2
-        center_x = (x_min + x_max) // 2        
         
         npim = image2np(image)
+        npim = cv2.cvtColor(npim, cv2.COLOR_BGR2RGB)
         
-        vis_util.visualize_boxes_and_labels_on_image_array(
-            npim,
-            np.squeeze(boxes),
-            np.squeeze(classes).astype(np.int32),
-            np.squeeze(scores),
-            category_index,
-            use_normalized_coordinates=True,
-            line_thickness=5,
-            min_score_thresh=.3)
-            
-        # Draw a circle at the center of the bounding box
-        center = (center_x * width, center_y * height)
-        circle_color = (255, 0, 0)  
-        circle_radius = 3 
-        circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
+        if (num>0):
+            first_box_coordinates = boxes[0][0]
+            y_min, x_min, y_max, x_max = first_box_coordinates
+
+            x_min = int(x_min * w)
+            y_min = int(y_min * h)
+            x_max = int(x_max * w)
+            y_max = int(y_max * h)
+
+            # Calculate the center coordinates
+            center_y = (y_min + y_max) // 2
+            center_x = (x_min + x_max) // 2        
+		            
+            # Y axis in Opencv is -Z axis in Unity 
+            move_x = (end_effector_x - center_x) * transform_ratio
+            move_z = -(end_effector_y - center_y) * transform_ratio
+
+            move_x = round(move_x, 3)
+            move_z = round(move_z, 3)
+
+            vis_util.visualize_boxes_and_labels_on_image_array(
+	            npim,
+	            np.squeeze(boxes),
+	            np.squeeze(classes).astype(np.int32),
+	            np.squeeze(scores),
+	            category_index,
+	            use_normalized_coordinates=True,
+	            line_thickness=5,
+	            min_score_thresh=.3)
+
+            # Draw a circle at the center of the bounding box
+            center = (center_x * width, center_y * height)
+            circle_color = (255, 0, 0)  
+            circle_radius = 3 
+            circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
+
+            if (os.path.isfile(output_file_path)):
+                os.remove(output_file_path)
+	            
+            with open(output_file_path, 'a+') as output_file:
+                output_file.write(f"{move_x}\n{move_z}\n")
+
+        else:
+            if (os.path.isfile(output_file_path)):
+                os.remove(output_file_path)
+                
+            with open(output_file_path, 'a+') as output_file:
+                output_file.write(f"0\n0\n")
         
-        with open(output_file_path, 'a+') as output_file:
-        	output_file.write(f"({center_x}, {center_y})\n")
-        
-        cv2.imshow("image", npim)
-        cv2.waitKey(0)
-        
-        cv2.destroyAllWindows()
+        #cv2.imshow("image", npim)
+        cv2.imwrite('./../output_image.jpg', npim)
+        #cv2.waitKey(1) 
+        #cv2.destroyAllWindows()
 
 
 DATA_DIR = './../Garbage Detection'
@@ -140,28 +162,38 @@ directory_Path = './../../Jaco_arm/Screenshots'
 
 while(True):
     for filename in os.listdir(directory_Path):
-        # Check if the file has an image extension
-        if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):
-            # Destroy previously created text files
-            filename_no_ext, _ = os.path.splitext(filename)
-            output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
+        filename_no_ext, _ = os.path.splitext(filename)
+        output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
             
-            if (os.path.isfile(output_file_path)):
-                os.remove(output_file_path)
-                
+        # Check if the file has an image extension
+        if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):                           
             # Get the full path of the image file
             image_path = os.path.join(directory_Path, filename)
 
             image = cv2.imread(image_path)
             height, width, _ = image.shape
-            resized_image = cv2.resize(image, (height//4, width//4))
-            height, width, _ = resized_image.shape
-            #cv2.imwrite('./../Garbage Detection/images/output_image.jpg', resized_image)
-            cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
 
-            detect(detection_graph, directory_Path + '/' + filename + '_resized.jpg', False)
+            # Detect markers
+            dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
+            parameters = cv2.aruco.DetectorParameters()
+            detector = cv2.aruco.ArucoDetector(dictionary, parameters)
+            markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(image)
+            cv2.aruco.drawDetectedMarkers(image, markerCorners, markerIds)
+            # print(markerCorners)
             
-            os.remove(directory_Path + '/' + filename + '_resized.jpg')
-
-       
+            for corners in markerCorners:
+                # Compute the Euclidean distance between corners to find width and height
+                marker_width = abs(corners[0][0][0] - corners[0][1][0])
+                marker_height = abs(corners[0][0][1] - corners[0][3][1])
+            
+            transform_ratio = 0.1/marker_width
+            
+            #resized_image = cv2.resize(image, (height//4, width//4))
+            #height, width, _ = resized_image.shape 
+            #cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
+            detect(detection_graph, image_path, False)    
+            #os.remove(directory_Path + '/' + filename + '_resized.jpg')
+            
+            # Remove image
+            os.remove(image_path)
 
