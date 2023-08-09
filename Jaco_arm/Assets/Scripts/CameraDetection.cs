@@ -40,6 +40,11 @@ public class CameraDetection : MonoBehaviour
     public string savePath = "Screenshots/";
     public string fileNamePrefix = "screenshot";
     
+       // for raycast
+    public LayerMask raycastMask = -1;
+    public Transform raycastOrigin; // Reference to a child GameObject acting as the raycast origin
+    private string filePath = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt";
+
     public int stage;
 
     // Articulation Bodies
@@ -85,6 +90,36 @@ public class CameraDetection : MonoBehaviour
         Debug.Log("Starting Coroutine Pregrasp.");
         yield return new WaitForSeconds(5.0f);
         
+        // Raycast sensor
+         if (raycastOrigin == null)
+            {
+                Debug.LogError("Raycast origin (child GameObject) is not assigned!");
+            }
+
+            // Cast a ray from the raycast origin's position towards its forward direction
+            Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
+            RaycastHit hit;
+
+            // Check if the ray hits an object on the specified layer
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastMask))
+            {
+                // Get the distance between the raycast origin and the hit object
+                float distance = Vector3.Distance(raycastOrigin.position, hit.point);
+                 
+                // Draw the ray from the origin to the hit point
+                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, 2f);
+
+                // You can now use the 'distance' value as needed (e.g., print it, display it in UI, etc.)
+                Debug.Log("Distance from camera center to object: " + distance);
+                
+                // Write the distance to the .txt file
+                WriteDistanceToFile(distance);
+            }
+            else
+            {
+                Debug.Log("Raycast did not hit any object.");
+            }
+        
         stage = (int)Poses.GoDown;
         PublishJoints();
         Debug.Log("Starting Coroutine GoDown.");
@@ -101,6 +136,16 @@ public class CameraDetection : MonoBehaviour
 
     }
     
+    
+     private void WriteDistanceToFile(float distance)
+    {
+        // Create the new .txt file
+        using (StreamWriter writer = new StreamWriter(filePath, false))
+        {
+            writer.WriteLine(distance);
+        }
+    }
+     
     
     private void CaptureScreen()
         {
@@ -239,7 +284,7 @@ public class CameraDetection : MonoBehaviour
             for (var poseIndex = stage; poseIndex < stage+1; poseIndex++)
             {
                 
-                // Close the gripper if completed executing the trajectory for the Grasp pose
+                // Close the gripper
                 if (poseIndex == (int)Poses.GraspAndPlace)
                 {
                     yield return new WaitForSeconds(k_PoseAssignmentWait);

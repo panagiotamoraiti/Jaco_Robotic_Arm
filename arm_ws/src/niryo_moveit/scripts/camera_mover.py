@@ -69,6 +69,18 @@ def read_values():
             line_2 = 0
                   
     return float(line_1), float(line_2)
+    
+def read_distance():
+    file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt'
+    
+    # Read the values
+    with open(file_path, 'r') as file:
+        line = file.readline().strip()
+        
+        if line == "":
+            line = 0
+                  
+    return float(line)
 
 """
     Creates a pick and place plan using the four states below.
@@ -121,8 +133,20 @@ def plan_pick_and_place(req):
 
 
     # Go Down - lower gripper so it can grab the object
-    #pick_pose = copy.deepcopy(req.pick_pose)
-    pick_pose.position.z -= 0.47
+    file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt'
+    move_y = read_distance()  
+    
+    with open(file_path, 'w') as file:
+        file.write('0')         
+
+    if move_y >= 0.45:
+        move_y = 0.47
+    elif move_y == 0:
+        move_y = 0 
+    else:
+        move_y += 0.02 
+    
+    pick_pose.position.z -= move_y
     go_down_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
     
     if not go_down_pose.joint_trajectory.points:

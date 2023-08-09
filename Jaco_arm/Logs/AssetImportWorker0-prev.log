@@ -13,11 +13,15 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-35035
+44615
 Successfully changed project path to: /home/beast1/Jaco_Robotic_Arm/Jaco_arm
 /home/beast1/Jaco_Robotic_Arm/Jaco_arm
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 79,98 ms, found 2 plugins.
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 29,68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path /home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -33,813 +37,169 @@ _buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth
 _tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_
 ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT
 _texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_vdpau_interop GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -1147471136
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 77284288
 Initialize mono
 Mono path[0] = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56502
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56734
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,001185 seconds.
+Registered in 0,000992 seconds.
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 26,66 ms, found 2 plugins.
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 29,56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0,827 seconds
+- Completed reload, in  0,639 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0,002980 seconds.
+Registered in 0,001793 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 40,74 ms, found 2 plugins.
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 26,36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,131 seconds
+- Completed reload, in  0,767 seconds
 Platform modules already initialized, skipping
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 ========================================================================
 Worker process is ready to serve import requests
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2167.
-Total: 2,898766 ms (FindLiveObjects: 0,206688 ms CreateObjectMapping: 0,069360 ms MarkObjects: 2,403988 ms  DeleteObjects: 0,217698 ms)
+Total: 4,566293 ms (FindLiveObjects: 0,221736 ms CreateObjectMapping: 0,101770 ms MarkObjects: 3,949116 ms  DeleteObjects: 0,291767 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/DetectionScene.unity
-  artifactKey: Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/DetectionScene.unity using Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fccfba7c3e32485042164ded54a14c') in 0,010972 seconds
-  Import took 0,014928 seconds .
+  path: Assets/Scripts/CameraDetection.cs
+  artifactKey: Guid(241b0f149f1274f36a2680f82a697048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraDetection.cs using Guid(241b0f149f1274f36a2680f82a697048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a77fab9c5e52eb1dd0a720373ab825') in 0,004830 seconds
+  Import took 0,008093 seconds .
 
 ========================================================================
 Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 Registering precompiled user dll's ...
-Registered in 0,003934 seconds.
+Registered in 0,001756 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,013 seconds
+- Completed reload, in  0,704 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
+System memory in use before: 69,6 MB.
+System memory in use after: 69,6 MB.
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2170.
-Total: 4,223661 ms (FindLiveObjects: 0,155512 ms CreateObjectMapping: 0,031399 ms MarkObjects: 3,919681 ms  DeleteObjects: 0,115777 ms)
+Total: 2,592833 ms (FindLiveObjects: 0,185227 ms CreateObjectMapping: 0,055174 ms MarkObjects: 2,249438 ms  DeleteObjects: 0,102001 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 39,118172 seconds.
+  path: Assets/Scripts/CameraDetection.cs
+  artifactKey: Guid(241b0f149f1274f36a2680f82a697048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraDetection.cs using Guid(241b0f149f1274f36a2680f82a697048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4af1ba3f1208445e20248952c575f6c') in 0,004301 seconds
+  Import took 0,007787 seconds .
 
 ========================================================================
 Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 Registering precompiled user dll's ...
-Registered in 0,002113 seconds.
+Registered in 0,001887 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0,927 seconds
+- Completed reload, in  0,742 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,60 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2173.
-Total: 3,336237 ms (FindLiveObjects: 0,192181 ms CreateObjectMapping: 0,040526 ms MarkObjects: 2,984617 ms  DeleteObjects: 0,118072 ms)
+Total: 3,999922 ms (FindLiveObjects: 0,201589 ms CreateObjectMapping: 0,084979 ms MarkObjects: 3,611503 ms  DeleteObjects: 0,100899 ms)
 
 ========================================================================
 Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 Registering precompiled user dll's ...
-Registered in 0,003128 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,959 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,74 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2176.
-Total: 3,801409 ms (FindLiveObjects: 0,377718 ms CreateObjectMapping: 0,042249 ms MarkObjects: 3,240197 ms  DeleteObjects: 0,140173 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002800 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,038 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2179.
-Total: 2,726142 ms (FindLiveObjects: 0,164969 ms CreateObjectMapping: 0,056196 ms MarkObjects: 2,405601 ms  DeleteObjects: 0,098504 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002988 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,024 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,71 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2182.
-Total: 3,151380 ms (FindLiveObjects: 0,189746 ms CreateObjectMapping: 0,040606 ms MarkObjects: 2,791856 ms  DeleteObjects: 0,128441 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002867 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,60 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,029 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,69 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2185.
-Total: 3,928287 ms (FindLiveObjects: 0,231985 ms CreateObjectMapping: 0,041879 ms MarkObjects: 3,514211 ms  DeleteObjects: 0,139221 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002888 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,90 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,995 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,99 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,5 MB.
-System memory in use after: 69,5 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2188.
-Total: 3,619427 ms (FindLiveObjects: 0,239650 ms CreateObjectMapping: 0,042399 ms MarkObjects: 3,201935 ms  DeleteObjects: 0,134642 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002759 seconds.
+Registered in 0,001723 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,007 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,61 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2191.
-Total: 4,008287 ms (FindLiveObjects: 0,259597 ms CreateObjectMapping: 0,043211 ms MarkObjects: 3,457624 ms  DeleteObjects: 0,246312 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002667 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,935 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,69 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2194.
-Total: 3,815806 ms (FindLiveObjects: 0,206928 ms CreateObjectMapping: 0,039304 ms MarkObjects: 3,390058 ms  DeleteObjects: 0,178565 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002844 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,61 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,051 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,60 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2197.
-Total: 2,817915 ms (FindLiveObjects: 0,170840 ms CreateObjectMapping: 0,035136 ms MarkObjects: 2,493446 ms  DeleteObjects: 0,117470 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002908 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,082 seconds
+- Completed reload, in  0,703 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0,70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2200.
-Total: 3,632032 ms (FindLiveObjects: 0,240321 ms CreateObjectMapping: 0,041909 ms MarkObjects: 3,202696 ms  DeleteObjects: 0,146315 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,003292 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,084 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,64 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2203.
-Total: 3,503290 ms (FindLiveObjects: 0,263554 ms CreateObjectMapping: 0,046598 ms MarkObjects: 3,029802 ms  DeleteObjects: 0,162685 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,003047 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,956 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,6 MB.
-System memory in use after: 69,6 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2206.
-Total: 2,624091 ms (FindLiveObjects: 0,189475 ms CreateObjectMapping: 0,055684 ms MarkObjects: 2,216496 ms  DeleteObjects: 0,161172 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1260,410311 seconds.
-  path: Assets/Materials/New Physic Material.physicMaterial
-  artifactKey: Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/New Physic Material.physicMaterial using Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9bb0031777fe935347995e213bc6f03') in 0,012294 seconds
-  Import took 0,015372 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002581 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,848 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 69,7 MB.
 System memory in use after: 69,7 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2209.
-Total: 3,756044 ms (FindLiveObjects: 0,308528 ms CreateObjectMapping: 0,078226 ms MarkObjects: 3,042276 ms  DeleteObjects: 0,323487 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2176.
+Total: 3,264682 ms (FindLiveObjects: 0,164057 ms CreateObjectMapping: 0,079529 ms MarkObjects: 2,899027 ms  DeleteObjects: 0,120866 ms)
 
 ========================================================================
 Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
 Registering precompiled user dll's ...
-Registered in 0,002901 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,908 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,7 MB.
-System memory in use after: 69,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2212.
-Total: 3,762837 ms (FindLiveObjects: 0,463780 ms CreateObjectMapping: 0,063139 ms MarkObjects: 3,087149 ms  DeleteObjects: 0,147076 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002950 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,064 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,7 MB.
-System memory in use after: 69,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2215.
-Total: 4,001204 ms (FindLiveObjects: 0,237816 ms CreateObjectMapping: 0,042650 ms MarkObjects: 3,547723 ms  DeleteObjects: 0,171672 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 284,895110 seconds.
-  path: Assets/Scenes/DetectionScene.unity
-  artifactKey: Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/DetectionScene.unity using Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbc1b5603226bdae1397a4036ce46a6') in 0,017167 seconds
-  Import took 0,021423 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,003035 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,064 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,59 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,7 MB.
-System memory in use after: 69,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2218.
-Total: 2,482646 ms (FindLiveObjects: 0,152657 ms CreateObjectMapping: 0,032611 ms MarkObjects: 2,074150 ms  DeleteObjects: 0,222688 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,001829 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,89 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,115 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,7 MB.
-System memory in use after: 69,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2221.
-Total: 3,956791 ms (FindLiveObjects: 0,284694 ms CreateObjectMapping: 0,035046 ms MarkObjects: 3,436335 ms  DeleteObjects: 0,199635 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,003091 seconds.
+Registered in 0,002731 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,041 seconds
+- Completed reload, in  0,757 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 69,7 MB.
 System memory in use after: 69,7 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2224.
-Total: 4,681029 ms (FindLiveObjects: 0,244328 ms CreateObjectMapping: 0,042630 ms MarkObjects: 4,211658 ms  DeleteObjects: 0,181240 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 149,287206 seconds.
-  path: Assets/Materials/New Physic Material.physicMaterial
-  artifactKey: Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/New Physic Material.physicMaterial using Guid(05a2f0b04063b5681a3370ec3d46aef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf9accfa6313d976308b09df40f3221') in 0,011320 seconds
-  Import took 0,014703 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002643 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,998 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,65 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 69,7 MB.
-System memory in use after: 69,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2227.
-Total: 6,753596 ms (FindLiveObjects: 0,224030 ms CreateObjectMapping: 0,041328 ms MarkObjects: 6,231837 ms  DeleteObjects: 0,255158 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 198,774450 seconds.
-  path: Assets/Resources/ROSConnectionPrefab.prefab
-  artifactKey: Guid(ff910f64d068a6a9cba3997205f0ff07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ROSConnectionPrefab.prefab using Guid(ff910f64d068a6a9cba3997205f0ff07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f1fa52e5e80c604126339589985e451') in 0,032179 seconds
-  Import took 0,035693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8,264664 seconds.
-  path: Assets/Prefabs/14025_Soda_Can_diff.jpg
-  artifactKey: Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/14025_Soda_Can_diff.jpg using Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d389a72029ff00f141723d541d9dbf6') in 0,041147 seconds
-  Import took 0,044500 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000125 seconds.
-  path: Assets/Prefabs/14025_Soda_Can_v3_l3.obj
-  artifactKey: Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.obj using Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867c2accaa248b0344fed5d95879385e') in 0,114028 seconds
-  Import took 0,117405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000117 seconds.
-  path: Assets/Prefabs/14025_Soda_Can_diff.jpg
-  artifactKey: Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/14025_Soda_Can_diff.jpg using Guid(d2f0fc41ebe190cd7b68410ec502ebdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d389a72029ff00f141723d541d9dbf6') in 0,004788 seconds
-  Import took 0,007721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9,976416 seconds.
-  path: Assets/Prefabs/14025_Soda_Can_v3_l3.mtl
-  artifactKey: Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.mtl using Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb56f1288fed89a6701cbf6b1317360') in 0,001128 seconds
-  Import took 0,004486 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,005706 seconds.
-  path: Assets/Prefabs/14025_Soda_Can_v3_l3.mtl
-  artifactKey: Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/14025_Soda_Can_v3_l3.mtl using Guid(1a6e461dddeec0545bbfb6104078b9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb56f1288fed89a6701cbf6b1317360') in 0,001029 seconds
-  Import took 0,004866 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002985 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,989 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1,18 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,4 MB.
-System memory in use after: 71,4 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2274.
-Total: 4,446349 ms (FindLiveObjects: 0,270407 ms CreateObjectMapping: 0,070002 ms MarkObjects: 3,836875 ms  DeleteObjects: 0,268023 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,020 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,4 MB.
-System memory in use after: 71,4 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2277.
-Total: 4,345920 ms (FindLiveObjects: 0,452368 ms CreateObjectMapping: 0,047990 ms MarkObjects: 3,704047 ms  DeleteObjects: 0,140603 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0,002812 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,111 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,74 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,5 MB.
-System memory in use after: 71,4 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2280.
-Total: 6,317588 ms (FindLiveObjects: 0,353653 ms CreateObjectMapping: 0,145403 ms MarkObjects: 5,623386 ms  DeleteObjects: 0,193513 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 724,140519 seconds.
-  path: Assets/Prefabs/pick_and_place
-  artifactKey: Guid(d425a0575438413a49ffd846e6695b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/pick_and_place using Guid(d425a0575438413a49ffd846e6695b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde22bd7b3c1800954d6734900963b73') in 0,004154 seconds
-  Import took 0,007485 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20,088358 seconds.
-  path: Assets/Prefabs/Garbage
-  artifactKey: Guid(2356b72575f294bcbbe4e7de699c342b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage using Guid(2356b72575f294bcbbe4e7de699c342b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abca5c882296d063d8a1c36d0950ce3') in 0,000964 seconds
-  Import took 0,004454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5,882864 seconds.
-  path: Assets/Prefabs/Garbage/14025_Soda_Can_v3_l3.obj
-  artifactKey: Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/14025_Soda_Can_v3_l3.obj using Guid(8f13c3bb44a54699e8cac87ccd0beb65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '905519e97550b1c10f907d8d8e391d0e') in 0,096886 seconds
-  Import took 0,100377 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4,777659 seconds.
-  path: Assets/Prefabs/Garbage/1441.jpg
-  artifactKey: Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/1441.jpg using Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51129527da30ff05866aea7a663c76ad') in 0,011012 seconds
-  Import took 0,014716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,005140 seconds.
-  path: Assets/Prefabs/Garbage/1441.jpg
-  artifactKey: Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/1441.jpg using Guid(1eee8c55d8d2cac08bf9dd4380664b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51129527da30ff05866aea7a663c76ad') in 0,002864 seconds
-  Import took 0,005321 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5,421024 seconds.
-  path: Assets/Prefabs/Garbage/rattan difuse.jpg
-  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16943075a28313bfa486f596e3a2c5ee') in 0,001021 seconds
-  Import took 0,004281 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000561 seconds.
-  path: Assets/Prefabs/Garbage/rattan difuse.jpg
-  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16943075a28313bfa486f596e3a2c5ee') in 0,000885 seconds
-  Import took 0,003313 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 222,458724 seconds.
-  path: Assets/Prefabs/Garbage/ff.max
-  artifactKey: Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/ff.max using Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53ac88302d349b00ace66feb7dd8593') in 0,000991 seconds
-  Import took 0,004299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000645 seconds.
-  path: Assets/Prefabs/Garbage/ff.max
-  artifactKey: Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/ff.max using Guid(6a65740968b5bda3a811bb5ea42a68cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53ac88302d349b00ace66feb7dd8593') in 0,000889 seconds
-  Import took 0,002980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 649,215794 seconds.
-  path: Assets/Prefabs/Garbage/rattan difuse.jpg
-  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f731cde560538485400d0280da6316') in 0,004936 seconds
-  Import took 0,008234 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000170 seconds.
-  path: Assets/Prefabs/Garbage/rattan_-basket.jpg
-  artifactKey: Guid(bf6cd6c8022923e8cb0af30983bf6daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan_-basket.jpg using Guid(bf6cd6c8022923e8cb0af30983bf6daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f2f039e4bf3cbaf0cd7a6d0617fb0d') in 0,002941 seconds
-  Import took 0,004601 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000156 seconds.
-  path: Assets/Prefabs/Garbage/rattan difuse.jpg
-  artifactKey: Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan difuse.jpg using Guid(9f939152298b4b843aecc40944e7c540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f731cde560538485400d0280da6316') in 0,003497 seconds
-  Import took 0,005838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000147 seconds.
-  path: Assets/Prefabs/Garbage/rattan opacity.jpg
-  artifactKey: Guid(efe23f3ee486f19faa0621d89028396f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/rattan opacity.jpg using Guid(efe23f3ee486f19faa0621d89028396f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5832b4eb010353bec9733aebcf9050c8') in 0,002865 seconds
-  Import took 0,004643 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13,599187 seconds.
-  path: Assets/Prefabs/Garbage/Soda Can
-  artifactKey: Guid(79d7af9a187d43084b03d890ad1caa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/Soda Can using Guid(79d7af9a187d43084b03d890ad1caa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8254b1917f1ac77c6ecf635a12da04e5') in 0,038680 seconds
-  Import took 0,042744 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11,737524 seconds.
-  path: Assets/Prefabs/Garbage/Basket
-  artifactKey: Guid(44a4da761d51758d9a0d6d5e12569bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/Basket using Guid(44a4da761d51758d9a0d6d5e12569bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6316b92238c634c5a5a7bc1357152ed3') in 0,038455 seconds
-  Import took 0,042906 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11,650151 seconds.
-  path: Assets/Prefabs/Garbage/Basket/Rattan_Basket_mesh.max
-  artifactKey: Guid(a6527cf48f83f31fb98e3998fbb1eeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/Basket/Rattan_Basket_mesh.max using Guid(a6527cf48f83f31fb98e3998fbb1eeda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc623ce6c33f14ceca365cc319d2662d') in 0,038770 seconds
-  Import took 0,043036 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 587,879465 seconds.
-  path: Assets/Prefabs/Garbage/box
-  artifactKey: Guid(48bbfbc1ddc20f34086695f61aed4c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box using Guid(48bbfbc1ddc20f34086695f61aed4c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fcd84e4350e61ab0ee82bb84f02c38a') in 0,038241 seconds
-  Import took 0,042053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000206 seconds.
-  path: Assets/Prefabs/Garbage/box/Render_1.jpg
-  artifactKey: Guid(6abb789c4806619d791d3e6f6441fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Render_1.jpg using Guid(6abb789c4806619d791d3e6f6441fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f530175a19fa426ae1cd529ccaa0daf6') in 0,018898 seconds
-  Import took 0,022858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1,707097 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures
-  artifactKey: Guid(255d1657a39891f17aa8897f67ddc0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures using Guid(255d1657a39891f17aa8897f67ddc0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa29ccb4fa79602211c9377f03f72c59') in 0,000747 seconds
-  Import took 0,004589 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,050214 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Base_Color.png
-  artifactKey: Guid(0a25cb574755f36a6ac33c59544ac4df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Base_Color.png using Guid(0a25cb574755f36a6ac33c59544ac4df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057f1347a4bae8f665d7e7f60ac0b479') in 0,006753 seconds
-  Import took 0,009818 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000246 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Normal.png
-  artifactKey: Guid(689d9c998b03e1e0885a21ce48ec7aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Normal.png using Guid(689d9c998b03e1e0885a21ce48ec7aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c8500723ee3b6755c8fd55214ba7f4a') in 0,003243 seconds
-  Import took 0,004709 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000227 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Normal_OpenGL.png
-  artifactKey: Guid(f1d357829535117d696925ea6feb04f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Normal_OpenGL.png using Guid(f1d357829535117d696925ea6feb04f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd23cff4fea07365617b7312848989c6e') in 0,005773 seconds
-  Import took 0,008702 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000404 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Metallic.png
-  artifactKey: Guid(511ba6eddb255dd39823e731ed020a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Metallic.png using Guid(511ba6eddb255dd39823e731ed020a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02250bbd956a63e6b8dc9e9fec654bc') in 0,006116 seconds
-  Import took 0,008696 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000234 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Height.png
-  artifactKey: Guid(e10c2fa61ccaa363ca2829ab77774622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Height.png using Guid(e10c2fa61ccaa363ca2829ab77774622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3f8a03dabe99110591517957a1f9a0') in 0,022628 seconds
-  Import took 0,025428 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000317 seconds.
-  path: Assets/Prefabs/Garbage/box/Textures/default_Roughness.png
-  artifactKey: Guid(4cbec5eedc6ea83bc8630598e1e9d83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/Textures/default_Roughness.png using Guid(4cbec5eedc6ea83bc8630598e1e9d83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d84e53889c5ead3e8d70df1831fa76b') in 0,006005 seconds
-  Import took 0,008872 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4,241265 seconds.
-  path: Assets/Prefabs/Garbage/box/3D models
-  artifactKey: Guid(6aa264187986213439969d7efd29ea1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/3D models using Guid(6aa264187986213439969d7efd29ea1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8876e577ce60e142fa58ec51ae69ef') in 0,038319 seconds
-  Import took 0,042698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000256 seconds.
-  path: Assets/Prefabs/Garbage/box/3D models/Box.fbx
-  artifactKey: Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/3D models/Box.fbx using Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e0eed697585a2f3db4241d3d4a8a052') in 0,268485 seconds
-  Import took 0,271378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000163 seconds.
-  path: Assets/Prefabs/Garbage/box/3D models/Box.3ds
-  artifactKey: Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/3D models/Box.3ds using Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eaaec3ef21d9938fc546346449aa313') in 0,045103 seconds
-  Import took 0,047130 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0,000127 seconds.
-  path: Assets/Prefabs/Garbage/box/3D models/Box.obj
-  artifactKey: Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/3D models/Box.obj using Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '378943b534f389365385da461e45f40d') in 0,012133 seconds
-  Import took 0,014235 seconds .
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2179.
+Total: 2,857228 ms (FindLiveObjects: 0,215604 ms CreateObjectMapping: 0,067798 ms MarkObjects: 2,452890 ms  DeleteObjects: 0,119865 ms)
 
 ========================================================================
 Received Prepare
@@ -848,118 +208,22 @@ Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing
 Please note that FBX files exported from Cinema4D are still supported.
 
 Registering precompiled user dll's ...
-Registered in 0,004386 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,700 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2288.
-Total: 3,274852 ms (FindLiveObjects: 0,263514 ms CreateObjectMapping: 0,102713 ms MarkObjects: 2,790654 ms  DeleteObjects: 0,116669 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001591 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,667 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2291.
-Total: 3,079025 ms (FindLiveObjects: 0,266159 ms CreateObjectMapping: 0,095649 ms MarkObjects: 2,596540 ms  DeleteObjects: 0,119204 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001749 seconds.
+Registered in 0,001810 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0,714 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2294.
-Total: 3,339403 ms (FindLiveObjects: 0,208872 ms CreateObjectMapping: 0,063489 ms MarkObjects: 2,929524 ms  DeleteObjects: 0,136336 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001795 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,860 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,66 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2297.
-Total: 5,325367 ms (FindLiveObjects: 0,395161 ms CreateObjectMapping: 0,075131 ms MarkObjects: 4,538902 ms  DeleteObjects: 0,314840 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001650 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,77 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,718 seconds
+- Completed reload, in  0,726 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2300.
-Total: 2,815801 ms (FindLiveObjects: 0,222637 ms CreateObjectMapping: 0,058760 ms MarkObjects: 2,427062 ms  DeleteObjects: 0,106490 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2182.
+Total: 3,093411 ms (FindLiveObjects: 0,200085 ms CreateObjectMapping: 0,083817 ms MarkObjects: 2,694744 ms  DeleteObjects: 0,113733 ms)
 
 ========================================================================
 Received Prepare
@@ -968,22 +232,310 @@ Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing
 Please note that FBX files exported from Cinema4D are still supported.
 
 Registering precompiled user dll's ...
-Registered in 0,002454 seconds.
+Registered in 0,001850 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,687 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2185.
+Total: 4,103696 ms (FindLiveObjects: 0,205766 ms CreateObjectMapping: 0,061335 ms MarkObjects: 3,692595 ms  DeleteObjects: 0,142567 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,003527 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,713 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2188.
+Total: 2,918083 ms (FindLiveObjects: 0,225253 ms CreateObjectMapping: 0,105137 ms MarkObjects: 2,475984 ms  DeleteObjects: 0,110738 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002909 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,771 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2191.
+Total: 4,617530 ms (FindLiveObjects: 0,231024 ms CreateObjectMapping: 0,122890 ms MarkObjects: 4,092545 ms  DeleteObjects: 0,169719 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001697 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,707 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2194.
+Total: 2,747542 ms (FindLiveObjects: 0,200386 ms CreateObjectMapping: 0,048821 ms MarkObjects: 2,358173 ms  DeleteObjects: 0,139231 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001773 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,691 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,7 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2197.
+Total: 2,834376 ms (FindLiveObjects: 0,194786 ms CreateObjectMapping: 0,078116 ms MarkObjects: 2,451868 ms  DeleteObjects: 0,108744 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,005744 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,746 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,8 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2200.
+Total: 3,260665 ms (FindLiveObjects: 0,209162 ms CreateObjectMapping: 0,061465 ms MarkObjects: 2,841870 ms  DeleteObjects: 0,147016 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001771 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,717 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,8 MB.
+System memory in use after: 69,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2203.
+Total: 2,889459 ms (FindLiveObjects: 0,208300 ms CreateObjectMapping: 0,072326 ms MarkObjects: 2,484049 ms  DeleteObjects: 0,123932 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001864 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,678 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,8 MB.
+System memory in use after: 69,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2206.
+Total: 3,403874 ms (FindLiveObjects: 0,179847 ms CreateObjectMapping: 0,058230 ms MarkObjects: 2,901641 ms  DeleteObjects: 0,263093 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001771 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,706 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,8 MB.
+System memory in use after: 69,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2209.
+Total: 7,513851 ms (FindLiveObjects: 0,200095 ms CreateObjectMapping: 0,084960 ms MarkObjects: 7,019083 ms  DeleteObjects: 0,208031 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002965 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,721 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2212.
+Total: 2,652324 ms (FindLiveObjects: 0,202861 ms CreateObjectMapping: 0,077155 ms MarkObjects: 2,257774 ms  DeleteObjects: 0,113693 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,717 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2215.
+Total: 3,104732 ms (FindLiveObjects: 0,209423 ms CreateObjectMapping: 0,091902 ms MarkObjects: 2,674055 ms  DeleteObjects: 0,128240 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002123 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,723 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2218.
+Total: 4,968778 ms (FindLiveObjects: 0,252183 ms CreateObjectMapping: 0,083717 ms MarkObjects: 4,367531 ms  DeleteObjects: 0,264376 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001686 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0,824 seconds
+- Completed reload, in  0,792 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,73 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,7 MB.
-System memory in use after: 71,7 MB.
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2303.
-Total: 4,285246 ms (FindLiveObjects: 0,289222 ms CreateObjectMapping: 0,095209 ms MarkObjects: 3,697945 ms  DeleteObjects: 0,201688 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2221.
+Total: 5,110173 ms (FindLiveObjects: 0,683332 ms CreateObjectMapping: 0,115937 ms MarkObjects: 4,133593 ms  DeleteObjects: 0,175309 ms)
 
 ========================================================================
 Received Prepare
@@ -992,149 +544,356 @@ Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing
 Please note that FBX files exported from Cinema4D are still supported.
 
 Registering precompiled user dll's ...
-Registered in 0,003274 seconds.
+Registered in 0,001844 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,86 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,153 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2306.
-Total: 4,363894 ms (FindLiveObjects: 0,401644 ms CreateObjectMapping: 0,091321 ms MarkObjects: 3,724245 ms  DeleteObjects: 0,145794 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001693 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,99 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,058 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,65 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2309.
-Total: 3,927456 ms (FindLiveObjects: 0,244378 ms CreateObjectMapping: 0,043952 ms MarkObjects: 3,441695 ms  DeleteObjects: 0,195998 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,003026 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,943 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2312.
-Total: 3,734463 ms (FindLiveObjects: 0,234519 ms CreateObjectMapping: 0,047549 ms MarkObjects: 3,205141 ms  DeleteObjects: 0,246382 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,002795 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,69 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1,025 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2315.
-Total: 4,855135 ms (FindLiveObjects: 0,709280 ms CreateObjectMapping: 0,083467 ms MarkObjects: 3,755914 ms  DeleteObjects: 0,303990 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1882,049017 seconds.
-  path: Assets/Prefabs/Garbage/box/3D models/Box.stl
-  artifactKey: Guid(343b57cd15bcbdec1887e1cdd48e918b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Garbage/box/3D models/Box.stl using Guid(343b57cd15bcbdec1887e1cdd48e918b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd44cfb99018f47d875864b97436cb5') in 0,018419 seconds
-  Import took 0,023350 seconds .
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001660 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,677 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2318.
-Total: 4,723348 ms (FindLiveObjects: 0,294593 ms CreateObjectMapping: 0,071514 ms MarkObjects: 4,173306 ms  DeleteObjects: 0,182813 ms)
-
-========================================================================
-Received Prepare
-Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Registering precompiled user dll's ...
-Registered in 0,001547 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0,627 seconds
+- Completed reload, in  0,856 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 71,8 MB.
-System memory in use after: 71,8 MB.
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2321.
-Total: 3,500184 ms (FindLiveObjects: 0,259938 ms CreateObjectMapping: 0,106770 ms MarkObjects: 3,015656 ms  DeleteObjects: 0,116338 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2224.
+Total: 4,608994 ms (FindLiveObjects: 0,508203 ms CreateObjectMapping: 0,110978 ms MarkObjects: 3,813041 ms  DeleteObjects: 0,175489 ms)
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,720 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2227.
+Total: 3,225139 ms (FindLiveObjects: 0,194274 ms CreateObjectMapping: 0,096130 ms MarkObjects: 2,791124 ms  DeleteObjects: 0,142848 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001692 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,817 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2230.
+Total: 4,223281 ms (FindLiveObjects: 0,432732 ms CreateObjectMapping: 0,084478 ms MarkObjects: 3,466812 ms  DeleteObjects: 0,234540 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001831 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,706 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2233.
+Total: 4,634472 ms (FindLiveObjects: 0,290344 ms CreateObjectMapping: 0,076033 ms MarkObjects: 3,986216 ms  DeleteObjects: 0,280707 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001877 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,737 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2236.
+Total: 3,781592 ms (FindLiveObjects: 0,314019 ms CreateObjectMapping: 0,085169 ms MarkObjects: 3,223446 ms  DeleteObjects: 0,158177 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002882 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2239.
+Total: 5,608819 ms (FindLiveObjects: 0,295294 ms CreateObjectMapping: 0,124674 ms MarkObjects: 4,877337 ms  DeleteObjects: 0,310032 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001769 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,729 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2242.
+Total: 4,500400 ms (FindLiveObjects: 0,261751 ms CreateObjectMapping: 0,083838 ms MarkObjects: 3,909481 ms  DeleteObjects: 0,243798 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001713 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,774 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2245.
+Total: 3,227483 ms (FindLiveObjects: 0,221656 ms CreateObjectMapping: 0,058410 ms MarkObjects: 2,820800 ms  DeleteObjects: 0,125546 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002693 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,819 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2248.
+Total: 3,545530 ms (FindLiveObjects: 0,211647 ms CreateObjectMapping: 0,056887 ms MarkObjects: 3,037086 ms  DeleteObjects: 0,238677 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001687 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,717 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2251.
+Total: 2,909997 ms (FindLiveObjects: 0,190847 ms CreateObjectMapping: 0,055243 ms MarkObjects: 2,542839 ms  DeleteObjects: 0,120195 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001705 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,814 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2254.
+Total: 3,510364 ms (FindLiveObjects: 0,264857 ms CreateObjectMapping: 0,082705 ms MarkObjects: 2,967225 ms  DeleteObjects: 0,194574 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001731 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,842 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2257.
+Total: 5,114302 ms (FindLiveObjects: 0,221907 ms CreateObjectMapping: 0,086953 ms MarkObjects: 4,627639 ms  DeleteObjects: 0,176582 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001956 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,736 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2260.
+Total: 2,834516 ms (FindLiveObjects: 0,205876 ms CreateObjectMapping: 0,075632 ms MarkObjects: 2,432943 ms  DeleteObjects: 0,119013 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001860 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,720 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2263.
+Total: 4,085532 ms (FindLiveObjects: 0,315722 ms CreateObjectMapping: 0,075211 ms MarkObjects: 3,567781 ms  DeleteObjects: 0,125716 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001915 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,708 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1735 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,9 MB.
+System memory in use after: 69,9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2266.
+Total: 5,750714 ms (FindLiveObjects: 0,218159 ms CreateObjectMapping: 0,082325 ms MarkObjects: 5,177920 ms  DeleteObjects: 0,270798 ms)
+

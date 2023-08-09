@@ -80,7 +80,22 @@ def detect(detection_graph, test_image_path, img):
 
             # Calculate the center coordinates
             center_y = (y_min + y_max) // 2
-            center_x = (x_min + x_max) // 2        
+            center_x = (x_min + x_max) // 2   
+            
+            # Detect markers
+            dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
+            parameters = cv2.aruco.DetectorParameters()
+            detector = cv2.aruco.ArucoDetector(dictionary, parameters)
+            markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(npim)
+            cv2.aruco.drawDetectedMarkers(npim, markerCorners, markerIds)
+            # print(markerCorners)
+            
+            for corners in markerCorners:
+                # Compute the Euclidean distance between corners to find width and height
+                marker_width = abs(corners[0][0][0] - corners[0][1][0])
+                marker_height = abs(corners[0][0][1] - corners[0][3][1])
+            
+            transform_ratio = 0.1/marker_width     
 		            
             # Y axis in Opencv is -Z axis in Unity 
             move_x = (end_effector_x - center_x) * transform_ratio
@@ -172,22 +187,7 @@ while(True):
 
             image = cv2.imread(image_path)
             height, width, _ = image.shape
-
-            # Detect markers
-            dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
-            parameters = cv2.aruco.DetectorParameters()
-            detector = cv2.aruco.ArucoDetector(dictionary, parameters)
-            markerCorners, markerIds, rejectedCandidates = detector.detectMarkers(image)
-            cv2.aruco.drawDetectedMarkers(image, markerCorners, markerIds)
-            # print(markerCorners)
-            
-            for corners in markerCorners:
-                # Compute the Euclidean distance between corners to find width and height
-                marker_width = abs(corners[0][0][0] - corners[0][1][0])
-                marker_height = abs(corners[0][0][1] - corners[0][3][1])
-            
-            transform_ratio = 0.1/marker_width
-            
+           
             #resized_image = cv2.resize(image, (height//4, width//4))
             #height, width, _ = resized_image.shape 
             #cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
