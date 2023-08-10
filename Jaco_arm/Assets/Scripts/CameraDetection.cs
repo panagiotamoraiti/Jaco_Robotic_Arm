@@ -254,17 +254,6 @@ public class CameraDetection : MonoBehaviour
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
     }
-    
-    void OnCollisionEnter (Collision collision)
-    {
-        Debug.Log("Creating Child...");
-        if(collision.gameObject.CompareTag("Target"))
-        {
-            Debug.Log("Creating Child...");
-            collision.transform.parent = m_endEffector;
-            Debug.Log("Child Made");
-        }
-    }
 
     /// <summary>
     ///     Get the current values of the robot's joint angles.
@@ -354,7 +343,7 @@ public class CameraDetection : MonoBehaviour
     ///     PreGrasp, Grasp, PickUp, and Place,
     ///     where each plan is an array of robot poses. A robot pose is the joint angle values
     ///     of the six robot joints.
-    ///     Executing a single trajectory will iterate through every robot pose in the array while updating the
+    ///     ExecStartCoroutine(ExecuteTrajectories(response));uting a single trajectory will iterate through every robot pose in the array while updating the
     ///     joint values on the robot.
     /// </summary>
     /// <param name="response"> MoverServiceResponse received from niryo_moveit mover service running in ROS</param>

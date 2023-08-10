@@ -6,6 +6,11 @@ public class MakeChild : MonoBehaviour
 {
 
     Transform targetTransform;
+    
+    IEnumerator WaitBeforeOpen()
+    {
+        yield return new WaitForSeconds(1.5f);
+    }
 
     void OnTriggerEnter (Collider other)
     {
@@ -18,6 +23,8 @@ public class MakeChild : MonoBehaviour
         
         if(other.gameObject.tag == "TargetPlacement")
         {
+          
+            StartCoroutine(WaitBeforeOpen());
             //Transform targetTransform = transform.FindWithTag("Target");
             if(targetTransform.transform.parent != null)
             {
