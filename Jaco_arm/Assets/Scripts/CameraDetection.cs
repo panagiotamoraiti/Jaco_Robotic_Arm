@@ -14,8 +14,7 @@ public class CameraDetection : MonoBehaviour
     // Hardcoded variables
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
-    const float k_PoseAssignmentWait = 1.5f;
-    const float k_PoseAssignmentWaitnew = 1.5f;
+    const float k_PoseAssignmentWait = 1f;
 
     // Variables required for ROS communication
     [SerializeField]
@@ -94,12 +93,12 @@ public class CameraDetection : MonoBehaviour
         stage = (int)Poses.Start;
         PublishJoints();
         Debug.Log("Starting Coroutine ScreenshotPosition.");      
-        yield return new WaitForSeconds(12.0f);
+        yield return new WaitForSeconds(10.0f); // Waiting for ML model's response
         
         stage = (int)Poses.PreGrasp;
         PublishJoints();
         Debug.Log("Starting Coroutine Pregrasp.");
-        yield return new WaitForSeconds(8.0f);
+        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
         
         // Raycast sensor
          if (raycastOrigin == null)
@@ -130,7 +129,7 @@ public class CameraDetection : MonoBehaviour
         {
             Debug.Log("Raycast did not hit any object.");
         }
-        yield return new WaitForSeconds(1.5f);
+        // yield return new WaitForSeconds(1f);
         
             
         // If the rotation of the gripper is wrong correct it
@@ -140,33 +139,27 @@ public class CameraDetection : MonoBehaviour
             stage = (int)Poses.PreGrasp;
             PublishJoints2();
             Debug.Log("Starting Coroutine with new orientation.");   
-            yield return new WaitForSeconds(8.0f);   
+            yield return new WaitForSeconds(5f);   
         }
         
+        // GoDown Pose
+        stage = (int)Poses.GoDown;
         if (line == "True")
-        {
-		    stage = (int)Poses.GoDown;
-		    PublishJoints2();
-		    Debug.Log("Starting Coroutine GoDown.");
-		    yield return new WaitForSeconds(8.0f);
-		    
-		    stage = (int)Poses.GraspAndPlace;
-		    PublishJoints2();
-		    Debug.Log("Starting Coroutine GraspAndPlace.");
-		    yield return new WaitForSeconds(5.0f);
-        }
-        else
-        {
-		    stage = (int)Poses.GoDown;
+	        PublishJoints2();
+	    else
 		    PublishJoints();
-		    Debug.Log("Starting Coroutine GoDown.");
-		    yield return new WaitForSeconds(8.0f);
-		    
-		    stage = (int)Poses.GraspAndPlace;
+	    Debug.Log("Starting Coroutine GoDown.");
+	    yield return new WaitForSeconds(6.0f);  // Delay Pregasp-> GoDown
+	    
+	    // GraspAndPlace Pose
+	    stage = (int)Poses.GraspAndPlace;
+        if (line == "True")
+	        PublishJoints2();
+	    else
 		    PublishJoints();
-		    Debug.Log("Starting Coroutine GraspAndPlace.");
-		    yield return new WaitForSeconds(5.0f);
-        }
+	    Debug.Log("Starting Coroutine GraspAndPlace.");
+	    yield return new WaitForSeconds(8.0f);  // Delay GoDown-> GraspAndPlace
+        
         
     }
     
@@ -360,7 +353,7 @@ public class CameraDetection : MonoBehaviour
                 // Close the gripper
                 if (poseIndex == (int)Poses.GraspAndPlace)
                 {
-                    yield return new WaitForSeconds(k_PoseAssignmentWait);
+                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
                     yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
@@ -386,14 +379,14 @@ public class CameraDetection : MonoBehaviour
                 if (poseIndex == (int)Poses.Start)
                 {
                     CaptureScreen();
-                    yield return new WaitForSeconds(k_PoseAssignmentWaitnew);
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment
-                yield return new WaitForSeconds(k_PoseAssignmentWait);
+                //yield return new WaitForSeconds(k_PoseAssignmentWait);
             }
 
             // All trajectories have been executed, open the gripper to place the target cube
+            yield return new WaitForSeconds(1f);
             OpenGripper();
         }
     }

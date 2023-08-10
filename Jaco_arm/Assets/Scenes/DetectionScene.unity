@@ -929,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.139
+      value: -0.082
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.y
@@ -937,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.679
+      value: 0.791
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1419,8 +1419,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.18663985, z: 0.13686563}
-  m_Center: {x: 0.07180878, y: 1.2673361, z: -0.0014233906}
+  m_Size: {x: 0.10030031, y: 0.083703406, z: 0.13686563}
+  m_Center: {x: -0.0011773803, y: 1.2739897, z: -0.0014233906}
 --- !u!65 &350143936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2935,6 +2935,8 @@ GameObject:
   - component: {fileID: 699610909}
   - component: {fileID: 699610908}
   - component: {fileID: 699610907}
+  - component: {fileID: 699610912}
+  - component: {fileID: 699610911}
   m_Layer: 0
   m_Name: j2n6s200_link_6
   m_TagString: Untagged
@@ -3060,6 +3062,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+--- !u!114 &699610911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699610905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b12c39bce623e4d8240e27395ac8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &699610912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699610905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027683651, y: 0.038064014, z: 0.014786825}
+  m_Center: {x: 0.001238361, y: -0.14706814, z: -0.0012000967}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,13 +3920,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: -0.03, y: 0.901, z: -0.895}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
+  m_LocalPosition: {x: -0.03, y: 0.792, z: -1.466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
 --- !u!1 &1016606941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,7 +4051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.133
+      value: -0.034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4032,7 +4059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.579
+      value: -0.653
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5010,8 +5037,6 @@ GameObject:
   - component: {fileID: 1327551725}
   - component: {fileID: 1327551724}
   - component: {fileID: 1327551723}
-  - component: {fileID: 1327551727}
-  - component: {fileID: 1327551728}
   m_Layer: 0
   m_Name: j2n6s200_link_finger_1
   m_TagString: Untagged
@@ -5134,31 +5159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
---- !u!114 &1327551727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327551721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b12c39bce623e4d8240e27395ac8eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &1327551728
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327551721}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01908182, y: 0.06613378, z: 0.10538487}
-  m_Center: {x: 0.0050061233, y: -0.003917216, z: 0.0323435}
 --- !u!1001 &1341662419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6138,7 +6138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.206
+      value: 0.264
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6146,7 +6146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.617
+      value: -0.565
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7958,7 +7958,6 @@ GameObject:
   - component: {fileID: 2015751008}
   - component: {fileID: 2015751007}
   - component: {fileID: 2015751006}
-  - component: {fileID: 2015751010}
   m_Layer: 0
   m_Name: j2n6s200_end_effector
   m_TagString: Untagged
@@ -8062,19 +8061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
---- !u!65 &2015751010
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015751004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.014448431, y: 0.05594276, z: 0.014786825}
-  m_Center: {x: 0.00045634783, y: 0.0064136516, z: -0.0012000971}
 --- !u!4 &2049992343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 53218f9ba7045f6acb780bc5f6131a96, type: 3}
@@ -8466,9 +8452,9 @@ MonoBehaviour:
   stiffness: 10000
   damping: 100
   forceLimit: 1000
-  speed: 15
+  speed: 20
   torque: 100
-  acceleration: 3
+  acceleration: 5
   highLightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2137049591
 MonoBehaviour:

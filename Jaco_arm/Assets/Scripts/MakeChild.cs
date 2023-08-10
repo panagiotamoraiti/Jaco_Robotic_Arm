@@ -9,7 +9,10 @@ public class MakeChild : MonoBehaviour
     
     IEnumerator WaitBeforeOpen()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.2f);
+        Debug.Log("Waiting for OpenGripper:::::::");
+        targetTransform.parent = null;
+        targetTransform.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
     void OnTriggerEnter (Collider other)
@@ -23,16 +26,7 @@ public class MakeChild : MonoBehaviour
         
         if(other.gameObject.tag == "TargetPlacement")
         {
-          
             StartCoroutine(WaitBeforeOpen());
-            //Transform targetTransform = transform.FindWithTag("Target");
-            if(targetTransform.transform.parent != null)
-            {
-                targetTransform.transform.parent = null;
-            }
-            
-            // Unfreeze position and rotation
-            targetTransform.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
     }
     
