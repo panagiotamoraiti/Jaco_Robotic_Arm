@@ -185,6 +185,7 @@ detection_graph = reconstruct("./../Garbage Detection/ssd_mobilenet_v2_taco_2018
 #directory_Path = './../Garbage Detection/images/batch_1'
 # For real-time detection using snapshots taken from the robot camera in Unity
 directory_Path = './../../Jaco_arm/Screenshots'
+file_path = './../../Jaco_arm/Screenshots/rotate.txt'
 
 while(True):
     for filename in os.listdir(directory_Path):
