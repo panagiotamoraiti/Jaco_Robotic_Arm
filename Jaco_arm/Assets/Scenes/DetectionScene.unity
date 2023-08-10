@@ -983,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 14025_Soda_Can_v3_l3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
 --- !u!4 &315238677 stripped
@@ -1404,6 +1408,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c0b513db15ae2b0a6a6fc6d4130b07db, type: 3}
   m_PrefabInstance: {fileID: 1944857204}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &350143935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350143934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29, y: 0.18663985, z: 0.13686563}
+  m_Center: {x: 0.07180878, y: 1.2673361, z: -0.0014233906}
 --- !u!65 &350143936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2673,6 +2690,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   raycastOrigin: {fileID: 1757634726}
+  m_endEffector: {fileID: 1327551722}
   stage: 0
 --- !u!1 &681325553
 GameObject:
@@ -4006,7 +4024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.055
+      value: -0.049
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4014,7 +4032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.406
+      value: -0.579
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4059,6 +4077,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_Name
       value: 14025_Soda_Can_v3_l3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
@@ -4988,6 +5010,8 @@ GameObject:
   - component: {fileID: 1327551725}
   - component: {fileID: 1327551724}
   - component: {fileID: 1327551723}
+  - component: {fileID: 1327551727}
+  - component: {fileID: 1327551728}
   m_Layer: 0
   m_Name: j2n6s200_link_finger_1
   m_TagString: Untagged
@@ -5110,6 +5134,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+--- !u!114 &1327551727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327551721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b12c39bce623e4d8240e27395ac8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1327551728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327551721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01908182, y: 0.06613378, z: 0.10538487}
+  m_Center: {x: 0.0050061233, y: -0.003917216, z: 0.0323435}
 --- !u!1001 &1341662419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6089,7 +6138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.301
+      value: 0.337
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6142,6 +6191,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
       propertyPath: m_Name
       value: 14025_Soda_Can_v3_l3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f13c3bb44a54699e8cac87ccd0beb65, type: 3}
@@ -6597,7 +6650,7 @@ ArticulationBody:
   m_ParentAnchorPosition: {x: -0.20729981, y: -0.011399764, z: -1.1768367e-14}
   m_ParentAnchorRotation: {x: 0, y: -1.0000002, z: 1.7763568e-15, w: -0.000000043711402}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0, z: 0.70710677, w: -0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 0
@@ -7415,6 +7468,7 @@ GameObject:
   - component: {fileID: 1932041721}
   - component: {fileID: 1932041720}
   - component: {fileID: 1932041719}
+  - component: {fileID: 1932041723}
   m_Layer: 0
   m_Name: j2n6s200_link_finger_tip_1
   m_TagString: Untagged
@@ -7536,6 +7590,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+--- !u!65 &1932041723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932041717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1933768800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc709742ad0bda6cfb10482b02c1f2f2, type: 3}
@@ -7607,6 +7674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c0b513db15ae2b0a6a6fc6d4130b07db, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0b513db15ae2b0a6a6fc6d4130b07db, type: 3}
+      propertyPath: m_TagString
+      value: TargetPlacement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0b513db15ae2b0a6a6fc6d4130b07db, type: 3}
@@ -7887,6 +7958,7 @@ GameObject:
   - component: {fileID: 2015751008}
   - component: {fileID: 2015751007}
   - component: {fileID: 2015751006}
+  - component: {fileID: 2015751010}
   m_Layer: 0
   m_Name: j2n6s200_end_effector
   m_TagString: Untagged
@@ -7990,6 +8062,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+--- !u!65 &2015751010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015751004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.014448431, y: 0.05594276, z: 0.014786825}
+  m_Center: {x: 0.00045634783, y: 0.0064136516, z: -0.0012000971}
 --- !u!4 &2049992343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 53218f9ba7045f6acb780bc5f6131a96, type: 3}

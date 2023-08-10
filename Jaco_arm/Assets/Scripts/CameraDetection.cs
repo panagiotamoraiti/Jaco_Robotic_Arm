@@ -49,6 +49,11 @@ public class CameraDetection : MonoBehaviour
     
     // For rotate
     private string filePathrotate = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/rotate.txt";
+    
+    // For making the Target child to the end effector
+    [SerializeField]
+    private Transform m_endEffector;
+
 
     public int stage;
 
@@ -162,6 +167,7 @@ public class CameraDetection : MonoBehaviour
 		    Debug.Log("Starting Coroutine GraspAndPlace.");
 		    yield return new WaitForSeconds(5.0f);
         }
+        
     }
     
     void Update()
@@ -227,8 +233,8 @@ public class CameraDetection : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = 60f;
-        rightDrive.target = 60f;
+        leftDrive.target = 53f;
+        rightDrive.target = 53f;
         
         leftDrive.stiffness = 4000;
         rightDrive.stiffness = 4000;
@@ -242,11 +248,22 @@ public class CameraDetection : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = -60f;
-        rightDrive.target = -60f;
+        leftDrive.target = -53f;
+        rightDrive.target = -53f;
 
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
+    }
+    
+    void OnCollisionEnter (Collision collision)
+    {
+        Debug.Log("Creating Child...");
+        if(collision.gameObject.CompareTag("Target"))
+        {
+            Debug.Log("Creating Child...");
+            collision.transform.parent = m_endEffector;
+            Debug.Log("Child Made");
+        }
     }
 
     /// <summary>
