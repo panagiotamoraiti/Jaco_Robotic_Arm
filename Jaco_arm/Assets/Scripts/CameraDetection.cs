@@ -30,20 +30,25 @@ public class CameraDetection : MonoBehaviour
     Vector3 box_place = new Vector3(0.315f, 0.4f, 0.121f);
     
     // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
-    Quaternion or = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
+    Quaternion or1 = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
+    Quaternion or2 = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f); // new orientation
     //readonly Quaternion or = new Quaternion.Euler(0,90,0);
     //Debug.Log(or.ToString());
     Vector3 pos = new Vector3(0f, 0.4f, -0.5f);
     
-    // for camera
+    // For camera
     public Camera targetCamera;
     public string savePath = "Screenshots/";
     public string fileNamePrefix = "screenshot";
     
-       // for raycast
+    // For raycast
     public LayerMask raycastMask = -1;
     public Transform raycastOrigin; // Reference to a child GameObject acting as the raycast origin
     private string filePath = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt";
+    private string filePath1 = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/screenshot.txt";
+    
+    // For rotate
+    private string filePathrotate = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/rotate.txt";
 
     public int stage;
 
@@ -78,6 +83,7 @@ public class CameraDetection : MonoBehaviour
         m_RightGripper = m_j2n6s200.transform.Find(rightGripper).GetComponent<ArticulationBody>();
         m_LeftGripper = m_j2n6s200.transform.Find(leftGripper).GetComponent<ArticulationBody>();
         
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
         // Introduce a delay before calling PublishJoints()
         yield return new WaitForSeconds(5.0f);
         stage = (int)Poses.Start;
@@ -88,7 +94,7 @@ public class CameraDetection : MonoBehaviour
         stage = (int)Poses.PreGrasp;
         PublishJoints();
         Debug.Log("Starting Coroutine Pregrasp.");
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(8.0f);
         
         // Raycast sensor
          if (raycastOrigin == null)
@@ -113,22 +119,49 @@ public class CameraDetection : MonoBehaviour
                 Debug.Log("Distance from camera center to object: " + distance);
                 
                 // Write the distance to the .txt file
-                WriteDistanceToFile(distance);
+                WriteDistanceToFile(distance, filePath);
             }
-            else
-            {
-                Debug.Log("Raycast did not hit any object.");
-            }
+        else
+        {
+            Debug.Log("Raycast did not hit any object.");
+        }
+        yield return new WaitForSeconds(1.5f);
         
-        stage = (int)Poses.GoDown;
-        PublishJoints();
-        Debug.Log("Starting Coroutine GoDown.");
-        yield return new WaitForSeconds(8.0f);
+            
+        // If the rotation of the gripper is wrong correct it
+        string line = ReadLineFromFile(filePathrotate); 
+        if (line == "True")
+        {
+            stage = (int)Poses.PreGrasp;
+            PublishJoints2();
+            Debug.Log("Starting Coroutine with new orientation.");   
+            yield return new WaitForSeconds(8.0f);   
+        }
         
-        stage = (int)Poses.GraspAndPlace;
-        PublishJoints();
-        Debug.Log("Starting Coroutine GraspAndPlace.");
-        yield return new WaitForSeconds(5.0f);
+        if (line == "True")
+        {
+		    stage = (int)Poses.GoDown;
+		    PublishJoints2();
+		    Debug.Log("Starting Coroutine GoDown.");
+		    yield return new WaitForSeconds(8.0f);
+		    
+		    stage = (int)Poses.GraspAndPlace;
+		    PublishJoints2();
+		    Debug.Log("Starting Coroutine GraspAndPlace.");
+		    yield return new WaitForSeconds(5.0f);
+        }
+        else
+        {
+		    stage = (int)Poses.GoDown;
+		    PublishJoints();
+		    Debug.Log("Starting Coroutine GoDown.");
+		    yield return new WaitForSeconds(8.0f);
+		    
+		    stage = (int)Poses.GraspAndPlace;
+		    PublishJoints();
+		    Debug.Log("Starting Coroutine GraspAndPlace.");
+		    yield return new WaitForSeconds(5.0f);
+        }
     }
     
     void Update()
@@ -136,19 +169,29 @@ public class CameraDetection : MonoBehaviour
 
     }
     
-    
-     private void WriteDistanceToFile(float distance)
+     private void WriteDistanceToFile(float distance, string filePath)
     {
         // Create the new .txt file
         using (StreamWriter writer = new StreamWriter(filePath, false))
         {
             writer.WriteLine(distance);
+            writer.WriteLine("0");
         }
+    }
+    
+    private string ReadLineFromFile(string filePath) 
+    { 
+        // Read the first line from the .txt file 
+        using (StreamReader reader = new StreamReader(filePath)) 
+        { 
+        string line = reader.ReadLine(); 
+        return line; 
+        } 
     }
      
     
     private void CaptureScreen()
-        {
+    {
         // Create the screenshot file path
         string filePath = savePath + fileNamePrefix + ".png";
      
@@ -171,13 +214,13 @@ public class CameraDetection : MonoBehaviour
             byte[] bytes = screenshot.EncodeToPNG();
             System.IO.File.WriteAllBytes(filePath, bytes);
      
-            Debug.Log("Screenshot saved to: " + filePath);
+            //Debug.Log("Screenshot saved to: " + filePath);
         }
         else
         {
             Debug.LogError("Target camera is not assigned!");
         }
-        }
+    }
 
     void CloseGripper()
     {
@@ -232,14 +275,14 @@ public class CameraDetection : MonoBehaviour
     {
         var request = new MoverServiceRequest();
         request.joints_input = CurrentJointConfig();
-
+        
         // Pick Pose
         request.pick_pose = new PoseMsg
         {
            position = pos.To<FLU>(),
-           orientation = or.To<FLU>()
+           orientation = or1.To<FLU>()
         };
-
+      
         // Place Pose
         request.place_pose = new PoseMsg
         {
@@ -247,6 +290,27 @@ public class CameraDetection : MonoBehaviour
             orientation = m_PickOrientation.To<FLU>()
         };
 
+        m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
+    }
+    
+    public void PublishJoints2()
+    {
+        var request = new MoverServiceRequest();
+        request.joints_input = CurrentJointConfig();
+        
+        // Pick Pose
+        request.pick_pose = new PoseMsg
+        {
+           position = pos.To<FLU>(),
+           orientation = or2.To<FLU>()
+        };
+      
+        // Place Pose
+        request.place_pose = new PoseMsg
+        {
+            position = box_place.To<FLU>(),
+            orientation = m_PickOrientation.To<FLU>()
+        };
 
         m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
     }
@@ -255,12 +319,15 @@ public class CameraDetection : MonoBehaviour
     {
         if (response.trajectories.Length > 0)
         {
-            Debug.Log("Trajectory returned.");
+            //Debug.Log("Trajectory returned.");
             StartCoroutine(ExecuteTrajectories(response));
         }
         else
         {
             Debug.LogError("No trajectory returned from MoverService.");
+            // Write 0, 0 to the .txt file
+            float distance = 0;
+            WriteDistanceToFile(distance, filePath1);
         }
     }
 

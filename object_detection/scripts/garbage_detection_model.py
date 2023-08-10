@@ -77,6 +77,17 @@ def detect(detection_graph, test_image_path, img):
             y_min = int(y_min * h)
             x_max = int(x_max * w)
             y_max = int(y_max * h)
+            
+            box_w = x_max - x_min
+            box_h = y_max - y_min
+            
+            # Find bigger side, and rotate gripper if needed
+            if box_w > box_h+5:
+                 with open(file_path, 'w') as file:
+                     file.write(f"True")
+            else:
+                with open(file_path, 'w') as file:
+                     file.write(f"False")
 
             # Calculate the center coordinates
             center_y = (y_min + y_max) // 2

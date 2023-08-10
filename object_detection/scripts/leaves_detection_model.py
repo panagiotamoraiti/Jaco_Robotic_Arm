@@ -22,6 +22,7 @@ new_model = tf.keras.models.load_model(model_path)
 
 # For real-time detection using snapshots taken from the robot camera in Unity
 directory_Path = './../../Jaco_arm/Screenshots'
+file_path = './../../Jaco_arm/Screenshots/rotate.txt'
 
 end_effector_x = 317
 end_effector_y = 354
@@ -88,7 +89,19 @@ while(True):
                     sy = int(sy * h)
                     ex = int(ex * w)
                     ey = int(ey * h)
-
+                    
+                    box_w = ex - sx
+                    box_h = ey - sy
+                    
+                    # Find bigger side, and rotate gripper if needed
+                    if box_w > box_h+5:
+                         with open(file_path, 'w') as file:
+                             file.write(f"True")
+                    else:
+                        with open(file_path, 'w') as file:
+                             file.write(f"False")
+                        
+                        
                     center_x = (sx + ex) // 2
                     center_y = (sy + ey) // 2
                     

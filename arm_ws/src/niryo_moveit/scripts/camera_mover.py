@@ -134,10 +134,7 @@ def plan_pick_and_place(req):
 
     # Go Down - lower gripper so it can grab the object
     file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt'
-    move_y = read_distance()  
-    
-    with open(file_path, 'w') as file:
-        file.write('0')         
+    move_y = read_distance()      
 
     if move_y >= 0.45:
         move_y = 0.47
