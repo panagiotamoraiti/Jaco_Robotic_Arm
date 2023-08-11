@@ -1,0 +1,1987 @@
+Using pre-set license
+Desktop is 1920 x 1080 @ 60 Hz
+
+ COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/home/beast1/Jaco_Robotic_Arm/Jaco_arm
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+34489
+Successfully changed project path to: /home/beast1/Jaco_Robotic_Arm/Jaco_arm
+/home/beast1/Jaco_Robotic_Arm/Jaco_arm
+Using Asset Import Pipeline V2.
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 26,75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path /home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/beast1/Jaco_Robotic_Arm/Jaco_arm/Assets
+GLX Extensions: GLX_ARB_create_context GLX_ARB_create_context_no_error GLX_ARB_create_context_profile GLX_ARB_create_context_robustness GLX_ARB_fbconfig_float GLX_ARB_framebuffer_sRGB GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_buffer_age GLX_EXT_create_context_es2_profile GLX_EXT_create_context_es_profile GLX_EXT_fbconfig_packed_float GLX_EXT_framebuffer_sRGB GLX_EXT_import_context GLX_EXT_no_config_context GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_texture_from_pixmap GLX_EXT_visual_info GLX_EXT_visual_rating GLX_INTEL_swap_event GLX_MESA_copy_sub_buffer GLX_MESA_query_renderer GLX_MESA_swap_control GLX_OML_swap_method GLX_OML_sync_control GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGIX_visual_select_group GLX_SGI_make_current_read GLX_SGI_swap_control GLX_SGI_video_sync 
+Renderer: AMD YELLOW_CARP (DRM 3.42.0, 5.15.0-78-generic, LLVM 12.0.0)
+Vendor:   AMD
+Version:  4.6 (Core Profile) Mesa 21.2.6
+GLES:     0
+ GL_AMD_conservative_depth GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_framebuffer_multisample_advanced GL_AMD_gpu_shader_int64 GL_AMD_multi_draw_indirect GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_query_buffer_object GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ARB_ES2_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_dist
+ance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel
+_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_sparse_buffer GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB
+_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_
+ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT
+_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_vdpau_interop GL_OES_EGL_image GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 1733901776
+Initialize mono
+Mono path[0] = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56847
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/beast1/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0,000790 seconds.
+Native extension for LinuxStandalone target not found
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 27,00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,603 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0,001768 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Refreshing native plugins compatible for Editor in 28,48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,764 seconds
+Platform modules already initialized, skipping
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+========================================================================
+Worker process is ready to serve import requests
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0,38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1742 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69,8 MB.
+System memory in use after: 69,7 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2169.
+Total: 4,612135 ms (FindLiveObjects: 0,238647 ms CreateObjectMapping: 0,096040 ms MarkObjects: 3,983497 ms  DeleteObjects: 0,292799 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/DetectionScene.unity
+  artifactKey: Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DetectionScene.unity using Guid(a24de005233a0212f861b0733c797530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ca729179549d5f6d1f5b4908fa38cf') in 0,010385 seconds
+  Import took 0,014039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,123077 seconds.
+  path: Assets/Scenes/GarbageSortingScene.unity
+  artifactKey: Guid(c3b7255912f00ed1eb990f8cc631c18a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GarbageSortingScene.unity using Guid(c3b7255912f00ed1eb990f8cc631c18a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448c0422d72d6e61372c7d84cc33a52d') in 0,001906 seconds
+  Import took 0,005829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 621,864817 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Base Mesh
+  artifactKey: Guid(307aea4e1451cc74d8410482ee1eb323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Base Mesh using Guid(307aea4e1451cc74d8410482ee1eb323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16daeedddc6c6e22a1d29062eba25db4') in 0,000668 seconds
+  Import took 0,004066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,089728 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Base Mesh/Trashbin.fbx
+  artifactKey: Guid(b08ef7d6178f62742af62250667c0dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Base Mesh/Trashbin.fbx using Guid(b08ef7d6178f62742af62250667c0dff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c650e92f35b5b013c0cac4b5897edd64') in 0,096011 seconds
+  Import took 0,099910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33,373712 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Materials/Materials
+  artifactKey: Guid(66dda850e566066c48353c69cebbe28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Materials/Materials using Guid(66dda850e566066c48353c69cebbe28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaea7cb3cd97943fd955f7b88eb8fb8f') in 0,000696 seconds
+  Import took 0,004465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,056044 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_metallic.mat
+  artifactKey: Guid(bd3d99296c0c60f0ba2db90c38b31b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_metallic.mat using Guid(bd3d99296c0c60f0ba2db90c38b31b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6346b32c8b74d0a10465b073bd96957c') in 0,022323 seconds
+  Import took 0,063545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000132 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_normal.mat
+  artifactKey: Guid(c6f5696483f3520449ca682b06e391c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_normal.mat using Guid(c6f5696483f3520449ca682b06e391c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0711855d780ef28b8635c9f57bf2d4') in 0,011603 seconds
+  Import took 0,014471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000105 seconds.
+  path: Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_roughness.mat
+  artifactKey: Guid(c8354195cc74aa1e3bc44b7fa8f75f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceZeta_PlasticTrashBins/Materials/Materials/Trashbin_roughness.mat using Guid(c8354195cc74aa1e3bc44b7fa8f75f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '606c287bf34035c976f51f93d64c50f9') in 0,005052 seconds
+  Import took 0,007230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 562,068720 seconds.
+  path: Assets/EvSeStudio
+  artifactKey: Guid(d4666eb40e5abfbf3a1d4745afaa2341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio using Guid(d4666eb40e5abfbf3a1d4745afaa2341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227d37998132a97ea17776d1d67cbe00') in 0,000742 seconds
+  Import took 0,004408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1,109423 seconds.
+  path: Assets/EvSeStudio/3D_Art
+  artifactKey: Guid(f327e9c69ee0c6a4e853568b20d31893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art using Guid(f327e9c69ee0c6a4e853568b20d31893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71773fa083ba6c74669df0ae9eb1b209') in 0,000684 seconds
+  Import took 0,004717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,830380 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment
+  artifactKey: Guid(78fb116aae6f02c85ab687d152c212d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment using Guid(78fb116aae6f02c85ab687d152c212d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c250bf7c8a1d2e3d3ac0cdf4ede29da') in 0,000762 seconds
+  Import took 0,004291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000508 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment
+  artifactKey: Guid(78fb116aae6f02c85ab687d152c212d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment using Guid(78fb116aae6f02c85ab687d152c212d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c250bf7c8a1d2e3d3ac0cdf4ede29da') in 0,000423 seconds
+  Import took 0,002154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,594493 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01
+  artifactKey: Guid(18347e601127bfd88850003590b44677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01 using Guid(18347e601127bfd88850003590b44677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe9f3a1ac958825bfb402c428cccec9') in 0,000688 seconds
+  Import took 0,004330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000448 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01
+  artifactKey: Guid(18347e601127bfd88850003590b44677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01 using Guid(18347e601127bfd88850003590b44677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe9f3a1ac958825bfb402c428cccec9') in 0,000341 seconds
+  Import took 0,002151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,619383 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01
+  artifactKey: Guid(0f07eaa7ad61ba34c9af66eedf2ad652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01 using Guid(0f07eaa7ad61ba34c9af66eedf2ad652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1a4942d41992ecf64143311609186f') in 0,000725 seconds
+  Import took 0,004486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6,930590 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs
+  artifactKey: Guid(dffa65cba748ec741bb8ed8f201d6c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs using Guid(dffa65cba748ec741bb8ed8f201d6c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1da5081c9659d01236b8a19f404c66') in 0,033402 seconds
+  Import took 0,036976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,023409 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/SM_Aluminum_Can_01_Closed.prefab
+  artifactKey: Guid(091c40835fc7ae44ba18d6d34a022afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/SM_Aluminum_Can_01_Closed.prefab using Guid(091c40835fc7ae44ba18d6d34a022afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5342f2a4d6e419bfa2c4b12f75e3c6') in 0,020175 seconds
+  Import took 0,023902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000113 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/SM_Aluminum_Can_01_Opened.prefab
+  artifactKey: Guid(327860819d06a964d98cea7acb224d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/SM_Aluminum_Can_01_Opened.prefab using Guid(327860819d06a964d98cea7acb224d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49fc5d14f8fd39c8dc366a3ebbd8fd77') in 0,004628 seconds
+  Import took 0,007406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2,142549 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/Colliders
+  artifactKey: Guid(b98b1366f023f5143a7ba1acab314330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/Colliders using Guid(b98b1366f023f5143a7ba1acab314330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0009941ddf3b9ba15ac2f1682a66d5c') in 0,000757 seconds
+  Import took 0,005036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,065670 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/Colliders/CL_Aluminum_Can_01.prefab
+  artifactKey: Guid(4bf39f506b1d5ee4caf537ccfe018a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Prefabs/Colliders/CL_Aluminum_Can_01.prefab using Guid(4bf39f506b1d5ee4caf537ccfe018a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3bd40dae1796183ad7b4a8493ce5c50') in 0,002639 seconds
+  Import took 0,006699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13,765301 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Materials
+  artifactKey: Guid(11f2d3fc65b82a24584d87cce4ce7408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Materials using Guid(11f2d3fc65b82a24584d87cce4ce7408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf3c3085f1f02ad61eac0f3b9c1f2bf') in 0,000758 seconds
+  Import took 0,004784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,106314 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Materials/M_Aluminum_Can_01.mat
+  artifactKey: Guid(bf524b9fad37717498b7ae7fd096d607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Materials/M_Aluminum_Can_01.mat using Guid(bf524b9fad37717498b7ae7fd096d607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af1121dfb33ac77fbdc27cf9d94bfeb') in 0,005764 seconds
+  Import took 0,008951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2,798830 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures
+  artifactKey: Guid(032854cb93c52f74cb8255b2b9c4e930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures using Guid(032854cb93c52f74cb8255b2b9c4e930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5868f04a3b33ad80d5a721130f43cd04') in 0,000799 seconds
+  Import took 0,004543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,043086 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_AO.png
+  artifactKey: Guid(5fe8d8eb45f4da24d854536b2bab7a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_AO.png using Guid(5fe8d8eb45f4da24d854536b2bab7a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ab3837cb41a6db29e26efe5131a255') in 0,006072 seconds
+  Import took 0,008978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000116 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_Normal.png
+  artifactKey: Guid(e374ebb9aba7a774da745f97e8801d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_Normal.png using Guid(e374ebb9aba7a774da745f97e8801d8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95cf444398a7002d1b71d01e8c9070d9') in 0,006421 seconds
+  Import took 0,009881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000111 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_BaseMap.png
+  artifactKey: Guid(645c04ec1eb22aa408dcac4e1ce84ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_BaseMap.png using Guid(645c04ec1eb22aa408dcac4e1ce84ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '340964db79f79f568fca1650027c0ac5') in 0,004546 seconds
+  Import took 0,008041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000127 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_MetallicSmoothness.png
+  artifactKey: Guid(5f4199f0f7d4fc841a209d3331b47864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_MetallicSmoothness.png using Guid(5f4199f0f7d4fc841a209d3331b47864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd884d208132ae16aadcf9ad03bd827a8') in 0,005293 seconds
+  Import took 0,008067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000912 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_MetallicSmoothness.png
+  artifactKey: Guid(5f4199f0f7d4fc841a209d3331b47864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Textures/T_Aluminum_Can_01_MetallicSmoothness.png using Guid(5f4199f0f7d4fc841a209d3331b47864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd884d208132ae16aadcf9ad03bd827a8') in 0,002775 seconds
+  Import took 0,004774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2,671228 seconds.
+  path: Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Scene
+  artifactKey: Guid(9aa2a2c74c0550748a496c6b684525a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EvSeStudio/3D_Art/Environment/Cans_Vol_01/Aluminum_Can_01/Scene using Guid(9aa2a2c74c0550748a496c6b684525a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd69f22f4287eadfeb3e6309db919c7') in 0,000864 seconds
+  Import took 0,004401 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001905 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,827 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,6 MB.
+System memory in use after: 71,6 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2218.
+Total: 3,544875 ms (FindLiveObjects: 0,219592 ms CreateObjectMapping: 0,092874 ms MarkObjects: 2,885219 ms  DeleteObjects: 0,345498 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 263,328088 seconds.
+  path: Assets/RosMessages
+  artifactKey: Guid(bdb26db08177675cd8925104fc9dcc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RosMessages using Guid(bdb26db08177675cd8925104fc9dcc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae3213e7d2d3121ad796a73cbf445430') in 0,004677 seconds
+  Import took 0,007975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10,777571 seconds.
+  path: Assets/DigitalKonstrukt
+  artifactKey: Guid(4a98670aef8eec435a2ea7dd27b6f155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt using Guid(4a98670aef8eec435a2ea7dd27b6f155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65bdcae42fe3243406a9005e2ab4885') in 0,000826 seconds
+  Import took 0,004571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,767713 seconds.
+  path: Assets/DigitalKonstrukt/Can
+  artifactKey: Guid(cd3f0314c1a6af20ca9c99806777376a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can using Guid(cd3f0314c1a6af20ca9c99806777376a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb217827d5252f7e52f768127fe328e') in 0,000645 seconds
+  Import took 0,004202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1,383810 seconds.
+  path: Assets/DigitalKonstrukt/Can/Resources
+  artifactKey: Guid(e3713c14a966cde42b26304b52f09f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can/Resources using Guid(e3713c14a966cde42b26304b52f09f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ead3bff02c4571702c16276e4804e6') in 0,000673 seconds
+  Import took 0,004572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1,804728 seconds.
+  path: Assets/DigitalKonstrukt/Can/Resources/Prefabs
+  artifactKey: Guid(f82c0960e5e63944ba3a06f3c68d5b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can/Resources/Prefabs using Guid(f82c0960e5e63944ba3a06f3c68d5b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd761bb383eb054d580a73bd8424c45e') in 0,000834 seconds
+  Import took 0,004678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,039863 seconds.
+  path: Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_1.prefab
+  artifactKey: Guid(6fbeeda97cbb4e84c9bb0180938aba76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_1.prefab using Guid(6fbeeda97cbb4e84c9bb0180938aba76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73bf4a02fa478d30ad68062c5f267a4e') in 0,045683 seconds
+  Import took 0,048871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000137 seconds.
+  path: Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_3.prefab
+  artifactKey: Guid(f11cc9e6e7553224ea19d6a2022331c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_3.prefab using Guid(f11cc9e6e7553224ea19d6a2022331c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813b2a2c044093da06d75e0e4289d69f') in 0,007387 seconds
+  Import took 0,010514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000106 seconds.
+  path: Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_2.prefab
+  artifactKey: Guid(7b7ed779076a711439b117150f31a519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DigitalKonstrukt/Can/Resources/Prefabs/Can_2.prefab using Guid(7b7ed779076a711439b117150f31a519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baf6da507f35d9b22b1a26542756f66a') in 0,008058 seconds
+  Import took 0,011661 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001772 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,796 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2222.
+Total: 3,202182 ms (FindLiveObjects: 0,349535 ms CreateObjectMapping: 0,111159 ms MarkObjects: 2,510065 ms  DeleteObjects: 0,229170 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002058 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,794 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2225.
+Total: 3,696760 ms (FindLiveObjects: 0,343584 ms CreateObjectMapping: 0,039525 ms MarkObjects: 3,148411 ms  DeleteObjects: 0,164297 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,003027 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,807 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 4,621704 ms (FindLiveObjects: 0,226314 ms CreateObjectMapping: 0,085951 ms MarkObjects: 4,099474 ms  DeleteObjects: 0,208741 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001848 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,776 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2231.
+Total: 4,522187 ms (FindLiveObjects: 0,253886 ms CreateObjectMapping: 0,084869 ms MarkObjects: 4,030736 ms  DeleteObjects: 0,151795 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002290 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,812 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2234.
+Total: 3,711447 ms (FindLiveObjects: 0,408806 ms CreateObjectMapping: 0,073548 ms MarkObjects: 2,992710 ms  DeleteObjects: 0,235351 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001749 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2237.
+Total: 3,162528 ms (FindLiveObjects: 0,361538 ms CreateObjectMapping: 0,045715 ms MarkObjects: 2,581829 ms  DeleteObjects: 0,171822 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,737 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 3,124026 ms (FindLiveObjects: 0,211667 ms CreateObjectMapping: 0,095058 ms MarkObjects: 2,694090 ms  DeleteObjects: 0,122349 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002311 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,807 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2243.
+Total: 4,235148 ms (FindLiveObjects: 0,324529 ms CreateObjectMapping: 0,123962 ms MarkObjects: 3,589929 ms  DeleteObjects: 0,195306 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,003333 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,820 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2246.
+Total: 3,837193 ms (FindLiveObjects: 0,468889 ms CreateObjectMapping: 0,066475 ms MarkObjects: 3,146989 ms  DeleteObjects: 0,152476 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002163 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,862 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2249.
+Total: 5,252486 ms (FindLiveObjects: 0,257633 ms CreateObjectMapping: 0,092824 ms MarkObjects: 4,740336 ms  DeleteObjects: 0,160111 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 611,213491 seconds.
+  path: Assets/Carton of Milk 4K PBR
+  artifactKey: Guid(144e9b6bbd3fda385ac7c9a2a8ded823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Carton of Milk 4K PBR using Guid(144e9b6bbd3fda385ac7c9a2a8ded823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb868e9f4de5704ab12f2ca2fa508f4e') in 0,004242 seconds
+  Import took 0,007510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2,056721 seconds.
+  path: Assets/Carton of Milk 4K PBR/Prefab
+  artifactKey: Guid(c9a8f92cde88ef745a984f5b0cdedb33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Carton of Milk 4K PBR/Prefab using Guid(c9a8f92cde88ef745a984f5b0cdedb33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '525fd146257ec76e888533ecf9afee48') in 0,000732 seconds
+  Import took 0,003933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,038130 seconds.
+  path: Assets/Carton of Milk 4K PBR/Prefab/Milk.prefab
+  artifactKey: Guid(8768913d8e716a2408503e75059f31df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Carton of Milk 4K PBR/Prefab/Milk.prefab using Guid(8768913d8e716a2408503e75059f31df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4042d284b3bc51550317be2d74d6d608') in 0,231532 seconds
+  Import took 0,234527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,003118 seconds.
+  path: Assets/Carton of Milk 4K PBR/Prefab/Milk.prefab
+  artifactKey: Guid(8768913d8e716a2408503e75059f31df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Carton of Milk 4K PBR/Prefab/Milk.prefab using Guid(8768913d8e716a2408503e75059f31df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4042d284b3bc51550317be2d74d6d608') in 0,007154 seconds
+  Import took 0,010107 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001950 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,778 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2253.
+Total: 4,032670 ms (FindLiveObjects: 0,208431 ms CreateObjectMapping: 0,077916 ms MarkObjects: 3,615918 ms  DeleteObjects: 0,129593 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001782 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,829 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2256.
+Total: 3,317949 ms (FindLiveObjects: 0,291607 ms CreateObjectMapping: 0,040516 ms MarkObjects: 2,854881 ms  DeleteObjects: 0,129683 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001793 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,800 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,7 MB.
+System memory in use after: 71,7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2259.
+Total: 4,163274 ms (FindLiveObjects: 0,221856 ms CreateObjectMapping: 0,060353 ms MarkObjects: 3,713762 ms  DeleteObjects: 0,166171 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/1yeoiuvkmtg0-171080/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001968 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,696 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2262.
+Total: 2,991728 ms (FindLiveObjects: 0,238548 ms CreateObjectMapping: 0,093525 ms MarkObjects: 2,542937 ms  DeleteObjects: 0,115927 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 607,852238 seconds.
+  path: Assets/Prefabs/Garbage/FoodCan
+  artifactKey: Guid(49148c3013020d5878dc0bc8f9bb1523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/FoodCan using Guid(49148c3013020d5878dc0bc8f9bb1523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b34e74617f8f7bc4330e0778105f4d6') in 0,003309 seconds
+  Import took 0,005858 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/1yeoiuvkmtg0-171080/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001685 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,698 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2265.
+Total: 4,554327 ms (FindLiveObjects: 0,212689 ms CreateObjectMapping: 0,082184 ms MarkObjects: 4,065381 ms  DeleteObjects: 0,192742 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002352 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,705 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71,8 MB.
+System memory in use after: 71,8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 3,063773 ms (FindLiveObjects: 0,172003 ms CreateObjectMapping: 0,056255 ms MarkObjects: 2,711533 ms  DeleteObjects: 0,123271 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 231,616267 seconds.
+  path: Assets/Prefabs/Garbage/Trash_bins
+  artifactKey: Guid(0a894d3734fe1077198c7dd77b905e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/Trash_bins using Guid(0a894d3734fe1077198c7dd77b905e2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaeda622fc93591f302d846127d6e7d6') in 0,004226 seconds
+  Import took 0,007445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4,085972 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton
+  artifactKey: Guid(35eb4493b429904d7b7b0685ca64c615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton using Guid(35eb4493b429904d7b7b0685ca64c615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7653c66e21b9463bdcf69f30e93494ba') in 0,000715 seconds
+  Import took 0,004325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1,964400 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus
+  artifactKey: Guid(997060348efb601a4bb50517ae3cc39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus using Guid(997060348efb601a4bb50517ae3cc39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac0328164db0b08f74b0fe8bc3fef2f') in 0,000868 seconds
+  Import took 0,004648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,063016 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/JUICE .jpg
+  artifactKey: Guid(b9f257ab2ce381e2e89426ddb12ee62f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/JUICE .jpg using Guid(b9f257ab2ce381e2e89426ddb12ee62f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007ce774a8cf7108fc0724b87df8257d') in 0,021250 seconds
+  Import took 0,024512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000121 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dxf
+  artifactKey: Guid(5bc09b178e78935e787a518c7a2f7212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dxf using Guid(5bc09b178e78935e787a518c7a2f7212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91dc1168341423ca62b2096d8f5ea667') in 0,167987 seconds
+  Import took 0,170354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000118 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.3ds
+  artifactKey: Guid(a320471e8fed57e018ac691c2d69d644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.3ds using Guid(a320471e8fed57e018ac691c2d69d644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b726b61aad8b016de4164645ed907aeb') in 0,113117 seconds
+  Import took 0,115530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000115 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.obj
+  artifactKey: Guid(29e824895bc5d61b088f524d9ea998ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.obj using Guid(29e824895bc5d61b088f524d9ea998ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fa3745e8299035974de5439afb8b23') in 0,170433 seconds
+  Import took 0,172948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000125 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dae
+  artifactKey: Guid(abee766bbf94b5e45b59aa9753f3228f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dae using Guid(abee766bbf94b5e45b59aa9753f3228f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bba0dbbb658bc973e32057099283a74f') in 0,113710 seconds
+  Import took 0,116699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000544 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dae
+  artifactKey: Guid(abee766bbf94b5e45b59aa9753f3228f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.dae using Guid(abee766bbf94b5e45b59aa9753f3228f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bba0dbbb658bc973e32057099283a74f') in 0,101577 seconds
+  Import took 0,104531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18,915961 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex
+  artifactKey: Guid(43ba33643bfd06d97a1de76631156a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex using Guid(43ba33643bfd06d97a1de76631156a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b46aa1a6b4666b17a26b71816c494cd') in 0,000787 seconds
+  Import took 0,004913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,592222 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/cote1 nouvo.jpg
+  artifactKey: Guid(83c271b3ea1f110a2adf070367c1c82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/cote1 nouvo.jpg using Guid(83c271b3ea1f110a2adf070367c1c82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79bc25e0a4b9f89ca4d4b49b60b52ade') in 0,003860 seconds
+  Import took 0,007586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000117 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/triangle 1.jpg
+  artifactKey: Guid(31c870ed311118dcc90a40a39c8e6612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/triangle 1.jpg using Guid(31c870ed311118dcc90a40a39c8e6612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f69afdef8584c737139709456bfff92') in 0,003360 seconds
+  Import took 0,005796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000111 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/face nouvo 3.jpg
+  artifactKey: Guid(3fa987063db8bcf45a2f1e8f3ae2c0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/face nouvo 3.jpg using Guid(3fa987063db8bcf45a2f1e8f3ae2c0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e7f39e5acb851c002b391cbdceddb4') in 0,003208 seconds
+  Import took 0,006154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 263,694358 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials
+  artifactKey: Guid(1d44300179909353ba023f0b63719efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials using Guid(1d44300179909353ba023f0b63719efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b7d2733d72545a11ba2512fe82fa51') in 0,000742 seconds
+  Import took 0,005071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,050847 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/cote1 nouvo.mat
+  artifactKey: Guid(7907824a478080ed08933ab7ad26a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/cote1 nouvo.mat using Guid(7907824a478080ed08933ab7ad26a5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043f183cdd0f818c0265932a973fe8b5') in 0,006123 seconds
+  Import took 0,009501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000126 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/triangle 1.mat
+  artifactKey: Guid(77d662e2cd43d815eab94e1769731e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/triangle 1.mat using Guid(77d662e2cd43d815eab94e1769731e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf68ec115e5507c869583a1c2c108f4') in 0,004850 seconds
+  Import took 0,006746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000122 seconds.
+  path: Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/face nouvo 3.mat
+  artifactKey: Guid(5e51730398eb0cff7b7befeb47368a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/juice_carton/jus/tex/Materials/face nouvo 3.mat using Guid(5e51730398eb0cff7b7befeb47368a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1924580dde002c912e717473c0245bf') in 0,004666 seconds
+  Import took 0,006809 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002233 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,807 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 5,281670 ms (FindLiveObjects: 0,240861 ms CreateObjectMapping: 0,081543 ms MarkObjects: 4,682978 ms  DeleteObjects: 0,274685 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001878 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,750 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2277.
+Total: 3,068692 ms (FindLiveObjects: 0,234580 ms CreateObjectMapping: 0,117140 ms MarkObjects: 2,600244 ms  DeleteObjects: 0,115687 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002049 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,033 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2280.
+Total: 6,088854 ms (FindLiveObjects: 0,420848 ms CreateObjectMapping: 0,091822 ms MarkObjects: 5,406123 ms  DeleteObjects: 0,168055 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002044 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,875 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2283.
+Total: 3,127943 ms (FindLiveObjects: 0,324388 ms CreateObjectMapping: 0,102352 ms MarkObjects: 2,587871 ms  DeleteObjects: 0,112531 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,727 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2286.
+Total: 2,912860 ms (FindLiveObjects: 0,194715 ms CreateObjectMapping: 0,069491 ms MarkObjects: 2,537827 ms  DeleteObjects: 0,109836 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,747 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2289.
+Total: 3,551507 ms (FindLiveObjects: 0,227998 ms CreateObjectMapping: 0,085680 ms MarkObjects: 3,045849 ms  DeleteObjects: 0,191289 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001847 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,775 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2292.
+Total: 3,779485 ms (FindLiveObjects: 0,300413 ms CreateObjectMapping: 0,094267 ms MarkObjects: 3,211820 ms  DeleteObjects: 0,171752 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001751 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,748 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2295.
+Total: 2,845624 ms (FindLiveObjects: 0,211777 ms CreateObjectMapping: 0,078387 ms MarkObjects: 2,441306 ms  DeleteObjects: 0,113262 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002271 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,857 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2298.
+Total: 4,428220 ms (FindLiveObjects: 0,258094 ms CreateObjectMapping: 0,091211 ms MarkObjects: 3,940697 ms  DeleteObjects: 0,137047 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002043 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,743 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2301.
+Total: 3,167357 ms (FindLiveObjects: 0,209643 ms CreateObjectMapping: 0,082154 ms MarkObjects: 2,711613 ms  DeleteObjects: 0,162535 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002011 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,770 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2304.
+Total: 3,071898 ms (FindLiveObjects: 0,197239 ms CreateObjectMapping: 0,073628 ms MarkObjects: 2,681266 ms  DeleteObjects: 0,118662 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001823 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,740 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2307.
+Total: 3,019701 ms (FindLiveObjects: 0,233778 ms CreateObjectMapping: 0,098164 ms MarkObjects: 2,560891 ms  DeleteObjects: 0,125636 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001748 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,887 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2310.
+Total: 5,488879 ms (FindLiveObjects: 0,230802 ms CreateObjectMapping: 0,086873 ms MarkObjects: 4,899384 ms  DeleteObjects: 0,270637 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002062 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,786 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2313.
+Total: 2,974626 ms (FindLiveObjects: 0,230973 ms CreateObjectMapping: 0,089107 ms MarkObjects: 2,533679 ms  DeleteObjects: 0,119804 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001738 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,759 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2316.
+Total: 3,440820 ms (FindLiveObjects: 0,197219 ms CreateObjectMapping: 0,069651 ms MarkObjects: 3,017376 ms  DeleteObjects: 0,155522 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001895 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,701 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,1 MB.
+System memory in use after: 72,1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2319.
+Total: 3,217932 ms (FindLiveObjects: 0,220773 ms CreateObjectMapping: 0,089748 ms MarkObjects: 2,737832 ms  DeleteObjects: 0,168486 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002123 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,731 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,2 MB.
+System memory in use after: 72,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2322.
+Total: 2,914232 ms (FindLiveObjects: 0,211677 ms CreateObjectMapping: 0,057839 ms MarkObjects: 2,526846 ms  DeleteObjects: 0,116568 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1101,358742 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can
+  artifactKey: Guid(5660416c72acfc1f393a7f909d26eb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can using Guid(5660416c72acfc1f393a7f909d26eb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efeb924afda44237ebebc816d135e285') in 0,004193 seconds
+  Import took 0,007828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,707869 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can
+  artifactKey: Guid(50d7ff2df8b0eed5a94d5b9ef5bca5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can using Guid(50d7ff2df8b0eed5a94d5b9ef5bca5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ef23c79501cf919e211fcca42b4034') in 0,000714 seconds
+  Import took 0,004578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,046594 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.3ds
+  artifactKey: Guid(01244e2ffd100bbb0b439f2d869fa27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.3ds using Guid(01244e2ffd100bbb0b439f2d869fa27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db566eb01d989197d687f5ef7d6ddd6a') in 0,081055 seconds
+  Import took 0,084334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000112 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.fbx
+  artifactKey: Guid(228bc76d72fe306bbbce362df9f790c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.fbx using Guid(228bc76d72fe306bbbce362df9f790c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425cbc1fbc4d99c84174ef4d6c89e5fb') in 0,021929 seconds
+  Import took 0,023997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000122 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.obj
+  artifactKey: Guid(49d678f0491c456a191e99b6a7e9b1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.obj using Guid(49d678f0491c456a191e99b6a7e9b1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ccae09df8e83a4067f7cce8d3e3c6d') in 0,013612 seconds
+  Import took 0,016192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000127 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.fbx
+  artifactKey: Guid(228bc76d72fe306bbbce362df9f790c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.fbx using Guid(228bc76d72fe306bbbce362df9f790c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425cbc1fbc4d99c84174ef4d6c89e5fb') in 0,026566 seconds
+  Import took 0,028843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3,715673 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures
+  artifactKey: Guid(4cc946784dd4bfaa59949adec4761d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures using Guid(4cc946784dd4bfaa59949adec4761d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a32cdb83b182d5f084446a66bee0c0') in 0,000767 seconds
+  Import took 0,005007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,039498 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Original_UV.png
+  artifactKey: Guid(e8b40f6396535164f993751eeb9c2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Original_UV.png using Guid(e8b40f6396535164f993751eeb9c2aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8d512b8f8e010dc6ec1ce8b2ae4fc8') in 0,008939 seconds
+  Import took 0,012389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000080 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Soda_Texture_0.png
+  artifactKey: Guid(ff14abb4c9b8be4af97ca2cfd1e0c251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Soda_Texture_0.png using Guid(ff14abb4c9b8be4af97ca2cfd1e0c251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3597f7e85621087a54f2270e910e7f8') in 0,003861 seconds
+  Import took 0,005991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000105 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Soda_Texture_1.png
+  artifactKey: Guid(ef0000c898dcf4470aee7fed50f4edba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Soda_Texture_1.png using Guid(ef0000c898dcf4470aee7fed50f4edba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ae23591dcfab542b0419af5eda9bdc') in 0,003908 seconds
+  Import took 0,006212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3,566503 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer
+  artifactKey: Guid(07da557269f0c7d27b26b9c460aa4651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer using Guid(07da557269f0c7d27b26b9c460aa4651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784487fb1396cc9cfadc7bbc35aeda3b') in 0,000750 seconds
+  Import took 0,004583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,058111 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_0.png
+  artifactKey: Guid(7fbb0df94271d125a8b4605c67df205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_0.png using Guid(7fbb0df94271d125a8b4605c67df205f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc7dfdb0c071364cd537a627a6492f50') in 0,004437 seconds
+  Import took 0,008359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000142 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_1.png
+  artifactKey: Guid(22fe71fe3d1690553ac22a2ac4c99a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_1.png using Guid(22fe71fe3d1690553ac22a2ac4c99a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d15f3479ab2c46f91de524bf1839b8b') in 0,002173 seconds
+  Import took 0,004806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000128 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_2.png
+  artifactKey: Guid(48507901cb9fe8e0abf0efdb57fa9b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_2.png using Guid(48507901cb9fe8e0abf0efdb57fa9b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26c3bb7db35c337a103e2e58525aea99') in 0,003027 seconds
+  Import took 0,006350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000113 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_4.png
+  artifactKey: Guid(df84b391f4ecbbaf497c946100369807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_4.png using Guid(df84b391f4ecbbaf497c946100369807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8fd0c15e25bb5a172fa7567044c7c8') in 0,003731 seconds
+  Import took 0,006418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000170 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_5.png
+  artifactKey: Guid(c41b633b3d8dbd79b9ad4ffc6013e54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_5.png using Guid(c41b633b3d8dbd79b9ad4ffc6013e54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9033db71790a532d2f2d9b32d829a85') in 0,002268 seconds
+  Import took 0,004269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000098 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_3.png
+  artifactKey: Guid(3e72aa9137e70906488285d2d18e6e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Pres_3.png using Guid(3e72aa9137e70906488285d2d18e6e15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eff4d51cbc9bc28d6b02a4cb6e3d8ce') in 0,002284 seconds
+  Import took 0,004256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 108,331413 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.blend
+  artifactKey: Guid(f55de0708929b8c3d8978c725a529a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.blend using Guid(f55de0708929b8c3d8978c725a529a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e81090aa656ea5bbd64278a4a8b7a7') in 0,000830 seconds
+  Import took 0,003624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,004855 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.blend
+  artifactKey: Guid(f55de0708929b8c3d8978c725a529a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Soda_Can.blend using Guid(f55de0708929b8c3d8978c725a529a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e81090aa656ea5bbd64278a4a8b7a7') in 0,000734 seconds
+  Import took 0,003474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58,394065 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials
+  artifactKey: Guid(010274d727d4e39beb3d969ec346f6fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials using Guid(010274d727d4e39beb3d969ec346f6fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f793604e4a33502a0b2400b76e1401') in 0,000794 seconds
+  Import took 0,004780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,030264 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_0.mat
+  artifactKey: Guid(2ed153a370c386affaa09660e9f37c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_0.mat using Guid(2ed153a370c386affaa09660e9f37c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '478f380e5ce6d28444ff5ba2278785c4') in 0,006450 seconds
+  Import took 0,009653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000125 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_3.mat
+  artifactKey: Guid(3471ed8945caf53259f6ff496aa98568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_3.mat using Guid(3471ed8945caf53259f6ff496aa98568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e8cfc81bdf008b63257bc0ea519db2') in 0,004227 seconds
+  Import took 0,006166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000099 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_1.mat
+  artifactKey: Guid(86fe2262a287175d2ae4a68502dea183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_1.mat using Guid(86fe2262a287175d2ae4a68502dea183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37053c3be10d1f30507536fd28c5d0e') in 0,004472 seconds
+  Import took 0,006610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000098 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_5.mat
+  artifactKey: Guid(eb0b77dcde62b2feabfbf1a8ca9640f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/Can Final Renderer/Materials/Pres_5.mat using Guid(eb0b77dcde62b2feabfbf1a8ca9640f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8954ed56826894d8d07cb0faeac34aba') in 0,004489 seconds
+  Import took 0,007094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 211,058136 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials
+  artifactKey: Guid(4732d6dd28064204581a2e39d9d52dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials using Guid(4732d6dd28064204581a2e39d9d52dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb729a05d3dc1336fb8d8b5533c25ef') in 0,000889 seconds
+  Import took 0,004623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,046328 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Original_UV.mat
+  artifactKey: Guid(170eb6b4b1575bf42b23f4d5b3ce7057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Original_UV.mat using Guid(170eb6b4b1575bf42b23f4d5b3ce7057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28b57e8208e44cf65c11eb2b01cb9fd3') in 0,007034 seconds
+  Import took 0,010465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000122 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Soda_Texture_0.mat
+  artifactKey: Guid(86ffde02fc164325eabf9ae19e0e41a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Soda_Texture_0.mat using Guid(86ffde02fc164325eabf9ae19e0e41a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b519c2874e9b7d329a90378c59ff27e') in 0,004478 seconds
+  Import took 0,006382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000100 seconds.
+  path: Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Soda_Texture_1.mat
+  artifactKey: Guid(7e01b3c82bfcf8d80822b47afbbc1f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/16-soda_can/soda_can/2 Different Textures/Materials/Soda_Texture_1.mat using Guid(7e01b3c82bfcf8d80822b47afbbc1f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c011b3007c2a7bc5c26760da6536eec') in 0,004894 seconds
+  Import took 0,007610 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001789 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,723 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,2 MB.
+System memory in use after: 72,2 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 2,974686 ms (FindLiveObjects: 0,194365 ms CreateObjectMapping: 0,098544 ms MarkObjects: 2,578573 ms  DeleteObjects: 0,102192 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001771 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,801 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,2 MB.
+System memory in use after: 72,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2,838941 ms (FindLiveObjects: 0,204003 ms CreateObjectMapping: 0,099206 ms MarkObjects: 2,420637 ms  DeleteObjects: 0,113953 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001927 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,785 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,2 MB.
+System memory in use after: 72,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2332.
+Total: 3,212031 ms (FindLiveObjects: 0,250299 ms CreateObjectMapping: 0,109666 ms MarkObjects: 2,721892 ms  DeleteObjects: 0,128962 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/y8c80uzhxyio-Bottle/Bottle 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/juice_carton/jus/pack de jus pindra 2.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/Prefabs/Garbage/ly5tfo0o543k-lata (1)/Lata de refresco.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001877 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,902 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1737 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72,2 MB.
+System memory in use after: 72,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2335.
+Total: 5,383612 ms (FindLiveObjects: 0,451586 ms CreateObjectMapping: 0,116589 ms MarkObjects: 4,603409 ms  DeleteObjects: 0,210214 ms)
+
