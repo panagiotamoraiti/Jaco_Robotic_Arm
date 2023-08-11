@@ -70,6 +70,8 @@ def detect(detection_graph, test_image_path, img):
         npim = cv2.cvtColor(npim, cv2.COLOR_BGR2RGB)
         
         if (num>0):
+            detection = True
+
             first_box_coordinates = boxes[0][0]
             y_min, x_min, y_max, x_max = first_box_coordinates
 
@@ -138,6 +140,7 @@ def detect(detection_graph, test_image_path, img):
                 output_file.write(f"{move_x}\n{move_z}\n")
 
         else:
+            detection = False
             if (os.path.isfile(output_file_path)):
                 os.remove(output_file_path)
                 
@@ -149,6 +152,30 @@ def detect(detection_graph, test_image_path, img):
         #cv2.waitKey(1) 
         #cv2.destroyAllWindows()
 
+        # Write the correct category in a .txt
+        first_detected_class = int(classes[0][0])
+        label = category_index[first_detected_class]['name']
+        # print("Detected Label:", label)
+
+        # Search for the label in the categorized lists
+        found_in_category = None
+        for category, item_names in [
+            ('plastic', plastic_item_names),
+            ('glass', glass_item_names),
+            ('metal', metal_item_names),
+            ('paper', paper_item_names),
+            ('other', other_item_names)
+        ]:
+            if label in item_names:
+                found_in_category = category
+                break
+
+        #print(f"The label '{label}' was found in the '{found_in_category.capitalize()}' category.")
+        with open(category_file_path, 'w') as output_file:
+            output_file.write(f"{found_in_category}")
+
+        with open(detection_file_path, 'w') as output_file:
+            output_file.write(f"{detection}")
 
 DATA_DIR = './../Garbage Detection'
 ANNOTATIONS_FILE = os.path.join(DATA_DIR, 'annotations.json')
@@ -180,6 +207,42 @@ label_map = label_map_util.load_labelmap('labelmap.pbtxt')
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NCLASSES, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
 
+# Make list with 5 categories
+# Define categories
+categories = {
+    'plastic': ['Plastic', 'Squeezable tube', 'Tupperware', 'Spread tub', 'Crisp packet', 'Garbage bag', 'Single-use carrier bag', 'Six pack rings'],
+    'glass': ['Glass'],
+    'metal': ['Metal', 'can', 'Aluminium ', 'Pop tab', 'Aerosol'],
+    'paper': ['Paper', 'box', 'container', 'carton', 'Tissues', 'Carded blister pack', 'Foam cup', 'Toilet tube'],
+}
+
+# Categorize the class names
+categorized_categories = {category: [] for category in categories}
+categorized_categories['other'] = []
+
+for class_id, class_info in category_index.items():
+    class_name = class_info['name']
+    for category, keywords in categories.items():
+        if any(keyword.lower() in class_name.lower() for keyword in keywords):
+            categorized_categories[category].append(class_info)
+            break
+    else:
+        categorized_categories['other'].append(class_info)
+
+# Separate lists for each category
+plastic_list = categorized_categories['plastic']
+glass_list = categorized_categories['glass']
+metal_list = categorized_categories['metal']
+paper_list = categorized_categories['paper']
+other_list = categorized_categories['other']
+
+# Extract item names
+plastic_item_names = [item['name'] for item in plastic_list]
+glass_item_names = [item['name'] for item in glass_list]
+metal_item_names = [item['name'] for item in metal_list]
+paper_item_names = [item['name'] for item in paper_list]
+other_item_names = [item['name'] for item in other_list]
+
 detection_graph = reconstruct("./../Garbage Detection/ssd_mobilenet_v2_taco_2018_03_29.pb")
 
 #directory_Path = './../Garbage Detection/images/batch_1'
@@ -191,6 +254,8 @@ while(True):
     for filename in os.listdir(directory_Path):
         filename_no_ext, _ = os.path.splitext(filename)
         output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
+        category_file_path = directory_Path + '/category.txt'
+        detection_file_path = directory_Path + '/detection.txt'
             
         # Check if the file has an image extension
         if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):                           

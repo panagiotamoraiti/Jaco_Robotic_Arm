@@ -15,13 +15,12 @@ public class GarbageSorting : MonoBehaviour
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
     const float k_PoseAssignmentWait = 1f;
+    const float k_Angle = 47f;		// for closing gripper fingers
 
     // Variables required for ROS communication
     [SerializeField]
     string m_RosServiceName = "niryo_moveit";
     public string RosServiceName { get => m_RosServiceName; set => m_RosServiceName = value; }
-
-// UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-0.5690000057220459,"y":0.023000000044703485,"z":-0.13099999725818635},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"scale":{"x":1.0,"y":1.0,"z":1.0}}
 
     [SerializeField]
     GameObject m_j2n6s200;
@@ -92,82 +91,84 @@ public class GarbageSorting : MonoBehaviour
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         // Introduce a delay before calling PublishJoints()
         yield return new WaitForSeconds(5.0f);
-        stage = (int)Poses.Start;
-        PublishJoints();
-        Debug.Log("Starting Coroutine ScreenshotPosition.");      
-        yield return new WaitForSeconds(10.0f); // Waiting for ML model's response
         
-        stage = (int)Poses.PreGrasp;
-        PublishJoints();
-        Debug.Log("Starting Coroutine Pregrasp.");
-        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
-        
-        // Raycast sensor
-         if (raycastOrigin == null)
-            {
-                Debug.LogError("Raycast origin (child GameObject) is not assigned!");
-            }
-
-            // Cast a ray from the raycast origin's position towards its forward direction
-            Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
-            RaycastHit hit;
-
-            // Check if the ray hits an object on the specified layer
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastMask))
-            {
-                // Get the distance between the raycast origin and the hit object
-                float distance = Vector3.Distance(raycastOrigin.position, hit.point);
-                 
-                // Draw the ray from the origin to the hit point
-                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, 2f);
-
-                // You can now use the 'distance' value as needed (e.g., print it, display it in UI, etc.)
-                Debug.Log("Distance from camera center to object: " + distance);
-                
-                // Write the distance to the .txt file
-                WriteDistanceToFile(distance, filePath);
-            }
-        else
-        {
-            Debug.Log("Raycast did not hit any object.");
-        }
-        // yield return new WaitForSeconds(1f);
-        
-            
-        // If the rotation of the gripper is wrong correct it
-        string line = ReadLineFromFile(filePathrotate); 
-        if (line == "True")
-        {
-            stage = (int)Poses.PreGrasp;
-            PublishJoints2();
-            Debug.Log("Starting Coroutine with new orientation.");   
-            yield return new WaitForSeconds(5f);   
-        }
-        
-        // GoDown Pose
-        stage = (int)Poses.GoDown;
-        if (line == "True")
-	        PublishJoints2();
-	    else
-		    PublishJoints();
-	    Debug.Log("Starting Coroutine GoDown.");
-	    yield return new WaitForSeconds(6.0f);  // Delay Pregasp-> GoDown
-	    
-	    // GraspAndPlace Pose
-	    stage = (int)Poses.GraspAndPlace;
-        if (line == "True")
-	        PublishJoints2();
-	    else
-		    PublishJoints();
-	    Debug.Log("Starting Coroutine GraspAndPlace.");
-	    yield return new WaitForSeconds(8.0f);  // Delay GoDown-> GraspAndPlace
-        
-        
+        StartCoroutine(DetectionPipeline());
     }
     
-    void Update()
+    IEnumerator DetectionPipeline()
     {
+        while(true)
+        {
+            stage = (int)Poses.Start;
+	        PublishJoints();
+	        Debug.Log("Starting Coroutine ScreenshotPosition.");      
+	        yield return new WaitForSeconds(10.0f); // Waiting for ML model's response
+	        
+	        stage = (int)Poses.PreGrasp;
+	        PublishJoints();
+	        Debug.Log("Starting Coroutine Pregrasp.");
+	        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
+	        
+	        // Raycast sensor
+	         if (raycastOrigin == null)
+	            {
+	                Debug.LogError("Raycast origin (child GameObject) is not assigned!");
+	            }
 
+	            // Cast a ray from the raycast origin's position towards its forward direction
+	            Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
+	            RaycastHit hit;
+
+	            // Check if the ray hits an object on the specified layer
+	            if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastMask))
+	            {
+	                // Get the distance between the raycast origin and the hit object
+	                float distance = Vector3.Distance(raycastOrigin.position, hit.point);
+	                 
+	                // Draw the ray from the origin to the hit point
+	                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, 2f);
+
+	                // You can now use the 'distance' value as needed (e.g., print it, display it in UI, etc.)
+	                Debug.Log("Distance from camera center to object: " + distance);
+	                
+	                // Write the distance to the .txt file
+	                WriteDistanceToFile(distance, filePath);
+	            }
+	            else
+                {
+                    Debug.Log("Raycast did not hit any object.");
+                }
+                // yield return new WaitForSeconds(1f);
+                
+                    
+                // If the rotation of the gripper is wrong correct it
+                string line = ReadLineFromFile(filePathrotate); 
+                if (line == "True")
+                {
+                    stage = (int)Poses.PreGrasp;
+                    PublishJoints2();
+                    Debug.Log("Starting Coroutine with new orientation.");   
+                    yield return new WaitForSeconds(5f);   
+                }
+                
+                // GoDown Pose
+                stage = (int)Poses.GoDown;
+                if (line == "True")
+                    PublishJoints2();
+                else
+	                PublishJoints();
+                Debug.Log("Starting Coroutine GoDown.");
+                yield return new WaitForSeconds(6.0f);  // Delay Pregasp-> GoDown
+                
+                // GraspAndPlace Pose
+                stage = (int)Poses.GraspAndPlace;
+                if (line == "True")
+                    PublishJoints2();
+                else
+	                PublishJoints();
+                Debug.Log("Starting Coroutine GraspAndPlace.");
+                yield return new WaitForSeconds(8.0f);  // Delay GoDown-> GraspAndPlace
+	    }
     }
     
      private void WriteDistanceToFile(float distance, string filePath)
@@ -228,8 +229,8 @@ public class GarbageSorting : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = 53f;
-        rightDrive.target = 53f;
+        leftDrive.target = k_Angle;
+        rightDrive.target = k_Angle;
         
         leftDrive.stiffness = 4000;
         rightDrive.stiffness = 4000;
@@ -243,8 +244,8 @@ public class GarbageSorting : MonoBehaviour
         var leftDrive = m_LeftGripper.xDrive;
         var rightDrive = m_RightGripper.xDrive;
 
-        leftDrive.target = -53f;
-        rightDrive.target = -53f;
+        leftDrive.target = -k_Angle;
+        rightDrive.target = -k_Angle;
 
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
