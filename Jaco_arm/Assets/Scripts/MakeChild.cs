@@ -10,7 +10,6 @@ public class MakeChild : MonoBehaviour
     IEnumerator WaitBeforeOpen()
     {
         yield return new WaitForSeconds(1.2f);
-        Debug.Log("Waiting for OpenGripper:::::::");
         targetTransform.parent = null;
         targetTransform.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }

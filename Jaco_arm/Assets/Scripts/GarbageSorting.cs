@@ -15,7 +15,7 @@ public class GarbageSorting : MonoBehaviour
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
     const float k_PoseAssignmentWait = 1f;
-    const float k_Angle = 47f;		// for closing gripper fingers
+    const float k_Angle = 45f;		// for closing gripper fingers
 
     // Variables required for ROS communication
     [SerializeField]
@@ -148,7 +148,7 @@ public class GarbageSorting : MonoBehaviour
                     stage = (int)Poses.PreGrasp;
                     PublishJoints2();
                     Debug.Log("Starting Coroutine with new orientation.");   
-                    yield return new WaitForSeconds(5f);   
+                    yield return new WaitForSeconds(5.0f);   
                 }
                 
                 // GoDown Pose
@@ -158,16 +158,25 @@ public class GarbageSorting : MonoBehaviour
                 else
 	                PublishJoints();
                 Debug.Log("Starting Coroutine GoDown.");
-                yield return new WaitForSeconds(6.0f);  // Delay Pregasp-> GoDown
+                yield return new WaitForSeconds(7.0f);  // Delay Pregasp-> GoDown
                 
-                // GraspAndPlace Pose
-                stage = (int)Poses.GraspAndPlace;
+                // GraspAndUp Pose
+                stage = (int)Poses.GraspAndUp;
                 if (line == "True")
                     PublishJoints2();
                 else
 	                PublishJoints();
-                Debug.Log("Starting Coroutine GraspAndPlace.");
-                yield return new WaitForSeconds(8.0f);  // Delay GoDown-> GraspAndPlace
+                Debug.Log("Starting Coroutine GraspAndUp.");
+                yield return new WaitForSeconds(5.0f);  // Delay GoDown-> GraspAndUp
+                
+                // Place Pose
+                stage = (int)Poses.Place;
+                if (line == "True")
+                    PublishJoints2();
+                else
+	                PublishJoints();
+                Debug.Log("Starting Coroutine Place.");
+                yield return new WaitForSeconds(9.0f);  // Delay GraspAndUp-> Place
 	    }
     }
     
@@ -354,7 +363,7 @@ public class GarbageSorting : MonoBehaviour
             {
                 
                 // Close the gripper
-                if (poseIndex == (int)Poses.GraspAndPlace)
+                if (poseIndex == (int)Poses.GraspAndUp)
                 {
                     //yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
@@ -383,14 +392,22 @@ public class GarbageSorting : MonoBehaviour
                 {
                     CaptureScreen();
                 }
+                
+                // Open the gripper
+                if (poseIndex == (int)Poses.Place)
+                {
+                    yield return new WaitForSeconds(k_PoseAssignmentWait);
+                    OpenGripper();
+                    yield return new WaitForSeconds(k_PoseAssignmentWait);
+                }
 
                 // Wait for the robot to achieve the final pose from joint assignment
                 //yield return new WaitForSeconds(k_PoseAssignmentWait);
             }
 
             // All trajectories have been executed, open the gripper to place the target cube
-            yield return new WaitForSeconds(1f);
-            OpenGripper();
+            //yield return new WaitForSeconds(1f);
+            //OpenGripper();
         }
     }
 
@@ -399,6 +416,7 @@ public class GarbageSorting : MonoBehaviour
         Start,
         PreGrasp,
         GoDown,
-        GraspAndPlace
+        GraspAndUp,
+        Place
     }
 }

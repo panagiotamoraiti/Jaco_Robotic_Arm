@@ -45,6 +45,7 @@ def image2tensor(image):
     return np.expand_dims(npim, axis=0)
 
 def detect(detection_graph, test_image_path, img):
+  detection = False
   with detection_graph.as_default():
     gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.01)
     with tf.compat.v1.Session(graph=detection_graph,config=tf.compat.v1.ConfigProto(gpu_options=gpu_options)) as sess:
@@ -70,8 +71,6 @@ def detect(detection_graph, test_image_path, img):
         npim = cv2.cvtColor(npim, cv2.COLOR_BGR2RGB)
         
         if (num>0):
-            detection = True
-
             first_box_coordinates = boxes[0][0]
             y_min, x_min, y_max, x_max = first_box_coordinates
 
@@ -126,21 +125,22 @@ def detect(detection_graph, test_image_path, img):
 	            use_normalized_coordinates=True,
 	            line_thickness=5,
 	            min_score_thresh=.3)
-
-            # Draw a circle at the center of the bounding box
-            center = (center_x * width, center_y * height)
-            circle_color = (255, 0, 0)  
-            circle_radius = 3 
-            circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
-
-            if (os.path.isfile(output_file_path)):
-                os.remove(output_file_path)
 	            
-            with open(output_file_path, 'a+') as output_file:
-                output_file.write(f"{move_x}\n{move_z}\n")
+            if scores[0][0] >= 0.3:
+                detection = True
+                # Draw a circle at the center of the bounding box
+                center = (center_x * width, center_y * height)
+                circle_color = (255, 0, 0)  
+                circle_radius = 3 
+                circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
+
+                if (os.path.isfile(output_file_path)):
+                    os.remove(output_file_path)
+	                
+                with open(output_file_path, 'a+') as output_file:
+                    output_file.write(f"{move_x}\n{move_z}\n")
 
         else:
-            detection = False
             if (os.path.isfile(output_file_path)):
                 os.remove(output_file_path)
                 
@@ -263,14 +263,15 @@ while(True):
             image_path = os.path.join(directory_Path, filename)
 
             image = cv2.imread(image_path)
-            height, width, _ = image.shape
+            if image is not None:
+                height, width, _ = image.shape
            
-            #resized_image = cv2.resize(image, (height//4, width//4))
-            #height, width, _ = resized_image.shape 
-            #cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
-            detect(detection_graph, image_path, False)    
-            #os.remove(directory_Path + '/' + filename + '_resized.jpg')
-            
-            # Remove image
-            os.remove(image_path)
+                #resized_image = cv2.resize(image, (height//4, width//4))
+                #height, width, _ = resized_image.shape 
+                #cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
+                detect(detection_graph, image_path, False)    
+                #os.remove(directory_Path + '/' + filename + '_resized.jpg')
+                
+                # Remove image
+                os.remove(image_path)
 
