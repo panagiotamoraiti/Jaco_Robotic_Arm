@@ -9,6 +9,8 @@ TagManager:
   - GarbageBin
   - MetalBin
   - PlasticBin
+  - PaperBin
+  - GlassBin
   layers:
   - Default
   - TransparentFX

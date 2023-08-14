@@ -54,6 +54,9 @@ public class GarbageSorting : MonoBehaviour
     // For choosing bin
     private string filePathCategory = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/category.txt";
     
+    // For recognise detection
+    private string filePathDetection = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/detection.txt";
+    
     // For making the Target child to the end effector
     [SerializeField]
     private Transform m_endEffector;
@@ -109,6 +112,11 @@ public class GarbageSorting : MonoBehaviour
 	        Debug.Log("Starting Coroutine ScreenshotPosition.");      
 	        yield return new WaitForSeconds(10.0f); // Waiting for ML model's response
 	        
+	        string detection = ReadLineFromFile(filePathDetection);
+	        if (detection=="False"){
+	            Debug.Log("No detecttion.");  
+	            continue;}
+	        
 	        string category = ReadLineFromFile(filePathCategory);
 	        Debug.Log("Object category: " + category);
 	        
@@ -132,10 +140,7 @@ public class GarbageSorting : MonoBehaviour
             string line = ReadLineFromFile(filePathrotate); 
             if (line == "True")
             {
-                // stage = (int)Poses.PreGrasp;
                 PickOrientation = VerticalPickOrientation;
-                //Debug.Log("Starting Coroutine with new orientation.");   
-                //yield return new WaitForSeconds(5.0f);   
             }
 	        
 	        // Raycast sensor
@@ -173,18 +178,8 @@ public class GarbageSorting : MonoBehaviour
             // GoDown Pose
             stage = (int)Poses.GoDown;
             PublishJoints();
-            Debug.Log("Starting Coroutine GoDown.");
-            yield return new WaitForSeconds(7.0f);  // Delay Pregasp-> GoDown
-
-            // GraspAndUp Pose
-            //stage = (int)Poses.GraspAndUp;
-            //Debug.Log("Starting Coroutine GraspAndUp.");
-            //yield return new WaitForSeconds(5.0f);  // Delay GoDown-> GraspAndUp
-
-            // Place Pose
-            //stage = (int)Poses.Place;
-            //Debug.Log("Starting Coroutine Place.");
-            //yield return new WaitForSeconds(9.0f);  // Delay GraspAndUp-> Place
+            Debug.Log("Starting Coroutine GoDown..Grasp..Place.");
+            yield return new WaitForSeconds(15.0f);  // Delay Pregasp-> GoDown -> GraspAndUp -> Place
 	    }
     }
     
@@ -389,7 +384,7 @@ public class GarbageSorting : MonoBehaviour
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment
-                //yield return new WaitForSeconds(k_PoseAssignmentWait);
+                yield return new WaitForSeconds(k_PoseAssignmentWait);
             }
 
             // All trajectories have been executed, open the gripper to place the target cube
