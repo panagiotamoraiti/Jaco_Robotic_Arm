@@ -148,15 +148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.125
+      value: -0.0885
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055
+      value: -0.0526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.669
+      value: -0.5606
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -280,8 +280,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.62, y: 0.92, z: 2.8543055}
-  m_Center: {x: -31.511368, y: -5.1715765, z: -1.768285}
+  m_Size: {x: 0.6199997, y: 0.83288175, z: 2.8543055}
+  m_Center: {x: -31.511368, y: -5.2151237, z: -1.768285}
 --- !u!1 &68650925
 GameObject:
   m_ObjectHideFlags: 8
@@ -868,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_TagString
-      value: TargetPlacement
+      value: GarbageBin
       objectReference: {fileID: 0}
     - target: {fileID: 3705161338145530439, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1627,7 +1627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398995015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: -0.039, z: 0.433}
+  m_LocalPosition: {x: 0.277, y: 0.004, z: 0.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1843,7 +1843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451866205}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.168, y: -0.125, z: -0.617}
+  m_LocalPosition: {x: 0.026, y: -0.125, z: -0.647}
   m_LocalScale: {x: 1, y: 1, z: 1.99155}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1927,8 +1927,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 204.49997, y: 885.8, z: 363.8302}
-  m_Center: {x: 3.4710517, y: -9.911804, z: -31.61516}
+  m_Size: {x: 204.49997, y: 885.8, z: 277.00528}
+  m_Center: {x: 3.4710517, y: -9.911805, z: 11.797286}
 --- !u!54 &494767119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2756,10 +2756,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RosServiceName: niryo_moveit
   m_j2n6s200: {fileID: 2137049589}
-  box_place: {x: -0.569, y: 0.023, z: -0.13}
-  or1: {x: 0.6935244, y: -0.02997759, z: 0.7166626, w: -0.06723422}
-  or2: {x: -0.024541438, y: 0.073478445, z: -0.9966779, w: 0.025146296}
-  pos: {x: 0, y: 0.4, z: -0.5}
+  PickOrientation: {x: 0, y: 0, z: 0, w: 0}
+  DefaultPickOrientation: {x: 0.6935244, y: -0.02997759, z: 0.7166626, w: -0.06723422}
+  VerticalPickOrientation: {x: -0.024541438, y: 0.073478445, z: -0.9966779, w: 0.025146296}
+  PickPosition: {x: 0, y: 0.4, z: -0.5}
+  PlacePosition: {x: -0.569, y: 0.023, z: -0.13}
   targetCamera: {fileID: 1946168423}
   savePath: Screenshots/
   fileNamePrefix: screenshot
@@ -3319,7 +3320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.261
+      value: -0.265
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3327,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.449
+      value: -0.381
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2912615082f69ec88f284dd11dd06bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3505,8 +3506,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 86.2, y: 171, z: 84.9}
-  m_Center: {x: -7.5305877, y: 97.67792, z: 1.8217081}
+  m_Size: {x: 86.19999, y: 171.00002, z: 63.874252}
+  m_Center: {x: -7.530588, y: 97.6779, z: -3.2145603}
 --- !u!54 &751394885
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4199,6 +4200,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_Name
       value: TrashbinRedPlastic
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
+      propertyPath: m_TagString
+      value: PlasticBin
       objectReference: {fileID: 0}
     - target: {fileID: 3705161338145530439, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7755,6 +7760,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_Name
       value: TrashbinBlueMetal
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
+      propertyPath: m_TagString
+      value: MetalBin
       objectReference: {fileID: 0}
     - target: {fileID: 3705161338145530439, guid: b08ef7d6178f62742af62250667c0dff, type: 3}
       propertyPath: m_Materials.Array.data[0]

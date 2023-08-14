@@ -6,7 +6,9 @@ TagManager:
   tags:
   - robot
   - Target
-  - TargetPlacement
+  - GarbageBin
+  - MetalBin
+  - PlasticBin
   layers:
   - Default
   - TransparentFX

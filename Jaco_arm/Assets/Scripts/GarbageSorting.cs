@@ -25,16 +25,17 @@ public class GarbageSorting : MonoBehaviour
     [SerializeField]
     GameObject m_j2n6s200;
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
-    readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
-    // readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
-    public Vector3 box_place = new Vector3(-0.569f, 0.023f, -0.130f);
     
-    // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
-    public Quaternion or1 = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
-    public Quaternion or2 = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f); // new orientation
-    //readonly Quaternion or = new Quaternion.Euler(0,90,0);
-    //Debug.Log(or.ToString());
-    public Vector3 pos = new Vector3(0f, 0.4f, -0.5f);
+    // Pick Default Values
+    public Quaternion PickOrientation;
+    public Quaternion DefaultPickOrientation = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
+    public Quaternion VerticalPickOrientation = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f);
+    public Vector3 PickPosition = new Vector3(0f, 0.4f, -0.5f);
+    
+    // Place Default Values
+    readonly Quaternion PlaceOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
+    public Vector3 PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
+    
     
     // For camera
     public Camera targetCamera;
@@ -91,8 +92,7 @@ public class GarbageSorting : MonoBehaviour
         m_RightGripper = m_j2n6s200.transform.Find(rightGripper).GetComponent<ArticulationBody>();
         m_LeftGripper = m_j2n6s200.transform.Find(leftGripper).GetComponent<ArticulationBody>();
         
-        /////////////////////////////////////////////////////////////////////////////////////////////////////
-        // Introduce a delay before calling PublishJoints()
+        // Introduce a delay before calling DetectionPipeline()
         yield return new WaitForSeconds(5.0f);
         
         StartCoroutine(DetectionPipeline());
@@ -102,6 +102,8 @@ public class GarbageSorting : MonoBehaviour
     {
         while(true)
         {
+            PickOrientation = DefaultPickOrientation;
+            
             stage = (int)Poses.Start;
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine ScreenshotPosition.");      
@@ -111,9 +113,9 @@ public class GarbageSorting : MonoBehaviour
 	        Debug.Log("Object category: " + category);
 	        
 	        if (category=="metal")
-	            box_place = new Vector3(-0.231f, 0.004f, 0.298f);
+	            PlacePosition = new Vector3(-0.231f, 0.004f, 0.298f);
 	        else if (category=="plastic")
-	            box_place = new Vector3(0.277f, 0.004f, 0.289f);
+	            PlacePosition = new Vector3(0.277f, 0.004f, 0.289f);
 	            
 	        stage = (int)Poses.PreGrasp;
 	        PublishJoints();
@@ -157,35 +159,28 @@ public class GarbageSorting : MonoBehaviour
                 if (line == "True")
                 {
                     stage = (int)Poses.PreGrasp;
-                    PublishJoints2();
+                    PickOrientation = VerticalPickOrientation;
+                    PublishJoints();
                     Debug.Log("Starting Coroutine with new orientation.");   
                     yield return new WaitForSeconds(5.0f);   
                 }
                 
                 // GoDown Pose
                 stage = (int)Poses.GoDown;
-                if (line == "True")
-                    PublishJoints2();
-                else
-	                PublishJoints();
+	            PublishJoints();
                 Debug.Log("Starting Coroutine GoDown.");
                 yield return new WaitForSeconds(7.0f);  // Delay Pregasp-> GoDown
                 
                 // GraspAndUp Pose
                 stage = (int)Poses.GraspAndUp;
-                if (line == "True")
-                    PublishJoints2();
-                else
-	                PublishJoints();
+                PublishJoints();
                 Debug.Log("Starting Coroutine GraspAndUp.");
                 yield return new WaitForSeconds(5.0f);  // Delay GoDown-> GraspAndUp
                 
                 // Place Pose
                 stage = (int)Poses.Place;
-                if (line == "True")
-                    PublishJoints2();
-                else
-	                PublishJoints();
+                
+                PublishJoints();
                 Debug.Log("Starting Coroutine Place.");
                 yield return new WaitForSeconds(9.0f);  // Delay GraspAndUp-> Place
 	    }
@@ -301,37 +296,15 @@ public class GarbageSorting : MonoBehaviour
         // Pick Pose
         request.pick_pose = new PoseMsg
         {
-           position = pos.To<FLU>(),
-           orientation = or1.To<FLU>()
+           position = PickPosition.To<FLU>(),
+           orientation = PickOrientation.To<FLU>()
         };
       
         // Place Pose
         request.place_pose = new PoseMsg
         {
-            position = box_place.To<FLU>(),
-            orientation = m_PickOrientation.To<FLU>()
-        };
-
-        m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
-    }
-    
-    public void PublishJoints2()
-    {
-        var request = new MoverServiceRequest();
-        request.joints_input = CurrentJointConfig();
-        
-        // Pick Pose
-        request.pick_pose = new PoseMsg
-        {
-           position = pos.To<FLU>(),
-           orientation = or2.To<FLU>()
-        };
-      
-        // Place Pose
-        request.place_pose = new PoseMsg
-        {
-            position = box_place.To<FLU>(),
-            orientation = m_PickOrientation.To<FLU>()
+            position = PlacePosition.To<FLU>(),
+            orientation = PlaceOrientation.To<FLU>()
         };
 
         m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
