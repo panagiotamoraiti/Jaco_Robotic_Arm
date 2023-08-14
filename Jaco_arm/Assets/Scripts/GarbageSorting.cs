@@ -15,7 +15,7 @@ public class GarbageSorting : MonoBehaviour
     const int k_NumRobotJoints = 6;
     const float k_JointAssignmentWait = 0.1f;
     const float k_PoseAssignmentWait = 1f;
-    const float k_Angle = 45f;		// for closing gripper fingers
+    const float k_Angle = 40f;		// for closing gripper fingers
 
     // Variables required for ROS communication
     [SerializeField]
@@ -27,14 +27,14 @@ public class GarbageSorting : MonoBehaviour
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
     readonly Quaternion m_PickOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     // readonly Vector3 m_PickPoseOffset = Vector3.up * 0.1f;
-    Vector3 box_place = new Vector3(-0.569f, 0.023f, -0.130f);
+    public Vector3 box_place = new Vector3(-0.569f, 0.023f, -0.130f);
     
     // The hardcoded x/y/z angles assure that the gripper is always positioned above the target cube before grasping.
-    Quaternion or1 = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
-    Quaternion or2 = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f); // new orientation
+    public Quaternion or1 = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
+    public Quaternion or2 = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f); // new orientation
     //readonly Quaternion or = new Quaternion.Euler(0,90,0);
     //Debug.Log(or.ToString());
-    Vector3 pos = new Vector3(0f, 0.4f, -0.5f);
+    public Vector3 pos = new Vector3(0f, 0.4f, -0.5f);
     
     // For camera
     public Camera targetCamera;
@@ -49,6 +49,9 @@ public class GarbageSorting : MonoBehaviour
     
     // For rotate
     private string filePathrotate = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/rotate.txt";
+    
+    // For choosing bin
+    private string filePathCategory = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/category.txt";
     
     // For making the Target child to the end effector
     [SerializeField]
@@ -104,6 +107,14 @@ public class GarbageSorting : MonoBehaviour
 	        Debug.Log("Starting Coroutine ScreenshotPosition.");      
 	        yield return new WaitForSeconds(10.0f); // Waiting for ML model's response
 	        
+	        string category = ReadLineFromFile(filePathCategory);
+	        Debug.Log("Object category: " + category);
+	        
+	        if (category=="metal")
+	            box_place = new Vector3(-0.231f, 0.004f, 0.298f);
+	        else if (category=="plastic")
+	            box_place = new Vector3(0.277f, 0.004f, 0.289f);
+	            
 	        stage = (int)Poses.PreGrasp;
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine Pregrasp.");

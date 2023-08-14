@@ -1,9 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Linq;
 
 public class MakeChild : MonoBehaviour
 {
+
+    
+    private string filePathCategory = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/category.txt";
+
+    private string ReadLineFromFile(string filePath) 
+    { 
+        // Read the first line from the .txt file 
+        using (StreamReader reader = new StreamReader(filePath)) 
+        { 
+        string line = reader.ReadLine(); 
+        return line; 
+        } 
+    }
 
     Transform targetTransform;
     
@@ -23,7 +38,12 @@ public class MakeChild : MonoBehaviour
             targetTransform = other.transform;
         }
         
-        if(other.gameObject.tag == "TargetPlacement")
+        string category = ReadLineFromFile(filePathCategory);
+        bool unchild = (other.gameObject.tag=="PlasticBin" && category=="plastic"
+               || other.gameObject.tag=="MetalBin" && category=="metal"
+               || other.gameObject.tag=="GarbageBin" && category=="other");
+        
+        if(unchild)
         {
             StartCoroutine(WaitBeforeOpen());
         }

@@ -152,7 +152,7 @@ def plan_pick_and_place(req):
     previous_ending_joint_angles = go_down_pose.joint_trajectory.points[-1].positions
     
     # GraspAndUp - pick up object and move upwards a bit
-    pick_pose.position.z += 0.1
+    pick_pose.position.z += 0.15
     grasp_and_up_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
     
     if not grasp_and_up_pose.joint_trajectory.points:
