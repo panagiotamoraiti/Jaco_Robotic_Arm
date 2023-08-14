@@ -1465,3 +1465,227 @@ System memory in use after: 70,2 MB.
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2337.
 Total: 3,836776 ms (FindLiveObjects: 0,217478 ms CreateObjectMapping: 0,052288 ms MarkObjects: 3,427789 ms  DeleteObjects: 0,138370 ms)
 
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001635 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,666 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1987 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 77,9 MB.
+System memory in use after: 77,8 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2584.
+Total: 5,182871 ms (FindLiveObjects: 0,315381 ms CreateObjectMapping: 0,139061 ms MarkObjects: 4,514237 ms  DeleteObjects: 0,212138 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 7092,684900 seconds.
+  path: Assets/ArUco-4x4-100-94.fbx
+  artifactKey: Guid(c0f4a98d740090e40b7af412ab14879a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ArUco-4x4-100-94.fbx using Guid(c0f4a98d740090e40b7af412ab14879a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764a001e29bd299ba7c9d0b2e5e92cf8') in 0,018489 seconds
+  Import took 0,021724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000276 seconds.
+  path: Assets/ArUco-4x4-100-94.prefab
+  artifactKey: Guid(d2a81b344b68174ccadddc650aa7f987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ArUco-4x4-100-94.prefab using Guid(d2a81b344b68174ccadddc650aa7f987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47748611aa1cb153e7843c1d8e8300df') in 0,044352 seconds
+  Import took 0,046423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 207,312728 seconds.
+  path: Assets/Prefabs/Garbage/water_bottle.fbx
+  artifactKey: Guid(2cad0ad126b2b5f778ef0c86c25d66c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/water_bottle.fbx using Guid(2cad0ad126b2b5f778ef0c86c25d66c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b54a822d81976c1d9a2f049bab5a8034') in 0,000919 seconds
+  Import took 0,004854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,060285 seconds.
+  path: Assets/Prefabs/Garbage/water_bottle.fbx/bottle.prefab
+  artifactKey: Guid(e5b90a6b15f6ddb9abc99bff459e8490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/water_bottle.fbx/bottle.prefab using Guid(e5b90a6b15f6ddb9abc99bff459e8490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26fdd4b0128e3682add9815f98741c96') in 0,009860 seconds
+  Import took 0,013165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25,456031 seconds.
+  path: Assets/Prefabs/Garbage/water_bottle
+  artifactKey: Guid(2cad0ad126b2b5f778ef0c86c25d66c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/water_bottle using Guid(2cad0ad126b2b5f778ef0c86c25d66c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c4530af05ab262bbc3475f113b87aa') in 0,000748 seconds
+  Import took 0,004135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 178,135129 seconds.
+  path: Assets/Prefabs/Garbage/pepsi_can
+  artifactKey: Guid(acc6b06d1c3a41fcb8e4b27e1694049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/pepsi_can using Guid(acc6b06d1c3a41fcb8e4b27e1694049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b86cd555e9b8e8dc2cbbb5123e687f6') in 0,000961 seconds
+  Import took 0,004818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,064319 seconds.
+  path: Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab
+  artifactKey: Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab using Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f97e9f903323e9d589c0088972ff534') in 0,015494 seconds
+  Import took 0,020163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 123,049228 seconds.
+  path: Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab
+  artifactKey: Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab using Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7c7ab7c9cda3baf56c2c254aa79eaa') in 0,023958 seconds
+  Import took 0,028303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,007036 seconds.
+  path: Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab
+  artifactKey: Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/pepsi_can/pepsi_can.prefab using Guid(36a3afb5f27400cc58ccf7c50262e9ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7c7ab7c9cda3baf56c2c254aa79eaa') in 0,005967 seconds
+  Import took 0,010001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32,641255 seconds.
+  path: Assets/Prefabs/Garbage/coca_cola
+  artifactKey: Guid(c0fdbae4b5de895d19ddcdf6a9aef4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/coca_cola using Guid(c0fdbae4b5de895d19ddcdf6a9aef4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd058518a32fddf72310b01995ab2274d') in 0,000900 seconds
+  Import took 0,004894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,090749 seconds.
+  path: Assets/Prefabs/Garbage/coca_cola/coca_cola.prefab
+  artifactKey: Guid(2d42b92d01fa6ce8bab3feff2835ed80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/coca_cola/coca_cola.prefab using Guid(2d42b92d01fa6ce8bab3feff2835ed80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3a5a376d61c60c40fbf11aca7f29f5') in 0,006207 seconds
+  Import took 0,010374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 74,948737 seconds.
+  path: Assets/Prefabs/Garbage/corona_beer_bottle
+  artifactKey: Guid(ade44c2644cebe5b7bbd7181ee311b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/corona_beer_bottle using Guid(ade44c2644cebe5b7bbd7181ee311b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70b6d6c94aa1b303963556a4b020eaa') in 0,000854 seconds
+  Import took 0,004978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,088827 seconds.
+  path: Assets/Prefabs/Garbage/corona_beer_bottle/Corona.prefab
+  artifactKey: Guid(d45821f4d9ea823d7bc1624f6382c3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/corona_beer_bottle/Corona.prefab using Guid(d45821f4d9ea823d7bc1624f6382c3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1191daecd3ed3bde2ae8efb50d4f98b') in 0,008366 seconds
+  Import took 0,011774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 463,445717 seconds.
+  path: Assets/Prefabs/Bins
+  artifactKey: Guid(1923b7f00830d24f08fcdd0c31ccab5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins using Guid(1923b7f00830d24f08fcdd0c31ccab5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a90e4f56b700861c181225d749ab036') in 0,000858 seconds
+  Import took 0,004899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,053199 seconds.
+  path: Assets/Prefabs/Bins/Trashbin.prefab
+  artifactKey: Guid(8813adabed7badbb6bd72e2e645c5aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins/Trashbin.prefab using Guid(8813adabed7badbb6bd72e2e645c5aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f8fdd45037eb1b0147236d92eca66e2') in 0,009196 seconds
+  Import took 0,012749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000249 seconds.
+  path: Assets/Prefabs/Bins/TrashbinRedPlastic.prefab
+  artifactKey: Guid(356122121b021f9eba03f369fbeaf34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins/TrashbinRedPlastic.prefab using Guid(356122121b021f9eba03f369fbeaf34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d938e80222711ece991fc2c8bcca90a') in 0,014167 seconds
+  Import took 0,016455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000158 seconds.
+  path: Assets/Prefabs/Bins/TrashbinBlueMetal.prefab
+  artifactKey: Guid(7e2c0768926c2e63bb6bba0700950311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins/TrashbinBlueMetal.prefab using Guid(7e2c0768926c2e63bb6bba0700950311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37aca3f0be3da32a25de3618e81c63dc') in 0,009420 seconds
+  Import took 0,012309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000182 seconds.
+  path: Assets/Prefabs/Bins/TrashbinGreenPaper.prefab
+  artifactKey: Guid(cb367fee806cfe6eabff1b702d38a7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins/TrashbinGreenPaper.prefab using Guid(cb367fee806cfe6eabff1b702d38a7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e04a88fb06758112e0ec118dd242f0c') in 0,009931 seconds
+  Import took 0,012802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000201 seconds.
+  path: Assets/Prefabs/Bins/TrashbinYellowGlass.prefab
+  artifactKey: Guid(abced500434681eb995305c8e4e0e7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bins/TrashbinYellowGlass.prefab using Guid(abced500434681eb995305c8e4e0e7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f03e54d67617c2e007609ff2ac2e4ad4') in 0,008343 seconds
+  Import took 0,011474 seconds .
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbageold/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002051 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,826 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1987 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79,3 MB.
+System memory in use after: 79,3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2594.
+Total: 6,063593 ms (FindLiveObjects: 0,595728 ms CreateObjectMapping: 0,111228 ms MarkObjects: 5,198791 ms  DeleteObjects: 0,156033 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbageold/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,838 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1987 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79,3 MB.
+System memory in use after: 79,3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2597.
+Total: 5,843109 ms (FindLiveObjects: 0,277741 ms CreateObjectMapping: 0,140995 ms MarkObjects: 5,231161 ms  DeleteObjects: 0,191940 ms)
+
