@@ -103,7 +103,7 @@ public class GarbageSorting : MonoBehaviour
         while(true)
         {
             PickOrientation = DefaultPickOrientation;
-            
+
             stage = (int)Poses.Start;
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine ScreenshotPosition.");      
@@ -112,77 +112,79 @@ public class GarbageSorting : MonoBehaviour
 	        string category = ReadLineFromFile(filePathCategory);
 	        Debug.Log("Object category: " + category);
 	        
-	        if (category=="metal")
-	            PlacePosition = new Vector3(-0.231f, 0.004f, 0.298f);
-	        else if (category=="plastic")
-	            PlacePosition = new Vector3(0.277f, 0.004f, 0.289f);
+	        if (category=="metal")	// blue
+	            PlacePosition = new Vector3(-0.518f, 0.004f, 0.282f);
+	        else if (category=="plastic")	// red
+	            PlacePosition = new Vector3(0.0f, 0.004f, 0.282f);
+	        else if (category=="paper")	// green
+	            PlacePosition = new Vector3(0.532f, 0.004f, 0.282f);
+	        else if (category=="glass")	// yellow
+	            PlacePosition = new Vector3(0.526f, 0.004f, -0.149f);
+	        else if (category=="other")	// grey
+	            PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
 	            
 	        stage = (int)Poses.PreGrasp;
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine Pregrasp.");
 	        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
 	        
+	        // If the rotation of the gripper is wrong correct it
+            string line = ReadLineFromFile(filePathrotate); 
+            if (line == "True")
+            {
+                // stage = (int)Poses.PreGrasp;
+                PickOrientation = VerticalPickOrientation;
+                //Debug.Log("Starting Coroutine with new orientation.");   
+                //yield return new WaitForSeconds(5.0f);   
+            }
+	        
 	        // Raycast sensor
-	         if (raycastOrigin == null)
-	            {
-	                Debug.LogError("Raycast origin (child GameObject) is not assigned!");
-	            }
+            if (raycastOrigin == null)
+            {
+                Debug.LogError("Raycast origin (child GameObject) is not assigned!");
+            }
 
-	            // Cast a ray from the raycast origin's position towards its forward direction
-	            Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
-	            RaycastHit hit;
+            // Cast a ray from the raycast origin's position towards its forward direction
+            Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
+            RaycastHit hit;
 
-	            // Check if the ray hits an object on the specified layer
-	            if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastMask))
-	            {
-	                // Get the distance between the raycast origin and the hit object
-	                float distance = Vector3.Distance(raycastOrigin.position, hit.point);
-	                 
-	                // Draw the ray from the origin to the hit point
-	                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, 2f);
+            // Check if the ray hits an object on the specified layer
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, raycastMask))
+            {
+                // Get the distance between the raycast origin and the hit object
+                float distance = Vector3.Distance(raycastOrigin.position, hit.point);
+                 
+                // Draw the ray from the origin to the hit point
+                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red, 2f);
 
-	                // You can now use the 'distance' value as needed (e.g., print it, display it in UI, etc.)
-	                Debug.Log("Distance from camera center to object: " + distance);
-	                
-	                // Write the distance to the .txt file
-	                WriteDistanceToFile(distance, filePath);
-	            }
-	            else
-                {
-                    Debug.Log("Raycast did not hit any object.");
-                }
-                // yield return new WaitForSeconds(1f);
+                // You can now use the 'distance' value as needed (e.g., print it, display it in UI, etc.)
+                Debug.Log("Distance from camera center to object: " + distance);
                 
-                    
-                // If the rotation of the gripper is wrong correct it
-                string line = ReadLineFromFile(filePathrotate); 
-                if (line == "True")
-                {
-                    stage = (int)Poses.PreGrasp;
-                    PickOrientation = VerticalPickOrientation;
-                    PublishJoints();
-                    Debug.Log("Starting Coroutine with new orientation.");   
-                    yield return new WaitForSeconds(5.0f);   
-                }
+                // Write the distance to the .txt file
+                WriteDistanceToFile(distance, filePath);
+            }
+            else
+            {
+                Debug.Log("Raycast did not hit any object.");
+            }
+            // yield return new WaitForSeconds(1f);
+
                 
-                // GoDown Pose
-                stage = (int)Poses.GoDown;
-	            PublishJoints();
-                Debug.Log("Starting Coroutine GoDown.");
-                yield return new WaitForSeconds(7.0f);  // Delay Pregasp-> GoDown
-                
-                // GraspAndUp Pose
-                stage = (int)Poses.GraspAndUp;
-                PublishJoints();
-                Debug.Log("Starting Coroutine GraspAndUp.");
-                yield return new WaitForSeconds(5.0f);  // Delay GoDown-> GraspAndUp
-                
-                // Place Pose
-                stage = (int)Poses.Place;
-                
-                PublishJoints();
-                Debug.Log("Starting Coroutine Place.");
-                yield return new WaitForSeconds(9.0f);  // Delay GraspAndUp-> Place
+            // GoDown Pose
+            stage = (int)Poses.GoDown;
+            PublishJoints();
+            Debug.Log("Starting Coroutine GoDown.");
+            yield return new WaitForSeconds(7.0f);  // Delay Pregasp-> GoDown
+
+            // GraspAndUp Pose
+            //stage = (int)Poses.GraspAndUp;
+            //Debug.Log("Starting Coroutine GraspAndUp.");
+            //yield return new WaitForSeconds(5.0f);  // Delay GoDown-> GraspAndUp
+
+            // Place Pose
+            //stage = (int)Poses.Place;
+            //Debug.Log("Starting Coroutine Place.");
+            //yield return new WaitForSeconds(9.0f);  // Delay GraspAndUp-> Place
 	    }
     }
     
@@ -340,10 +342,11 @@ public class GarbageSorting : MonoBehaviour
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {        
         if (response.trajectories != null)
-        {          
+        {     
+            int stopIndex = (stage == (int)Poses.GoDown) ? 5 : stage+1;
                     
             // For every trajectory plan returned
-            for (var poseIndex = stage; poseIndex < stage+1; poseIndex++)
+            for (var poseIndex = stage; poseIndex < stopIndex; poseIndex++)
             {
                 
                 // Close the gripper

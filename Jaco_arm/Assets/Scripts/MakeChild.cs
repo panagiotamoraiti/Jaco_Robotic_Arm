@@ -41,6 +41,8 @@ public class MakeChild : MonoBehaviour
         string category = ReadLineFromFile(filePathCategory);
         bool unchild = (other.gameObject.tag=="PlasticBin" && category=="plastic"
                || other.gameObject.tag=="MetalBin" && category=="metal"
+               || other.gameObject.tag=="PaperBin" && category=="paper"
+               || other.gameObject.tag=="GlassBin" && category=="glass"
                || other.gameObject.tag=="GarbageBin" && category=="other");
         
         if(unchild)
