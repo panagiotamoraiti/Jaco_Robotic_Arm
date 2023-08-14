@@ -102,6 +102,7 @@ def detect(detection_graph, test_image_path, img):
             cv2.aruco.drawDetectedMarkers(npim, markerCorners, markerIds)
             # print(markerCorners)
             
+            marker_width = 75.0    # default
             for corners in markerCorners:
                 # Compute the Euclidean distance between corners to find width and height
                 marker_width = abs(corners[0][0][0] - corners[0][1][0])

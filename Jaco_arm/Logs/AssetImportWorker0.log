@@ -1345,3 +1345,123 @@ System memory in use after: 70,1 MB.
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2322.
 Total: 5,256960 ms (FindLiveObjects: 0,475512 ms CreateObjectMapping: 0,100188 ms MarkObjects: 4,511021 ms  DeleteObjects: 0,168386 ms)
 
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,001655 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,760 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70,2 MB.
+System memory in use after: 70,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 2,850356 ms (FindLiveObjects: 0,216216 ms CreateObjectMapping: 0,062928 ms MarkObjects: 2,444094 ms  DeleteObjects: 0,126437 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002837 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,915 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70,2 MB.
+System memory in use after: 70,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2328.
+Total: 5,138558 ms (FindLiveObjects: 0,252904 ms CreateObjectMapping: 0,113813 ms MarkObjects: 4,573979 ms  DeleteObjects: 0,196629 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002315 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,845 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70,2 MB.
+System memory in use after: 70,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2331.
+Total: 3,446073 ms (FindLiveObjects: 0,200275 ms CreateObjectMapping: 0,039965 ms MarkObjects: 2,957387 ms  DeleteObjects: 0,247164 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002317 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1,014 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70,2 MB.
+System memory in use after: 70,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2334.
+Total: 6,534526 ms (FindLiveObjects: 0,393829 ms CreateObjectMapping: 0,104145 ms MarkObjects: 5,694942 ms  DeleteObjects: 0,338835 ms)
+
+========================================================================
+Received Prepare
+Assets/Prefabs/Garbage/box/3D models/Box.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0,002039 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0,903 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0,72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 1740 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70,2 MB.
+System memory in use after: 70,2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2337.
+Total: 3,836776 ms (FindLiveObjects: 0,217478 ms CreateObjectMapping: 0,052288 ms MarkObjects: 3,427789 ms  DeleteObjects: 0,138370 ms)
+
