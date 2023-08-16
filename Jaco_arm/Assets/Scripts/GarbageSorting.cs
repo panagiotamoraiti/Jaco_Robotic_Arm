@@ -27,14 +27,14 @@ public class GarbageSorting : MonoBehaviour
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
     
     // Pick Default Values
-    public Quaternion PickOrientation;
-    public Quaternion DefaultPickOrientation = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
-    public Quaternion VerticalPickOrientation = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f);
-    public Vector3 PickPosition = new Vector3(0f, 0.4f, -0.5f);
+    private Quaternion PickOrientation;
+    private Quaternion DefaultPickOrientation = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
+    private Quaternion VerticalPickOrientation = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f);
+    readonly Vector3 PickPosition = new Vector3(0f, 0.4f, -0.5f);
     
     // Place Default Values
     readonly Quaternion PlaceOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
-    public Vector3 PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
+    private Vector3 PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
     
     
     // For camera
