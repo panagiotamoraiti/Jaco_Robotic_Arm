@@ -1,6 +1,6 @@
 using System;
 using RosMessageTypes.Geometry;
-using RosMessageTypes.NiryoMoveit;
+using RosMessageTypes.JacoUnity;
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using Unity.Robotics.UrdfImporter;
@@ -15,7 +15,7 @@ public class SourceDestinationPublisher : MonoBehaviour
 
     // Variables required for ROS communication
     [SerializeField]
-    string m_TopicName = "/niryo_joints";
+    string m_TopicName = "jaco_unity";
 
     [SerializeField]
     GameObject m_j2n6s200;
@@ -35,7 +35,7 @@ public class SourceDestinationPublisher : MonoBehaviour
     {
         // Get ROS connection static instance
         m_Ros = ROSConnection.GetOrCreateInstance();
-        m_Ros.RegisterPublisher<NiryoMoveitJointsMsg>(m_TopicName);
+        m_Ros.RegisterPublisher<JacoMoveitJointsMsg>(m_TopicName);
 
         m_JointArticulationBodies = new UrdfJoint[k_NumRobotJoints];
 
@@ -49,7 +49,7 @@ public class SourceDestinationPublisher : MonoBehaviour
 
     public void Publish()
     {
-        var sourceDestinationMessage = new NiryoMoveitJointsMsg();
+        var sourceDestinationMessage = new JacoMoveitJointsMsg();
 
         for (var i = 0; i < k_NumRobotJoints; i++)
         {

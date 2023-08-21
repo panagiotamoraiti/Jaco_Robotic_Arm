@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using RosMessageTypes.Geometry;
-using RosMessageTypes.NiryoMoveit;
+using RosMessageTypes.JacoUnity;
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using UnityEngine;
@@ -16,7 +16,7 @@ public class TrajectoryPlanner : MonoBehaviour
 
     // Variables required for ROS communication
     [SerializeField]
-    string m_RosServiceName = "niryo_moveit";
+    string m_RosServiceName = "jaco_unity";
     public string RosServiceName { get => m_RosServiceName; set => m_RosServiceName = value; }
 
     [SerializeField]
@@ -113,10 +113,10 @@ public class TrajectoryPlanner : MonoBehaviour
     /// <summary>
     ///     Get the current values of the robot's joint angles.
     /// </summary>
-    /// <returns>NiryoMoveitJoints</returns>
-    NiryoMoveitJointsMsg CurrentJointConfig()
+    /// <returns>JacoMoveitJoints</returns>
+    JacoMoveitJointsMsg CurrentJointConfig()
     {
-        var joints = new NiryoMoveitJointsMsg();
+        var joints = new JacoMoveitJointsMsg();
 
         for (var i = 0; i < k_NumRobotJoints; i++)
         {
@@ -179,7 +179,7 @@ public class TrajectoryPlanner : MonoBehaviour
     ///     Executing a single trajectory will iterate through every robot pose in the array while updating the
     ///     joint values on the robot.
     /// </summary>
-    /// <param name="response"> MoverServiceResponse received from niryo_moveit mover service running in ROS</param>
+    /// <param name="response"> MoverServiceResponse received from jaco_moveit mover service running in ROS</param>
     /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {

@@ -2585,7 +2585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e8b343489caecbea33fa2e87eab342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TopicName: /niryo_joints
+  m_TopicName: jaco_joints
   m_j2n6s200: {fileID: 2137049589}
   m_Target: {fileID: 1991093515}
   m_TargetPlacement: {fileID: 504403305}
@@ -2601,7 +2601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4930c9cca6550d62d962f7db4271ec44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RosServiceName: niryo_moveit
+  m_RosServiceName: jaco_unity
   m_j2n6s200: {fileID: 2137049589}
   m_Target: {fileID: 1991093515}
   m_TargetPlacement: {fileID: 504403305}

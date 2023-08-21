@@ -2496,11 +2496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abba9ee83b9ebab498051080eda69c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RosServiceName: niryo_moveit
+  m_RosServiceName: jaco_unity
   m_j2n6s200: {fileID: 2137049589}
   targetCamera: {fileID: 1946168423}
-  savePath: Screenshots/
-  fileNamePrefix: screenshot
   raycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
