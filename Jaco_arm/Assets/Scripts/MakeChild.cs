@@ -8,7 +8,7 @@ public class MakeChild : MonoBehaviour
 {
 
     
-    private string filePathCategory = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/category.txt";
+    private string filePathCategory = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/category.txt");
 
     private string ReadLineFromFile(string filePath) 
     { 

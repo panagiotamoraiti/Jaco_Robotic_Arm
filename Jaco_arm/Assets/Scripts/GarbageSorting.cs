@@ -36,30 +36,33 @@ public class GarbageSorting : MonoBehaviour
     readonly Quaternion PlaceOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     private Vector3 PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
     
-    
     // For camera
     public Camera targetCamera;
-    public string savePath = "Screenshots/";
-    public string fileNamePrefix = "screenshot";
+    private string savePath = "temp_txt/";
+    private string fileNamePrefix = "screenshot";
     
     // For raycast
     public LayerMask raycastMask = -1;
     public Transform raycastOrigin; // Reference to a child GameObject acting as the raycast origin
-    private string filePath = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt";
-    private string filePath1 = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/screenshot.txt";
-    
-    // For rotate
-    private string filePathrotate = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/rotate.txt";
-    
-    // For choosing bin
-    private string filePathCategory = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/category.txt";
-    
-    // For recognise detection
-    private string filePathDetection = "/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/detection.txt";
     
     // For making the Target child to the end effector
     [SerializeField]
     private Transform m_endEffector;
+    
+    // Object Center Coordinates
+    private string filePathCoordinates = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/coordinates.txt");
+    
+    // For recognising detection
+	private string filePathDetection = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/detection.txt");
+	
+    // For distance
+    private string filePathDistance = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/distance.txt");
+    
+    // For rotation
+    private string filePathRotate = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/rotate.txt");
+    
+    // For choosing bin
+    private string filePathCategory = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/category.txt");
 
 
     public int stage;
@@ -135,9 +138,9 @@ public class GarbageSorting : MonoBehaviour
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine Pregrasp.");
 	        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
-	        
+	 
 	        // If the rotation of the gripper is wrong correct it
-            string line = ReadLineFromFile(filePathrotate); 
+            string line = ReadLineFromFile(filePathRotate); 
             if (line == "True")
             {
                 PickOrientation = VerticalPickOrientation;
@@ -166,7 +169,7 @@ public class GarbageSorting : MonoBehaviour
                 Debug.Log("Distance from camera center to object: " + distance);
                 
                 // Write the distance to the .txt file
-                WriteDistanceToFile(distance, filePath);
+                WriteDistanceToFile(distance, filePathDistance);
             }
             else
             {
@@ -197,7 +200,7 @@ public class GarbageSorting : MonoBehaviour
     { 
         // Read the first line from the .txt file 
         using (StreamReader reader = new StreamReader(filePath)) 
-        { 
+        {
         string line = reader.ReadLine(); 
         return line; 
         } 
@@ -309,6 +312,7 @@ public class GarbageSorting : MonoBehaviour
 
     void TrajectoryResponse(MoverServiceResponse response)
     {
+        
         if (response.trajectories.Length > 0)
         {
             //Debug.Log("Trajectory returned.");
@@ -319,7 +323,7 @@ public class GarbageSorting : MonoBehaviour
             Debug.LogError("No trajectory returned from MoverService.");
             // Write 0, 0 to the .txt file
             float distance = 0;
-            WriteDistanceToFile(distance, filePath1);
+            WriteDistanceToFile(distance, filePathCoordinates);
         }
     }
 

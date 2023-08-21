@@ -23,6 +23,8 @@ from niryo_moveit.srv import MoverService, MoverServiceRequest, MoverServiceResp
 
 joint_names = ['j2n6s200_joint_1', 'j2n6s200_joint_2', 'j2n6s200_joint_3', 'j2n6s200_joint_4', 'j2n6s200_joint_5', 'j2n6s200_joint_6']
 
+absolute_dirname = os.path.dirname(__file__)
+
 # Between Melodic and Noetic, the return type of plan() changed. moveit_commander has no __version__ variable, so checking the python version as a proxy
 if sys.version_info >= (3, 0):
     def planCompat(plan):
@@ -56,8 +58,8 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
     return planCompat(plan)
 
 def read_values():
-    file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/screenshot.txt'
-    
+    file_path = os.path.join(absolute_dirname, '../../../../Jaco_arm/temp_txt/coordinates.txt')
+
     # Read the values
     with open(file_path, 'r') as file:
         line_1 = file.readline().strip()
@@ -71,7 +73,8 @@ def read_values():
     return float(line_1), float(line_2)
     
 def read_distance():
-    file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt'
+    file_path = os.path.join(absolute_dirname, '../../../../Jaco_arm/temp_txt/distance.txt')
+    print(file_path)
     
     # Read the values
     with open(file_path, 'r') as file:
@@ -133,7 +136,6 @@ def plan_pick_and_place(req):
 
 
     # Go Down - lower gripper so it can grab the object
-    file_path = '/home/beast1/Jaco_Robotic_Arm/Jaco_arm/Screenshots/distance.txt'
     move_y = read_distance()      
 
     if move_y >= 0.45:

@@ -21,10 +21,11 @@ new_model = tf.keras.models.load_model(model_path)
 # directory_path = './../Grape Leaves disease detection/images/Test File'
 
 # For real-time detection using snapshots taken from the robot camera in Unity
-directory_path = './../../Jaco_arm/Screenshots'
-file_path = directory_path + '/rotate.txt'
+directory_path = './../../Jaco_arm/temp_txt'
+rotate_file_path = directory_path + '/rotate.txt'
 detection_file_path = directory_path + '/detection.txt'
 category_file_path = directory_path + '/category.txt'
+coordinates_file_path = directory_path + '/coordinates.txt'
 
 end_effector_x = 317
 end_effector_y = 354
@@ -35,7 +36,6 @@ while(True):
         if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):
             # Destroy previously created text files
             filename_no_ext, _ = os.path.splitext(filename)
-            output_file_path = directory_path + '/' + filename_no_ext + ".txt"
             
             # Get the full path of the image file
             image_path = os.path.join(directory_path, filename)
@@ -80,8 +80,8 @@ while(True):
                     txt_list = []
                     for i in range(len(prediction[0])):
                         if i == 0:
-                            if (os.path.isfile(output_file_path)):
-                                os.remove(output_file_path)
+                            if (os.path.isfile(coordinates_file_path)):
+                                os.remove(coordinates_file_path)
                             
                          #print(prediction[0][i])
                         (sy, sx, ey, ex, conf) = prediction[0][i]
@@ -97,10 +97,10 @@ while(True):
                         
                         # Find bigger side, and rotate gripper if needed
                         if box_w > box_h+5:
-                             with open(file_path, 'w') as file:
+                             with open(rotate_file_path, 'w') as file:
                                  file.write(f"True")
                         else:
-                            with open(file_path, 'w') as file:
+                            with open(rotate_file_path, 'w') as file:
                                  file.write(f"False")
                             
                             
@@ -121,17 +121,17 @@ while(True):
                             cv2.circle(img, (center_x, center_y), circle_radius, circle_color, -1)
 
                         
-                        with open(output_file_path, 'a+') as output_file:
+                        with open(coordinates_file_path, 'a+') as output_file:
                             if (center_x, center_y) not in txt_list:
                                 output_file.write(f"{move_x}\n{move_z}\n")
                                 txt_list.append((center_x, center_y))
 
                         cv2.rectangle(img, (sx, sy), (ex,ey), (0, 255, 0), 2)
                 else:
-                    if (os.path.isfile(output_file_path)):
-                        os.remove(output_file_path)
+                    if (os.path.isfile(coordinates_file_path)):
+                        os.remove(coordinates_file_path)
                     
-                    with open(output_file_path, 'a+') as output_file:
+                    with open(coordinates_file_path, 'a+') as output_file:
                         output_file.write(f"0\n0\n")
                         
                 with open(category_file_path, 'w') as output_file:

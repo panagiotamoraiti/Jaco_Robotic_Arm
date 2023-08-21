@@ -84,10 +84,10 @@ def detect(detection_graph, test_image_path, img):
             
             # Find bigger side, and rotate gripper if needed
             if box_w > box_h+5:
-                 with open(file_path, 'w') as file:
+                 with open(rotate_file_path, 'w') as file:
                      file.write(f"True")
             else:
-                with open(file_path, 'w') as file:
+                with open(rotate_file_path, 'w') as file:
                      file.write(f"False")
 
             # Calculate the center coordinates
@@ -135,17 +135,17 @@ def detect(detection_graph, test_image_path, img):
                 circle_radius = 3 
                 circle = cv2.circle(npim, (center_x, center_y), circle_radius, circle_color, -1)
 
-                if (os.path.isfile(output_file_path)):
-                    os.remove(output_file_path)
+                if (os.path.isfile(coordinates_file_path)):
+                    os.remove(coordinates_file_path)
 	                
-                with open(output_file_path, 'a+') as output_file:
+                with open(coordinates_file_path, 'a+') as output_file:
                     output_file.write(f"{move_x}\n{move_z}\n")
 
         else:
-            if (os.path.isfile(output_file_path)):
-                os.remove(output_file_path)
+            if (os.path.isfile(coordinates_file_path)):
+                os.remove(coordinates_file_path)
                 
-            with open(output_file_path, 'a+') as output_file:
+            with open(coordinates_file_path, 'a+') as output_file:
                 output_file.write(f"0\n0\n")
         
         #cv2.imshow("image", npim)
@@ -246,22 +246,22 @@ other_item_names = [item['name'] for item in other_list]
 
 detection_graph = reconstruct("./../Garbage Detection/ssd_mobilenet_v2_taco_2018_03_29.pb")
 
-#directory_Path = './../Garbage Detection/images/batch_1'
+#directory_path = './../Garbage Detection/images/batch_1'
 # For real-time detection using snapshots taken from the robot camera in Unity
-directory_Path = './../../Jaco_arm/Screenshots'
-file_path = './../../Jaco_arm/Screenshots/rotate.txt'
+directory_path = './../../Jaco_arm/temp_txt'
+rotate_file_path =  directory_path + '/rotate.txt'
+category_file_path = directory_path + '/category.txt'
+detection_file_path = directory_path + '/detection.txt'
+coordinates_file_path = directory_path + '/coordinates.txt'
 
 while(True):
-    for filename in os.listdir(directory_Path):
+    for filename in os.listdir(directory_path):
         filename_no_ext, _ = os.path.splitext(filename)
-        output_file_path = directory_Path + '/' + filename_no_ext + ".txt"
-        category_file_path = directory_Path + '/category.txt'
-        detection_file_path = directory_Path + '/detection.txt'
             
         # Check if the file has an image extension
         if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):                           
             # Get the full path of the image file
-            image_path = os.path.join(directory_Path, filename)
+            image_path = os.path.join(directory_path, filename)
 
             image = cv2.imread(image_path)
             if image is not None:
@@ -269,9 +269,9 @@ while(True):
            
                 #resized_image = cv2.resize(image, (height//4, width//4))
                 #height, width, _ = resized_image.shape 
-                #cv2.imwrite(directory_Path + '/' + filename + '_resized.jpg', resized_image)
+                #cv2.imwrite(directory_path + '/' + filename + '_resized.jpg', resized_image)
                 detect(detection_graph, image_path, False)    
-                #os.remove(directory_Path + '/' + filename + '_resized.jpg')
+                #os.remove(directory_path + '/' + filename + '_resized.jpg')
                 
                 # Remove image
                 os.remove(image_path)
