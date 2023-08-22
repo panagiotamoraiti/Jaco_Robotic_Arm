@@ -37,6 +37,7 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   roslaunch jaco_unity simple_pick_place.launch
   ```
   Open SampleScene and start the Unity simulation.
+  
   ![Simple_Pick_Place](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/be48df2c-46b3-482d-b84c-56752ed6ce5f)
 
   ### 2. Grape Leaves Disease Detection and Grasping
@@ -50,6 +51,9 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   ```
   Open GrapeLeavesScene and start the Unity simulation.
   
+  ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/46e7f21c-70f3-4d58-b3df-c5cd198dfd29)
+
+  
   ### 3. Garbage Detection and Sorting
   In this scene we have some plastic bottles and tin cans. The robot carries a camera near its end effector, takes a photo of the table and places the object classified with the highest confidence in the suitable bin. The classification is based on the material (metal, plastic, paper and glass). To run this, execute in a terminal:
   ```
@@ -60,6 +64,8 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   python3 garbage_detection_model.py
   ```
   Open GarbageSortingScene and start the Unity simulation.
+  
+  ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/30694a73-3a71-409b-9e3f-9748bf6877bd)
 
 ## Object detection
 We implemented two python scripts for garbage detection and leaf disease detection, using two already trained models we found. The scripts interact with the Unity environment using the text files found in Jaco_arm/temp_txt directory.
