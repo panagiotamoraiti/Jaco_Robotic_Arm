@@ -37,7 +37,8 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   roslaunch jaco_unity simple_pick_place.launch
   ```
   Open SampleScene and start the Unity simulation.
-  
+  ![Simple_Pick_Place](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/be48df2c-46b3-482d-b84c-56752ed6ce5f)
+
   ### 2. Grape Leaves Disease Detection and Grasping
   In this scene we have a few leaves, some with disease spots and some healthy. The robot carries a camera near its end effector, takes a photo of the table and if a spot is detected, the arm picks up the leaf and places it in the bin. To run this, execute in a terminal:
   ```
