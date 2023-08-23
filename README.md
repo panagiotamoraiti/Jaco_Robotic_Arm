@@ -69,7 +69,3 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
 
 ## Object detection
 We implemented two python scripts for garbage detection and leaf disease detection, using two already trained models we found. The scripts interact with the Unity environment using the text files found in Jaco_arm/temp_txt directory.
-\
-These scripts, in order to work they need the annotations.json file for garbage detection and the pretrained models.
-\
-We have put two folders (Garbage Detection and Grape Leaves disease detection) in Jaco_Robotic_Arm/object_detection folder, that contain the information mentioned above, but we have not include these folders in our repo.
