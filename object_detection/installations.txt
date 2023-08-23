@@ -1,4 +1,4 @@
-conda env export > environment.yml # I used this command in order to export conda environment
+conda env export > environment.yml # We used this command in order to export conda environment
 
 In order to replicate conda environment execute:
 conda env create --name myenv --file=environment.yml
