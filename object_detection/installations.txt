@@ -1,0 +1,16 @@
+conda env export > environment.yml # I used this command in order to export conda environment
+
+In order to replicate conda environment execute:
+conda env create --name myenv --file=environment.yml
+
+For Garbage detection model we need to do a few more steps:
+- Inside the folder ~/anaconda3/envs/myenv/lib/python3.11/site-packages/object_detection/protos put the file string_int_label_map_pb2.py, this file is inside Jaco_Robotic_Arm/object_detection folder
+- In the file ~/anaconda3/envs/myenv/lib/python3.11/site-packages/object_detection/utils/label_map_util.py, replace tf.gfile with tf.io.gfile, in line 132
+- If the following error occurs AttributeError: 'ImageFont' object has no attribute 'getsize',
+  you need to downgrade Pillow library with: pip install Pillow==9.5.0
+
+
+
+
+
+
