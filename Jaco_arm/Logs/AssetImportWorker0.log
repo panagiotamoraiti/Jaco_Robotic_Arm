@@ -129,3 +129,43 @@ Received Import Request.
 Start importing Assets/Prefabs/materials using Guid(d5bf08468e1dd3fdf904701c913e6ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833aaebad6c3b7db39f6d8cb24f781a9') in 0,001123 seconds
   Import took 0,004965 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1044,800343 seconds.
+  path: Assets/Prefabs/Garbageold/box/3D models/Box.3ds
+  artifactKey: Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbageold/box/3D models/Box.3ds using Guid(65f8d01103b0b81c3a1743de0be39d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4056380c5292efff2e421701d3cc7d5') in 0,203253 seconds
+  Import took 0,206724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000149 seconds.
+  path: Assets/Prefabs/Garbageold/box/3D models/Box.fbx
+  artifactKey: Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbageold/box/3D models/Box.fbx using Guid(c0b513db15ae2b0a6a6fc6d4130b07db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd6e8831b6ecdd8c1a1abf60f59f0cb') in 0,055097 seconds
+  Import took 0,057129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0,000134 seconds.
+  path: Assets/Prefabs/Garbageold/box/3D models/Box.obj
+  artifactKey: Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbageold/box/3D models/Box.obj using Guid(cc41bb65347c68426bdccb4f7a0d6e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3845cbcd760d2fff64c581ac4acaca0c') in 0,014063 seconds
+  Import took 0,016596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 165,863404 seconds.
+  path: Assets/Prefabs/Garbage/corona_beer_bottle/Materials/BotellaText.mat
+  artifactKey: Guid(b26c9b9a1ab1cbbe2bacc5e33b5ab45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/corona_beer_bottle/Materials/BotellaText.mat using Guid(b26c9b9a1ab1cbbe2bacc5e33b5ab45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2343b6b36fd6f3e7f325906631d618b4') in 0,008871 seconds
+  Import took 0,012451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16,940000 seconds.
+  path: Assets/Prefabs/Garbage/corona_beer_bottle/Corona.prefab
+  artifactKey: Guid(d45821f4d9ea823d7bc1624f6382c3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Garbage/corona_beer_bottle/Corona.prefab using Guid(d45821f4d9ea823d7bc1624f6382c3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd773090a85c94889e857ec77fd913961') in 0,008438 seconds
+  Import took 0,012009 seconds .
+
