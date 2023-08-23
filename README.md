@@ -9,7 +9,7 @@ Jaco Kinova arm is a 6DOF robot arm that can perform a wide range of tasks. In t
 ## Configuration
 In order to replicate the project in your computer, follow these steps:
 1. Clone the repo
-2. Navigate to arm_ws, execute:
+2. Navigate to arm_ws (you need to have ROS Noetic or Melodic installed), execute:
    
    ```
    catkin_make
@@ -20,7 +20,7 @@ In order to replicate the project in your computer, follow these steps:
 5. Change ROS IP Address in Unity:
     * Go to ROS Settings and change the ROS IP Address.
     * Find ROSConnectionPrefab and change the IP there too.
-6. Install the python packages required for the detection models. They can be found in object_detection/requirements.txt.
+6. Install the python packages required for the detection models. They can be found in object_detection/installations.txt.
 
 ## Gazebo Simulator
 This repository contains files for simulating the robot arm in gazebo simulator using ROS.
@@ -69,3 +69,5 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
 
 ## Object detection
 We implemented two python scripts for garbage detection and leaf disease detection, using two already trained models we found. The scripts interact with the Unity environment using the text files found in Jaco_arm/temp_txt directory.
+These scripts, in order to work they need the annotations.json file for garbage detection and the pretrained models.
+We have put two folders (Garbage Detection and Grape Leaves disease detection) in Jaco_Robotic_Arm/object_detection folder, that contain the information mentioned above, but we have not include these folders in our repo.
