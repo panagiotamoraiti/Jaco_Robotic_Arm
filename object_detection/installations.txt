@@ -9,8 +9,6 @@ For Garbage detection model we need to do a few more steps:
 - If the following error occurs AttributeError: 'ImageFont' object has no attribute 'getsize',
   you need to downgrade Pillow library with: pip install Pillow==9.5.0
 
-
-
-
-
-
+For object detection scripts you need the annotations.json for garbage detection and the pretrained models. We put these required files, into two folders (Garbage Detection and Grape Leaves disease detection) inside Jaco_Robotic_Arm/object_detection folder. 
+/
+We have not included these two folders in our repo.
