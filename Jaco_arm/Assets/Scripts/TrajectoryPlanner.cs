@@ -44,7 +44,7 @@ public class TrajectoryPlanner : MonoBehaviour
         pos.y = box_pos.y + 0.06f; 
         pos.z = box_pos.z;          
     } 
- 
+
     // Articulation Bodies
     ArticulationBody[] m_JointArticulationBodies;
     ArticulationBody m_LeftGripper;
@@ -113,7 +113,6 @@ public class TrajectoryPlanner : MonoBehaviour
     /// <summary>
     ///     Get the current values of the robot's joint angles.
     /// </summary>
-    /// <returns>JacoMoveitJoints</returns>
     JacoMoveitJointsMsg CurrentJointConfig()
     {
         var joints = new JacoMoveitJointsMsg();
@@ -153,7 +152,6 @@ public class TrajectoryPlanner : MonoBehaviour
 	    orientation = m_PickOrientation.To<FLU>()
         };
 
-
         m_Ros.SendServiceMessage<MoverServiceResponse>(m_RosServiceName, request, TrajectoryResponse);
     }
 
@@ -179,8 +177,6 @@ public class TrajectoryPlanner : MonoBehaviour
     ///     Executing a single trajectory will iterate through every robot pose in the array while updating the
     ///     joint values on the robot.
     /// </summary>
-    /// <param name="response"> MoverServiceResponse received from jaco_moveit mover service running in ROS</param>
-    /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {
         if (response.trajectories != null)
@@ -211,7 +207,6 @@ public class TrajectoryPlanner : MonoBehaviour
                 {
                     yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
-                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
 
                 // Wait for the robot to achieve the final pose from joint assignment

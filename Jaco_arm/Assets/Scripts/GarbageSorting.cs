@@ -53,7 +53,7 @@ public class GarbageSorting : MonoBehaviour
     private string filePathCoordinates = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/coordinates.txt");
     
     // For recognising detection
-	private string filePathDetection = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/detection.txt");
+    private string filePathDetection = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/detection.txt");
 	
     // For distance
     private string filePathDistance = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/distance.txt");
@@ -104,6 +104,14 @@ public class GarbageSorting : MonoBehaviour
         StartCoroutine(DetectionPipeline());
     }
     
+    /// <summary>
+    ///     Execute the whole pipeline containing 4 stages:
+    ///         1. Start            Move the robot above the table and take a photo
+    ///         2. Pre Grasp        Position gripper directly above target object and measure the vertical destance using raycast sensor
+    ///         3. Go Down          Lower gripper so that fingers are on either side of object
+    ///         4. Grasp And Up     Close gripper and move the end-effector a little upwards
+    ///         5. Place            Move the end-effector to the place position and open the gripper
+    /// </summary>
     IEnumerator DetectionPipeline()
     {
         while(true)
@@ -186,9 +194,12 @@ public class GarbageSorting : MonoBehaviour
 	    }
     }
     
-     private void WriteDistanceToFile(float distance, string filePath)
+    
+    /// <summary>
+    ///     Write the distance measured by the raycast sensor in a .txt file
+    /// </summary>
+    private void WriteDistanceToFile(float distance, string filePath)
     {
-        // Create the new .txt file
         using (StreamWriter writer = new StreamWriter(filePath, false))
         {
             writer.WriteLine(distance);
@@ -196,17 +207,21 @@ public class GarbageSorting : MonoBehaviour
         }
     }
     
+    /// <summary>
+    ///     Read the first line of a .txt file
+    /// </summary>
     private string ReadLineFromFile(string filePath) 
-    { 
-        // Read the first line from the .txt file 
+    {
         using (StreamReader reader = new StreamReader(filePath)) 
         {
-        string line = reader.ReadLine(); 
-        return line; 
+            string line = reader.ReadLine(); 
+            return line; 
         } 
     }
      
-    
+    /// <summary>
+    ///     Take a photo from the RobotCamera attached to the end-effector, and store it as a png file.
+    /// </summary>
     private void CaptureScreen()
     {
         // Create the screenshot file path
@@ -239,6 +254,9 @@ public class GarbageSorting : MonoBehaviour
         }
     }
 
+    /// <summary>
+    ///     Close gripper fingers.
+    /// </summary>
     void CloseGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -253,7 +271,10 @@ public class GarbageSorting : MonoBehaviour
         m_LeftGripper.xDrive = leftDrive;
         m_RightGripper.xDrive = rightDrive;
     }
-
+    
+    /// <summary>
+    ///     Open gripper fingers.
+    /// </summary>
     void OpenGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -269,7 +290,6 @@ public class GarbageSorting : MonoBehaviour
     /// <summary>
     ///     Get the current values of the robot's joint angles.
     /// </summary>
-    /// <returns>JacoMoveitJoints</returns>
     JacoMoveitJointsMsg CurrentJointConfig()
     {
         var joints = new JacoMoveitJointsMsg();
@@ -292,14 +312,14 @@ public class GarbageSorting : MonoBehaviour
     {
         var request = new MoverServiceRequest();
         request.joints_input = CurrentJointConfig();
-        
+
         // Pick Pose
         request.pick_pose = new PoseMsg
         {
            position = PickPosition.To<FLU>(),
            orientation = PickOrientation.To<FLU>()
         };
-      
+
         // Place Pose
         request.place_pose = new PoseMsg
         {
@@ -312,7 +332,7 @@ public class GarbageSorting : MonoBehaviour
 
     void TrajectoryResponse(MoverServiceResponse response)
     {
-        
+
         if (response.trajectories.Length > 0)
         {
             //Debug.Log("Trajectory returned.");
@@ -336,26 +356,23 @@ public class GarbageSorting : MonoBehaviour
     ///     ExecStartCoroutine(ExecuteTrajectories(response));uting a single trajectory will iterate through every robot pose in the array while updating the
     ///     joint values on the robot.
     /// </summary>
-    /// <param name="response"> MoverServiceResponse received from jaco_unity mover service running in ROS</param>
-    /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {        
         if (response.trajectories != null)
         {     
             int stopIndex = (stage == (int)Poses.GoDown) ? 5 : stage+1;
-                    
+
             // For every trajectory plan returned
             for (var poseIndex = stage; poseIndex < stopIndex; poseIndex++)
             {
-                
+
                 // Close the gripper
                 if (poseIndex == (int)Poses.GraspAndUp)
                 {
-                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
                     yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
-                
+
                 // For every robot pose in trajectory plan
                 foreach (var t in response.trajectories[poseIndex].joint_trajectory.points)
                 {
@@ -373,12 +390,12 @@ public class GarbageSorting : MonoBehaviour
                     // Wait for robot to achieve pose for all joint assignments
                     yield return new WaitForSeconds(k_JointAssignmentWait);
                 }
-                
+
                 if (poseIndex == (int)Poses.Start)
                 {
                     CaptureScreen();
                 }
-                
+
                 // Open the gripper
                 if (poseIndex == (int)Poses.Place)
                 {
@@ -390,10 +407,6 @@ public class GarbageSorting : MonoBehaviour
                 // Wait for the robot to achieve the final pose from joint assignment
                 yield return new WaitForSeconds(k_PoseAssignmentWait);
             }
-
-            // All trajectories have been executed, open the gripper to place the target cube
-            //yield return new WaitForSeconds(1f);
-            //OpenGripper();
         }
     }
 

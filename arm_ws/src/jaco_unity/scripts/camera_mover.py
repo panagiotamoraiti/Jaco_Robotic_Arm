@@ -32,11 +32,12 @@ if sys.version_info >= (3, 0):
 else:
     def planCompat(plan):
         return plan
-        
-"""
-    Given the start angles of the robot, plan a trajectory that ends at the destination pose.
-"""
-def plan_trajectory(move_group, destination_pose, start_joint_angles): 
+
+
+def plan_trajectory(move_group, destination_pose, start_joint_angles):
+    """
+        Given the start angles of the robot, plan a trajectory that ends at the destination pose.
+    """
     current_joint_state = JointState()
     current_joint_state.name = joint_names
     current_joint_state.position = start_joint_angles
@@ -57,49 +58,60 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
 
     return planCompat(plan)
 
-def read_values():
+def read_coordinates():
+    """
+        Used for Pregrasp stage.
+        Read 2 lines from coordinates.txt file, which contains the relative coordinates between the end-effector
+        and the object, so that the end-effector can move exactly above the detected object.
+    """
     file_path = os.path.join(absolute_dirname, '../../../../Jaco_arm/temp_txt/coordinates.txt')
 
     # Read the values
     with open(file_path, 'r') as file:
         line_1 = file.readline().strip()
         line_2 = file.readline().strip()
-        
+
         if line_1 == "":
             line_1 = 0
         if line_2 == "":
             line_2 = 0
-                  
+
     return float(line_1), float(line_2)
-    
+
 def read_distance():
+    """
+        Used for Grasp stage.
+        Read the first line from distance.txt file, which contains the vertical distance between the
+        detected object and the end-effector, measured by the raycast sensor during previous stage.
+    """
     file_path = os.path.join(absolute_dirname, '../../../../Jaco_arm/temp_txt/distance.txt')
     print(file_path)
-    
+
     # Read the values
     with open(file_path, 'r') as file:
         line = file.readline().strip()
         
         if line == "":
             line = 0
-                  
+
     return float(line)
 
-"""
-    Creates a pick and place plan using the four states below.
-    
-    1. Pre Grasp - position gripper directly above target object
-    2. Grasp - lower gripper so that fingers are on either side of object
-    3. Pick Up - raise gripper back to the pre grasp position
-    4. Place - move gripper to desired placement position
 
-    Gripper behaviour is handled outside of this trajectory planning.
-        - Gripper close occurs after 'grasp' position has been achieved
-        - Gripper open occurs after 'place' position has been achieved
-
-    https://github.com/ros-planning/moveit/blob/master/moveit_commander/src/moveit_commander/move_group.py
-"""
 def plan_pick_and_place(req):
+    """
+        Creates a pick and place plan using the four states below.
+        
+        1. Pre Grasp - position gripper directly above target object
+        2. Grasp - lower gripper so that fingers are on either side of object
+        3. Pick Up - raise gripper back to the pre grasp position
+        4. Place - move gripper to desired placement position
+
+        Gripper behaviour is handled outside of this trajectory planning.
+            - Gripper close occurs after 'grasp' position has been achieved
+            - Gripper open occurs after 'place' position has been achieved
+
+        https://github.com/ros-planning/moveit/blob/master/moveit_commander/src/moveit_commander/move_group.py
+    """
     response = MoverServiceResponse()
 
     group_name = "arm"
@@ -107,20 +119,20 @@ def plan_pick_and_place(req):
 
     current_robot_joint_configuration = req.joints_input.joints
 
-    
+
     # Starting Pose - Place camera above the center of the table and take a screenshot
     starting_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
-    
+
     # If the trajectory has no points, planning has failed and we return an empty response
     if not starting_pose.joint_trajectory.points:
         return response
 
     previous_ending_joint_angles = starting_pose.joint_trajectory.points[-1].positions
-    
+
     # In unity coordinates
-    move_x, move_z = read_values()
-    
-    
+    move_x, move_z = read_coordinates()
+
+
     # Pre grasp - Move end effector exactly above the object
     pick_pose = copy.deepcopy(req.pick_pose)
     
@@ -128,7 +140,7 @@ def plan_pick_and_place(req):
     pick_pose.position.y -= move_x  # Y in ROS -> -X in Unity
     pick_pose.position.x += move_z  # X in ROS -> Z in Unity
     pre_grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-    
+
     if not pre_grasp_pose.joint_trajectory.points:
         return response
 
@@ -144,24 +156,24 @@ def plan_pick_and_place(req):
         move_y = 0 
     else:
         move_y += 0.02 
-    
+
     pick_pose.position.z -= move_y
     go_down_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-    
+
     if not go_down_pose.joint_trajectory.points:
         return response
 
     previous_ending_joint_angles = go_down_pose.joint_trajectory.points[-1].positions
-    
+
     # GraspAndUp - pick up object and move upwards a bit
     pick_pose.position.z += 0.15
     grasp_and_up_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-    
+
     if not grasp_and_up_pose.joint_trajectory.points:
         return response
-        
+
     previous_ending_joint_angles = grasp_and_up_pose.joint_trajectory.points[-1].positions
-    
+
     # Place - move gripper to desired placement position
     place_pose = plan_trajectory(move_group, req.place_pose, previous_ending_joint_angles)
 
@@ -181,6 +193,9 @@ def plan_pick_and_place(req):
 
 
 def moveit_server():
+    """
+        Start the moveit server.
+    """
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node('jaco_unity_server')
 

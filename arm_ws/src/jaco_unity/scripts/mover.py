@@ -29,11 +29,12 @@ if sys.version_info >= (3, 0):
 else:
     def planCompat(plan):
         return plan
-        
-"""
-    Given the start angles of the robot, plan a trajectory that ends at the destination pose.
-"""
-def plan_trajectory(move_group, destination_pose, start_joint_angles): 
+
+
+def plan_trajectory(move_group, destination_pose, start_joint_angles):
+    """
+        Given the start angles of the robot, plan a trajectory that ends at the destination pose.
+    """
     current_joint_state = JointState()
     current_joint_state.name = joint_names
     current_joint_state.position = start_joint_angles
@@ -55,21 +56,22 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
     return planCompat(plan)
 
 
-"""
-    Creates a pick and place plan usiniryng the four states below.
-    
-    1. Pre Grasp - position gripper directly above target object
-    2. Grasp - lower gripper so that fingers are on either side of object
-    3. Pick Up - raise gripper back to the pre grasp position
-    4. Place - move gripper to desired placement position
 
-    Gripper behaviour is handled outside of this trajectory planning.
-        - Gripper close occurs after 'grasp' position has been achieved
-        - Gripper open occurs after 'place' position has been achieved
-
-    https://github.com/ros-planning/moveit/blob/master/moveit_commander/src/moveit_commander/move_group.py
-"""
 def plan_pick_and_place(req):
+    """
+        Creates a pick and place plan usiniryng the four states below.
+        
+        1. Pre Grasp - position gripper directly above target object
+        2. Grasp - lower gripper so that fingers are on either side of object
+        3. Pick Up - raise gripper back to the pre grasp position
+        4. Place - move gripper to desired placement position
+
+        Gripper behaviour is handled outside of this trajectory planning.
+            - Gripper close occurs after 'grasp' position has been achieved
+            - Gripper open occurs after 'place' position has been achieved
+
+        https://github.com/ros-planning/moveit/blob/master/moveit_commander/src/moveit_commander/move_group.py
+    """
     response = MoverServiceResponse()
 
     group_name = "arm"
@@ -81,7 +83,7 @@ def plan_pick_and_place(req):
 
     # Pre grasp - position gripper directly above target object
     pre_grasp_pose = plan_trajectory(move_group, req.pick_pose, current_robot_joint_configuration)
-    
+
     # If the trajectory has no points, planning has failed and we return an empty response
     if not pre_grasp_pose.joint_trajectory.points:
         return response
@@ -92,7 +94,7 @@ def plan_pick_and_place(req):
     pick_pose = copy.deepcopy(req.pick_pose)
     pick_pose.position.z -= 0.05  # Static value coming from Unity, TODO: pass along with request
     grasp_pose = plan_trajectory(move_group, pick_pose, previous_ending_joint_angles)
-    
+
     if not grasp_pose.joint_trajectory.points:
         return response
 
@@ -100,7 +102,7 @@ def plan_pick_and_place(req):
 
     # Pick Up - raise gripper back to the pre grasp position
     pick_up_pose = plan_trajectory(move_group, req.pick_pose, previous_ending_joint_angles)
-    
+
     if not pick_up_pose.joint_trajectory.points:
         return response
 
@@ -124,6 +126,9 @@ def plan_pick_and_place(req):
 
 
 def moveit_server():
+    """
+        Start the moveit server.
+    """
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node('jaco_unity_server')
 

@@ -25,17 +25,17 @@ public class LeavesDetection : MonoBehaviour
     [SerializeField]
     GameObject m_j2n6s200;
     public GameObject j2n6s200 { get => m_j2n6s200; set => m_j2n6s200 = value; }
-    
+
     // Pick Default Values
     private Quaternion PickOrientation;
     private Quaternion DefaultPickOrientation = new Quaternion(0.6935244202613831f, -0.02997758984565735f, 0.716662585735321f, -0.06723421812057495f);
     private Quaternion VerticalPickOrientation = new Quaternion(-0.02454143762588501f, 0.07347844541072846f, -0.9966778755187988f, 0.025146296247839929f);
     readonly Vector3 PickPosition = new Vector3(0f, 0.15f, -0.5f);
-    
+
     // Place Default Values
     readonly Quaternion PlaceOrientation = new Quaternion(0.19721326231956483f, -0.0665614977478981f, 0.9772276878356934f, 0.04126504436135292f);
     private Vector3 PlacePosition = new Vector3(-0.569f, 0.023f, -0.130f);
-    
+
     // For camera
     public Camera targetCamera;
     private string savePath = "temp_txt/";
@@ -50,13 +50,13 @@ public class LeavesDetection : MonoBehaviour
     
     // For recognising detection
     private string filePathDetection = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/detection.txt");
-	
+
     // For distance
     private string filePathDistance = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/distance.txt");
-    
+
     // For rotation
     private string filePathRotate = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/rotate.txt");
-    
+
     // For choosing bin
     private string filePathCategory = string.Concat('/', Directory.GetCurrentDirectory(), "/temp_txt/category.txt");
     
@@ -101,7 +101,15 @@ public class LeavesDetection : MonoBehaviour
         
         StartCoroutine(DetectionPipeline());
     }
-    
+
+    /// <summary>
+    ///     Execute the whole pipeline containing 4 stages:
+    ///         1. Start            Move the robot above the table and take a photo
+    ///         2. Pre Grasp        Position gripper directly above target object and measure the vertical destance using raycast sensor
+    ///         3. Go Down          Lower gripper so that fingers are on either side of object
+    ///         4. Grasp And Up     Close gripper and move the end-effector a little upwards
+    ///         5. Place            Move the end-effector to the place position and open the gripper
+    /// </summary>
     IEnumerator DetectionPipeline()
     {
         while(true)
@@ -117,19 +125,19 @@ public class LeavesDetection : MonoBehaviour
 	        if (detection=="False"){
 	            Debug.Log("No detecttion.");  
 	            continue;}
-	            
+
 	        stage = (int)Poses.PreGrasp;
 	        PublishJoints();
 	        Debug.Log("Starting Coroutine Pregrasp.");
 	        yield return new WaitForSeconds(6.0f); // Delay Start->Pregrasp
-	        
+
 	        // If the rotation of the gripper is wrong correct it
             string line = ReadLineFromFile(filePathRotate); 
             if (line == "True")
             {
                 PickOrientation = VerticalPickOrientation;
             }
-	        
+
 	        // Raycast sensor
             if (raycastOrigin == null)
             {
@@ -159,9 +167,7 @@ public class LeavesDetection : MonoBehaviour
             {
                 Debug.Log("Raycast did not hit any object.");
             }
-            // yield return new WaitForSeconds(1f);
 
-                
             // GoDown Pose
             stage = (int)Poses.GoDown;
             PublishJoints();
@@ -169,8 +175,11 @@ public class LeavesDetection : MonoBehaviour
             yield return new WaitForSeconds(12.0f);  // Delay Pregasp-> GoDown -> GraspAndUp -> Place
 	    }
     }
-    
-     private void WriteDistanceToFile(float distance, string filePath)
+
+    /// <summary>
+    ///     Write the distance measured by the raycast sensor in a .txt file
+    /// </summary>
+    private void WriteDistanceToFile(float distance, string filePath)
     {
         // Create the new .txt file
         using (StreamWriter writer = new StreamWriter(filePath, false))
@@ -179,7 +188,10 @@ public class LeavesDetection : MonoBehaviour
             writer.WriteLine("0");
         }
     }
-    
+
+    /// <summary>
+    ///     Read the first line of a .txt file
+    /// </summary>
     private string ReadLineFromFile(string filePath) 
     { 
         // Read the first line from the .txt file 
@@ -189,13 +201,15 @@ public class LeavesDetection : MonoBehaviour
         return line; 
         } 
     }
-     
-    
+
+    /// <summary>
+    ///     Take a photo from the RobotCamera attached to the end-effector, and store it as a png file.
+    /// </summary>
     private void CaptureScreen()
     {
         // Create the screenshot file path
         string filePath = savePath + fileNamePrefix + ".png";
-     
+
         // Capture the screenshot from the target camera
         if (targetCamera != null)
         {
@@ -223,6 +237,9 @@ public class LeavesDetection : MonoBehaviour
         }
     }
 
+    /// <summary>
+    ///     Close gripper fingers.
+    /// </summary>
     void CloseGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -238,6 +255,9 @@ public class LeavesDetection : MonoBehaviour
         m_RightGripper.xDrive = rightDrive;
     }
 
+    /// <summary>
+    ///     Open gripper fingers.
+    /// </summary>
     void OpenGripper()
     {
         var leftDrive = m_LeftGripper.xDrive;
@@ -276,16 +296,14 @@ public class LeavesDetection : MonoBehaviour
     {
         var request = new MoverServiceRequest();
         request.joints_input = CurrentJointConfig();
-        
-        // Debug.Log(PickPosition.ToString());
-        
+
         // Pick Pose
         request.pick_pose = new PoseMsg
         {
            position = PickPosition.To<FLU>(),
            orientation = PickOrientation.To<FLU>()
         };
-      
+
         // Place Pose
         request.place_pose = new PoseMsg
         {
@@ -300,7 +318,6 @@ public class LeavesDetection : MonoBehaviour
     {
         if (response.trajectories.Length > 0)
         {
-            //Debug.Log("Trajectory returned.");
             StartCoroutine(ExecuteTrajectories(response));
         }
         else
@@ -321,26 +338,22 @@ public class LeavesDetection : MonoBehaviour
     ///     ExecStartCoroutine(ExecuteTrajectories(response));uting a single trajectory will iterate through every robot pose in the array while updating the
     ///     joint values on the robot.
     /// </summary>
-    /// <param name="response"> MoverServiceResponse received from jaco_moveit mover service running in ROS</param>
-    /// <returns></returns>
     IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     {        
         if (response.trajectories != null)
         {     
             int stopIndex = (stage == (int)Poses.GoDown) ? 5 : stage+1;
-                    
+
             // For every trajectory plan returned
             for (var poseIndex = stage; poseIndex < stopIndex; poseIndex++)
             {
-                
                 // Close the gripper
                 if (poseIndex == (int)Poses.GraspAndUp)
                 {
-                    //yield return new WaitForSeconds(k_PoseAssignmentWait);
                     CloseGripper();
                     yield return new WaitForSeconds(k_PoseAssignmentWait);
                 }
-                
+
                 // For every robot pose in trajectory plan
                 foreach (var t in response.trajectories[poseIndex].joint_trajectory.points)
                 {
@@ -358,12 +371,12 @@ public class LeavesDetection : MonoBehaviour
                     // Wait for robot to achieve pose for all joint assignments
                     yield return new WaitForSeconds(k_JointAssignmentWait);
                 }
-                
+
                 if (poseIndex == (int)Poses.Start)
                 {
                     CaptureScreen();
                 }
-                
+
                 // Open the gripper
                 if (poseIndex == (int)Poses.Place)
                 {
@@ -375,10 +388,6 @@ public class LeavesDetection : MonoBehaviour
                 // Wait for the robot to achieve the final pose from joint assignment
                 yield return new WaitForSeconds(k_PoseAssignmentWait);
             }
-
-            // All trajectories have been executed, open the gripper to place the target cube
-            //yield return new WaitForSeconds(1f);
-            //OpenGripper();
         }
     }
 
