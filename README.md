@@ -49,23 +49,22 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   Then in another terminal:
   ```
   python3 leaves_detection_model.py
-  ```https://www.kaggle.com/code/bouweceunen/garbage-detection-with-tensorflow
+  ```
   Open GrapeLeavesScene and start the Unity simulation.
   
-  ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/46e7f21c-70f3-4d58-b3df-c5cd198https://www.kaggle.com/code/bouweceunen/garbage-detection-with-tensorflowdfd29)
+  ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/46e7f21c-70f3-4d58-b3df-c5cd198dfd29)
 
   
   ### 3. Garbage Detection and Sorting
   In this scene we have some plastic bottles and tin cans. The robot carries a camera near its end effector, takes a photo of the table and places the object classified with the highest confidence in the suitable bin. The classification is based on the material (metal, plastic, paper and glass). To run this, execute in a terminal:
   ```
   roslaunch jaco_unity camera_pick_place.launch
-  ```https://www.kaggle.com/code/bouweceunen/garbage-detection-with-tensorflow
+  ```
   Then in another terminal:
   ```
   python3 garbage_detection_model.py
   ```
   Open GarbageSortingScene and start the Unity simulation.
-  
   ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/30694a73-3a71-409b-9e3f-9748bf6877bd)
 
 ## Object detection
@@ -73,5 +72,5 @@ We implemented two python scripts for garbage detection and leaf disease detecti
 Additional installation instructions for python libraries can be found inside Jaco_Robotic_Arm/object_detection/installations.txt
 
 The leaves detection model (YoloV4) was trained on a dataset created by Athena RC.
-The garbage detection model (SSD MobilenetV2) was trained on TACO dataset (http://tacodataset.org).
+The garbage detection model (SSD MobilenetV2) was trained on [TACO dataset](http://tacodataset.org).
 The pretrained garbage detection model and some inference code we based on can be found at https://www.kaggle.com/code/bouweceunen/garbage-detection-with-tensorflow.
