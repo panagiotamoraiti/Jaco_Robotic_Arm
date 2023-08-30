@@ -65,6 +65,7 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   python3 garbage_detection_model.py
   ```
   Open GarbageSortingScene and start the Unity simulation.
+  
   ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/30694a73-3a71-409b-9e3f-9748bf6877bd)
 
 ## Object detection
