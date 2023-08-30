@@ -69,9 +69,10 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   ![image](https://github.com/panagiotamoraiti/Jaco_Robotic_Arm/assets/72858165/30694a73-3a71-409b-9e3f-9748bf6877bd)
 
 ## Object detection
-We implemented two python scripts for garbage detection and leaf disease detection, using two already trained models we found. The scripts interact with the Unity environment using the text files found in Jaco_Robotic_Arm/Jaco_arm/temp_txt directory.
+We implemented two python scripts for garbage detection and leaf disease detection, using two already trained models we found. The scripts interact with the Unity environment using the text files found in Jaco_Robotic_Arm/Jaco_arm/temp_txt directory.\
+\
 Additional installation instructions for python libraries can be found inside Jaco_Robotic_Arm/object_detection/installations.txt
 
-The leaves detection model (YoloV4) was trained on a dataset created by Athena RC.
-The garbage detection model (SSD MobilenetV2) was trained on [TACO dataset](http://tacodataset.org).
+The leaves detection model (YoloV4) was trained on a dataset created by Athena RC.\
+The garbage detection model (SSD MobilenetV2) was trained on [TACO dataset](http://tacodataset.org).\
 The pretrained garbage detection model and some inference code we based on can be found at https://www.kaggle.com/code/bouweceunen/garbage-detection-with-tensorflow.
