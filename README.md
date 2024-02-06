@@ -30,7 +30,7 @@ In order to launch the robot arm in Gazebo and control it using RViz, execute:
 roslaunch moveit_config my_robot_planning_execution.launch
 ```
 ## Unity Game Engine
-We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
+We created 3 different Unity Scenes (found in Assets/Scenes directory)
   ### 1. Simple Pick and Place
   This scene is mostly based on the [Pick And Place](https://github.com/Unity-Technologies/Unity-Robotics-Hub/tree/main/tutorials/pick_and_place) tutorial from Unity Robotics Hub. In a terminal execute:
   ```
@@ -43,7 +43,7 @@ We created 3 differrent Unity Scenes (found in Assets/Scenes directory)
   ### 2. Grape Leaves Disease Detection and Grasping
   In this scene we have a few leaves, some with disease spots and some healthy. The robot carries a camera near its end effector, takes a photo of the table and if a spot is detected, the arm picks up the leaf and places it in the bin. To run this, execute in a terminal:
   ```
-  roslaunch jaco_unity camera_pick_place.launcha_pick_place.launch
+  roslaunch jaco_unity camera_pick_place.launch
 
   ```
   Then in another terminal:
